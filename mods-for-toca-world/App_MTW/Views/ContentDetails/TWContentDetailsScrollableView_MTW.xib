@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TWContentDetailsScrollableView_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
+            <connections>
+                <outlet property="btnDownload" destination="dzl-qZ-Q2K" id="MEC-U7-VDp"/>
+                <outlet property="vContentDetails" destination="pDL-ib-iJS" id="90Z-YW-pHW"/>
+                <outlet property="vDownloadBtnCover" destination="pz0-XP-Uqk" id="WeC-jE-SAY"/>
+                <outlet property="vRecomendations" destination="LB4-GV-XLg" id="mAk-Br-Kjl"/>
+                <outlet property="vRecomendationsCover" destination="fnD-qq-nO6" id="zKP-g2-t1n"/>
+                <outlet property="view" destination="iN0-l3-epB" id="tj5-GK-gTC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwq-sk-E2T">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tPa-Sw-k5U">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5i-Yx-ddd">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="584"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pDL-ib-iJS" customClass="TWContentDetailsView_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
+                                            <rect key="frame" x="19.666666666666657" y="0.0" width="353.66666666666674" height="584"/>
+                                            <color key="backgroundColor" systemColor="separatorColor"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="pDL-ib-iJS" firstAttribute="centerX" secondItem="s5i-Yx-ddd" secondAttribute="centerX" id="GmA-nA-oFJ"/>
+                                        <constraint firstItem="pDL-ib-iJS" firstAttribute="width" secondItem="s5i-Yx-ddd" secondAttribute="width" multiplier="0.65" id="PX6-jL-lR0"/>
+                                        <constraint firstAttribute="bottom" secondItem="pDL-ib-iJS" secondAttribute="bottom" id="SJh-AK-VZz"/>
+                                        <constraint firstItem="pDL-ib-iJS" firstAttribute="top" secondItem="s5i-Yx-ddd" secondAttribute="top" id="UXE-kw-DcC"/>
+                                        <constraint firstItem="pDL-ib-iJS" firstAttribute="width" secondItem="s5i-Yx-ddd" secondAttribute="width" multiplier="0.9" id="hPH-k1-4Nw"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="PX6-jL-lR0"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <mask key="constraints">
+                                            <include reference="PX6-jL-lR0"/>
+                                            <exclude reference="hPH-k1-4Nw"/>
+                                        </mask>
+                                    </variation>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pz0-XP-Uqk">
+                                    <rect key="frame" x="0.0" y="604" width="393" height="64"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzl-qZ-Q2K" customClass="TWBaseButton_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
+                                            <rect key="frame" x="19.666666666666657" y="0.0" width="353.66666666666674" height="64"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            <connections>
+                                                <action selector="downloadAction_MTW:" destination="-1" eventType="touchUpInside" id="N5m-sz-fSG"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="dzl-qZ-Q2K" firstAttribute="centerX" secondItem="pz0-XP-Uqk" secondAttribute="centerX" id="4dA-Lw-KUj"/>
+                                        <constraint firstAttribute="height" constant="64" id="L4A-lW-vn0">
+                                            <variation key="heightClass=regular-widthClass=regular" constant="128"/>
+                                        </constraint>
+                                        <constraint firstAttribute="bottom" secondItem="dzl-qZ-Q2K" secondAttribute="bottom" id="OtX-k4-dYy"/>
+                                        <constraint firstItem="dzl-qZ-Q2K" firstAttribute="width" secondItem="pz0-XP-Uqk" secondAttribute="width" multiplier="0.9" id="Q9T-vW-Pwm"/>
+                                        <constraint firstItem="dzl-qZ-Q2K" firstAttribute="top" secondItem="pz0-XP-Uqk" secondAttribute="top" id="TBd-ni-WZN"/>
+                                        <constraint firstItem="dzl-qZ-Q2K" firstAttribute="width" secondItem="pz0-XP-Uqk" secondAttribute="width" multiplier="0.65" id="TK5-zc-3rW"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="TK5-zc-3rW"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <mask key="constraints">
+                                            <exclude reference="Q9T-vW-Pwm"/>
+                                            <include reference="TK5-zc-3rW"/>
+                                        </mask>
+                                    </variation>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fnD-qq-nO6">
+                                    <rect key="frame" x="0.0" y="688" width="393" height="164"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LB4-GV-XLg" customClass="TWContentRecomendationsView_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="164"/>
+                                            <color key="backgroundColor" systemColor="separatorColor"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="LB4-GV-XLg" firstAttribute="leading" secondItem="fnD-qq-nO6" secondAttribute="leading" id="23g-Mo-QOJ"/>
+                                        <constraint firstAttribute="height" constant="164" id="Fzh-nr-z9D"/>
+                                        <constraint firstAttribute="bottom" secondItem="LB4-GV-XLg" secondAttribute="bottom" id="GLj-hc-r8N"/>
+                                        <constraint firstItem="LB4-GV-XLg" firstAttribute="top" secondItem="fnD-qq-nO6" secondAttribute="top" id="Z4u-4R-MWv"/>
+                                        <constraint firstAttribute="trailing" secondItem="LB4-GV-XLg" secondAttribute="trailing" id="bTo-v4-iJd"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="tPa-Sw-k5U" firstAttribute="width" secondItem="qwq-sk-E2T" secondAttribute="width" id="Qjo-pI-2g7"/>
+                        <constraint firstAttribute="bottom" secondItem="tPa-Sw-k5U" secondAttribute="bottom" id="TYW-JF-8nf"/>
+                        <constraint firstItem="tPa-Sw-k5U" firstAttribute="top" secondItem="qwq-sk-E2T" secondAttribute="top" id="Zk7-pB-iQx"/>
+                        <constraint firstAttribute="trailing" secondItem="tPa-Sw-k5U" secondAttribute="trailing" id="e78-T2-c4H"/>
+                        <constraint firstItem="tPa-Sw-k5U" firstAttribute="leading" secondItem="qwq-sk-E2T" secondAttribute="leading" id="gIu-Vs-S8Q"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="qwq-sk-E2T" secondAttribute="trailing" id="BSy-kn-avs"/>
+                <constraint firstItem="tPa-Sw-k5U" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" priority="750" id="NpE-pL-qFc"/>
+                <constraint firstAttribute="bottom" secondItem="qwq-sk-E2T" secondAttribute="bottom" id="iHk-mb-6WS"/>
+                <constraint firstItem="qwq-sk-E2T" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jdf-aP-aOJ"/>
+                <constraint firstItem="qwq-sk-E2T" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="rZE-x2-lGc"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="65" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

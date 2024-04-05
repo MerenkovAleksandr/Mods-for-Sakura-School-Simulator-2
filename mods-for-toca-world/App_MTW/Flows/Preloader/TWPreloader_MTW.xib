@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TWPreloader_MTW" customModule="template" customModuleProvider="target">
+            <connections>
+                <outlet property="lblTitle" destination="w4J-h5-gXU" id="PYP-oq-hnX"/>
+                <outlet property="vProgressBar" destination="3em-1z-bJ2" id="ID9-2V-9aS"/>
+                <outlet property="view" destination="agf-Wv-JAG" id="094-96-iHw"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="agf-Wv-JAG">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MGK-9D-Jhm">
+                    <rect key="frame" x="20" y="388.66666666666669" width="353" height="74.666666666666686"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="LABEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4J-h5-gXU">
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3em-1z-bJ2" customClass="TWProgressBarView_MTW" customModule="template" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="30.333333333333318" width="353" height="44.333333333333343"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="3em-1z-bJ2" secondAttribute="height" multiplier="8:1" id="hEX-qn-gMd"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="MGK-9D-Jhm" secondAttribute="trailing" constant="20" id="0sQ-qo-s2S">
+                    <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                </constraint>
+                <constraint firstItem="MGK-9D-Jhm" firstAttribute="leading" secondItem="agf-Wv-JAG" secondAttribute="leading" constant="20" id="Mek-PE-oyt">
+                    <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                </constraint>
+                <constraint firstItem="MGK-9D-Jhm" firstAttribute="centerY" secondItem="agf-Wv-JAG" secondAttribute="centerY" id="mBd-Bj-OeV"/>
+                <constraint firstItem="MGK-9D-Jhm" firstAttribute="centerX" secondItem="agf-Wv-JAG" secondAttribute="centerX" id="yLj-uP-4CT"/>
+            </constraints>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

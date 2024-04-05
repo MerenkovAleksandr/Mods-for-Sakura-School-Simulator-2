@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "CFBD681A-65AA-4BE3-B8B2-340717C3BE2C"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "10825D2C-14AA-478F-9191-2BA29BB08ADA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Views/ContentCollection/TWContentCollectionView_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "297"
+            endingLineNumber = "297"
+            landmarkName = "applySnapshot()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "10825D2C-14AA-478F-9191-2BA29BB08ADA - 75785bf462f0be40"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in mods_for_toca_world.TWContentCollectionView_MTW.applySnapshot() -&gt; ()"
+                  moduleName = "mods-for-toca-world"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/NoName/mods-for-toca-world/mods-for-toca-world/App_MTW/Views/ContentCollection/TWContentCollectionView_MTW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "297"
+                  endingLineNumber = "297"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "10825D2C-14AA-478F-9191-2BA29BB08ADA - 75785bf462f0be40"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in mods_for_toca_world.TWContentCollectionView_MTW.applySnapshot() -&gt; ()"
+                  moduleName = "mods-for-toca-world"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/NoName/mods-for-toca-world/mods-for-toca-world/App_MTW/Views/ContentCollection/TWContentCollectionView_MTW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "297"
+                  endingLineNumber = "297"
+                  offsetFromSymbolStart = "384">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F892614F-6D26-4DB4-8B12-3D51BE81B7AA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Flows/ContentCollection/TWContentCollectionController_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F892614F-6D26-4DB4-8B12-3D51BE81B7AA - 3f0bfffafb5586e3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mods_for_toca_world.TWContentCollectionController_MTW.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "mods-for-toca-world"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/NoName/mods-for-toca-world/mods-for-toca-world/App_MTW/Flows/ContentCollection/TWContentCollectionController_MTW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "468">
+               </Location>
+               <Location
+                  uuid = "F892614F-6D26-4DB4-8B12-3D51BE81B7AA - 847377d2999efb1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in mods_for_toca_world.TWContentCollectionController_MTW.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "mods-for-toca-world"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/NoName/mods-for-toca-world/mods-for-toca-world/App_MTW/Flows/ContentCollection/TWContentCollectionController_MTW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "23B7091B-5694-400C-B802-B5FC9C940162"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Utilities/TWDBManager_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "273"
+            endingLineNumber = "273"
+            landmarkName = "getFile(with:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "23B7091B-5694-400C-B802-B5FC9C940162 - a5a2ecd9d06d8d72"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mods_for_toca_world.TWDBManager_MTW.getFile(with: Swift.String, completion: (Swift.Optional&lt;Foundation.Data&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "mods-for-toca-world"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/NoName/mods-for-toca-world/mods-for-toca-world/App_MTW/Utilities/TWDBManager_MTW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "282"
+                  endingLineNumber = "282"
+                  offsetFromSymbolStart = "212">
+               </Location>
+               <Location
+                  uuid = "23B7091B-5694-400C-B802-B5FC9C940162 - 13d8206647a3b3e1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SwiftyDropbox.DropboxClient) -&gt; () in mods_for_toca_world.TWDBManager_MTW.getFile(with: Swift.String, completion: (Swift.Optional&lt;Foundation.Data&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "mods-for-toca-world"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/NoName/mods-for-toca-world/mods-for-toca-world/App_MTW/Utilities/TWDBManager_MTW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "273"
+                  endingLineNumber = "273"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F6099AF1-789D-44FE-9A2A-29469B346656"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Flows/ContentCollection/TWContentCollectionController_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "fetchContentFromDropbox(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F6099AF1-789D-44FE-9A2A-29469B346656 - f6460561a7bc00e2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mods_for_toca_world.TWContentCollectionController_MTW.fetchContentFromDropbox(completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "mods-for-toca-world"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/NoName/mods-for-toca-world/mods-for-toca-world/App_MTW/Flows/ContentCollection/TWContentCollectionController_MTW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "117"
+                  endingLineNumber = "117"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "F6099AF1-789D-44FE-9A2A-29469B346656 - f348f69e79762cd3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in mods_for_toca_world.TWContentCollectionController_MTW.fetchContentFromDropbox(completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "mods-for-toca-world"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/NoName/mods-for-toca-world/mods-for-toca-world/App_MTW/Flows/ContentCollection/TWContentCollectionController_MTW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "168">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "00E00CC8-A710-4EBF-9CF6-BB1242DF9363"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Utilities/TWDBManager_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
+            landmarkName = "fetchData(for:markup:client:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "00E00CC8-A710-4EBF-9CF6-BB1242DF9363 - 5710217913ef25b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mods_for_toca_world.TWDBManager_MTW.fetchData(for: mods_for_toca_world.TWEditorContentModel_MTW, markup: mods_for_toca_world.TWEditorMarkup_MTW, client: SwiftyDropbox.DropboxClient, completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "mods-for-toca-world"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/NoName/mods-for-toca-world/mods-for-toca-world/App_MTW/Utilities/TWDBManager_MTW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "226"
+                  endingLineNumber = "226"
+                  offsetFromSymbolStart = "556">
+               </Location>
+               <Location
+                  uuid = "00E00CC8-A710-4EBF-9CF6-BB1242DF9363 - 5710217913ef274"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mods_for_toca_world.TWDBManager_MTW.fetchData(for: mods_for_toca_world.TWEditorContentModel_MTW, markup: mods_for_toca_world.TWEditorMarkup_MTW, client: SwiftyDropbox.DropboxClient, completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "mods-for-toca-world"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/NoName/mods-for-toca-world/mods-for-toca-world/App_MTW/Utilities/TWDBManager_MTW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "225"
+                  endingLineNumber = "225"
+                  offsetFromSymbolStart = "556">
+               </Location>
+               <Location
+                  uuid = "00E00CC8-A710-4EBF-9CF6-BB1242DF9363 - 5710217913ef274"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mods_for_toca_world.TWDBManager_MTW.fetchData(for: mods_for_toca_world.TWEditorContentModel_MTW, markup: mods_for_toca_world.TWEditorMarkup_MTW, client: SwiftyDropbox.DropboxClient, completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "mods-for-toca-world"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/NoName/mods-for-toca-world/mods-for-toca-world/App_MTW/Utilities/TWDBManager_MTW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "225"
+                  endingLineNumber = "225"
+                  offsetFromSymbolStart = "668">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E06F2400-36D3-4AC2-AB88-2FF7F9A2DF80"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Utilities/TWContentManager_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "589"
+            endingLineNumber = "589"
+            landmarkName = "store(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3FE13C0B-19E4-444A-B582-CEF8E142873D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Utilities/TWContentManager_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "677"
+            endingLineNumber = "677"
+            landmarkName = "stored(codable:for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D9221266-C91E-4362-A26B-5A26E1BD5288"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Flows/CharacterEditor/TWCharacterSelectorController_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "applySnapshot()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D9221266-C91E-4362-A26B-5A26E1BD5288 - a893dfcfb7d08d25"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mods_for_toca_world.TWCharacterSelectorController_MTW.applySnapshot() -&gt; ()"
+                  moduleName = "mods-for-toca-world"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/NoName/mods-for-toca-world/mods-for-toca-world/App_MTW/Flows/CharacterEditor/TWCharacterSelectorController_MTW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "163"
+                  endingLineNumber = "163"
+                  offsetFromSymbolStart = "264">
+               </Location>
+               <Location
+                  uuid = "D9221266-C91E-4362-A26B-5A26E1BD5288 - 30a9dce393a1cd4a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Swift.MainActor () -&gt; () in mods_for_toca_world.TWCharacterSelectorController_MTW.applySnapshot() -&gt; ()"
+                  moduleName = "mods-for-toca-world"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/NoName/mods-for-toca-world/mods-for-toca-world/App_MTW/Flows/CharacterEditor/TWCharacterSelectorController_MTW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "163"
+                  endingLineNumber = "163"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "80FB1F8B-98A7-4B49-9233-5B0F0C6D56B5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Flows/Common/TWColorSlider_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "configureDataSource()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B5DBE21B-BDA7-4F43-95AC-1D9E493EE33A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Views/NavigationBar/TWNavigationBarView_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "leadingBarBtnAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "03A3257D-5F57-46E5-9E75-48C4144465E5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Flows/SoundsCollection/TWSoundsCollectionController_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "274"
+            endingLineNumber = "274"
+            landmarkName = "updateFile(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E0920B26-76C9-406B-B851-BACAD00B02F9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Views/Common/TWPlainTextCollectionViewCell_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "configure_MTW(with:isLoading:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B2B5FE9C-03A9-4242-89D9-8E1D962DA53D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Flows/SoundsCollection/TWSoundsCollectionController_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
+            landmarkName = "loadNextPage()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "26F9CA1B-7BF4-4B3A-9652-55EAF80C23CF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Utilities/TWDBManager_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "fetchEditorContent(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "26F9CA1B-7BF4-4B3A-9652-55EAF80C23CF - 93200e4ad2b9eea9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SwiftyDropbox.DropboxClient) -&gt; () in mods_for_toca_world.TWDBManager_MTW.fetchEditorContent(completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "mods-for-toca-world"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/NoName/mods-for-toca-world/mods-for-toca-world/App_MTW/Utilities/TWDBManager_MTW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "145"
+                  endingLineNumber = "145"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "26F9CA1B-7BF4-4B3A-9652-55EAF80C23CF - 9b616bd599976f51"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;) -&gt; () in closure #1 (SwiftyDropbox.DropboxClient) -&gt; () in mods_for_toca_world.TWDBManager_MTW.fetchEditorContent(completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "mods-for-toca-world"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/NoName/mods-for-toca-world/mods-for-toca-world/App_MTW/Utilities/TWDBManager_MTW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "145"
+                  endingLineNumber = "145"
+                  offsetFromSymbolStart = "548">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "70A46FBD-74A8-487A-A89F-751D47F94361"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Utilities/TWContentManager_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "668"
+            endingLineNumber = "668"
+            landmarkName = "stored(codable:for:with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F5F5CF52-D48E-4192-A0C4-E24D5721C092"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Utilities/TWContentManager_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "672"
+            endingLineNumber = "672"
+            landmarkName = "stored(codable:for:with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F5F5CF52-D48E-4192-A0C4-E24D5721C092 - c5ee69ff84e4ca43"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mods_for_toca_world.TWContentManager_MTW.stored(codable: Swift.Optional&lt;Swift.Array&lt;mods_for_toca_world.TWEditorCodableContent_MTW&gt;&gt;, for: mods_for_toca_world.TWEditorContentType_MTW, with: Swift.Int) -&gt; Swift.Array&lt;mods_for_toca_world.TWEditorContentModel_MTW&gt;"
+                  moduleName = "mods-for-toca-world"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/NoName/mods-for-toca-world/mods-for-toca-world/App_MTW/Utilities/TWContentManager_MTW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "608"
+                  endingLineNumber = "608"
+                  offsetFromSymbolStart = "3292">
+               </Location>
+               <Location
+                  uuid = "F5F5CF52-D48E-4192-A0C4-E24D5721C092 - c5ee69ff84e4ca43"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mods_for_toca_world.TWContentManager_MTW.stored(codable: Swift.Optional&lt;Swift.Array&lt;mods_for_toca_world.TWEditorCodableContent_MTW&gt;&gt;, for: mods_for_toca_world.TWEditorContentType_MTW, with: Swift.Int) -&gt; Swift.Array&lt;mods_for_toca_world.TWEditorContentModel_MTW&gt;"
+                  moduleName = "mods-for-toca-world"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/NoName/mods-for-toca-world/mods-for-toca-world/App_MTW/Utilities/TWContentManager_MTW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "608"
+                  endingLineNumber = "608"
+                  offsetFromSymbolStart = "3508">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5546A8FF-E6BA-4DF7-90E2-B3B4655B6BE4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Utilities/TWContentManager_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "620"
+            endingLineNumber = "620"
+            landmarkName = "stored(codable:for:with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "199FFECA-33E8-45B6-9F14-1DBC0BF3F554"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Utilities/TWContentManager_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "614"
+            endingLineNumber = "614"
+            landmarkName = "stored(codable:for:with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "959925D5-0EB8-4605-A7A3-4D7FAB4A1250"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Utilities/TWCharacterConfigurator_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
+            landmarkName = "getCharacterImage(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E25647E9-6C5D-4AA4-A27B-0B1E122C9815"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Flows/Common/TWAlertController_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "TWAlertController_MTW"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "25A0FC13-6857-4DFA-8B7B-E32CC5AE8DD1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Flows/Common/TWAlertController_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "TWAlertController_MTW"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C9D3D658-B932-4E5E-81EE-0C77B75837E6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Flows/Common/TWAlertController_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8F6CB6D8-64EA-4CB9-A8B3-36E8A7619165"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Flows/ContentPlainCollection/TWContentPlainCollectionController_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8F6CB6D8-64EA-4CB9-A8B3-36E8A7619165 - 342e4c58c3964879"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mods_for_toca_world.TWContentPlainCollectionController_MTW.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "mods-for-toca-world"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/NoName/mods-for-toca-world/mods-for-toca-world/App_MTW/Flows/ContentPlainCollection/TWContentPlainCollectionController_MTW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "160"
+                  endingLineNumber = "160"
+                  offsetFromSymbolStart = "456">
+               </Location>
+               <Location
+                  uuid = "8F6CB6D8-64EA-4CB9-A8B3-36E8A7619165 - 342e4c58c3964879"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mods_for_toca_world.TWContentPlainCollectionController_MTW.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "mods-for-toca-world"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/NoName/mods-for-toca-world/mods-for-toca-world/App_MTW/Flows/ContentPlainCollection/TWContentPlainCollectionController_MTW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "160"
+                  endingLineNumber = "160"
+                  offsetFromSymbolStart = "644">
+               </Location>
+               <Location
+                  uuid = "8F6CB6D8-64EA-4CB9-A8B3-36E8A7619165 - 342e4c58c3964879"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mods_for_toca_world.TWContentPlainCollectionController_MTW.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "mods-for-toca-world"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/NoName/mods-for-toca-world/mods-for-toca-world/App_MTW/Flows/ContentPlainCollection/TWContentPlainCollectionController_MTW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "160"
+                  endingLineNumber = "160"
+                  offsetFromSymbolStart = "1448">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27B14B31-C2A9-420A-8106-0972F616F305"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Flows/ContentDetails/TWContentDetailsController_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "configureScrollableView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3F57BE94-E99F-48D4-8959-202F898E5A93"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Flows/CharacterEditor/TWCharacterEditorController_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3F57BE94-E99F-48D4-8959-202F898E5A93 - e181ff587258d789"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mods_for_toca_world.TWCharacterEditorController_MTW.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "mods-for-toca-world"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/NoName/mods-for-toca-world/mods-for-toca-world/App_MTW/Flows/CharacterEditor/TWCharacterEditorController_MTW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "1012">
+               </Location>
+               <Location
+                  uuid = "3F57BE94-E99F-48D4-8959-202F898E5A93 - 7251d7261b4ed686"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in mods_for_toca_world.TWCharacterEditorController_MTW.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "mods-for-toca-world"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/konstantinchukhas/DEVELOP/NoName/mods-for-toca-world/mods-for-toca-world/App_MTW/Flows/CharacterEditor/TWCharacterEditorController_MTW.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "92B6D369-C883-4385-906D-EA46D2644009"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Extensions/UIKit/TWAlertController_MTW+Extensions.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "connectionIssue(handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BC1ED825-DD04-4664-8B44-FAB5A6C6DA07"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mods-for-toca-world/App_MTW/Utilities/NetworkStatusMonitor_MTW.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "isNetworkAvailable"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

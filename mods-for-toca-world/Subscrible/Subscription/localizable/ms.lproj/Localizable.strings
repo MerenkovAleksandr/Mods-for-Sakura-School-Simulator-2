@@ -1,0 +1,67 @@
+/*
+  LocalizableSubscription.strings
+  Equalizer - Volume Booster EQ
+
+  Created by Systems
+  
+*/
+
+/**/
+"iOSAfterID"="* Percubaan ini diperbaharui secara automatik menjadi langganan berbayar dan akan terus diperbaharui secara automatik sehingga anda membatalkannya. * Anda perlu melanggan untuk menggunakan aplikasi ini. Tiada kandungan percuma. * Bayaran langganan akan dicaj ke akaun iTunes anda pada pengesahan pembelian anda. * Langganan akan diperbaharui secara automatik dan bayaran akan dicaj ke akaun iTunes anda melainkan pembaharuan automatik dimatikan sekurang-kurangnya 24 jam sebelum akhir tempoh semasa. Kos pembaharuan bergantung pada Pelan Langganan anda. Pelan Langganan standard kami ialah: * Langganan 1 minggu (%@) Untuk mata wang lain, harga sepadan dengan peringkat harga yang sama pada Matriks Harga App Store. * Langganan dengan tempoh percubaan percuma akan diperbaharui secara automatik kepada langganan berbayar. Anda boleh membatalkan atau mengurus pembaharuan automatik percubaan percuma anda dalam Tetapan Akaun anda selepas pembelian. Pembatalan akan berkuat kuasa 24 jam selepas hari terakhir tempoh langganan semasa dan anda akan diturunkan taraf kepada perkhidmatan percuma. * Sila ambil perhatian: mana-mana bahagian yang tidak digunakan dalam tempoh percubaan percuma selama 3 hari (jika ditawarkan) akan dibatalkan apabila anda membeli langganan premium semasa tempoh percubaan percuma. Sila, untuk mendapatkan maklumat lanjut lihat Dasar Privasi dan Syarat Penggunaan kami.";
+/**/
+"iOSButtonID"="TERUSKAN";
+/**/
+"iOSStart3daysTitleID"="MULAKAN 3-HARI PERCUMA KEMUDIAN %@/MINGGU";
+
+/**/
+"LoadingID"="MEMBUAT";
+
+/**/
+"PrivacyID"="Dasar Privasi";
+
+/**/
+"restore"="Pulihkan";
+
+/**/
+"TermsID"="Syarat Penggunaan";
+
+/**/
+"SliderID1"="DAPATKAN LOKASI PERisai Dewa GAS";
+/**/
+"SliderID2"="CARI 5 KEBOLEHAN PARA SAGES DAN HUTAN KOROK";
+/**/
+"SliderID3"="SEMUA GUA DAN PERGI DI PETA";
+/**/
+"SliderID4"="SEMUA 152 SHRINES PADA PETA INTERAKTIF";
+/**/
+"SliderID5"="KUMPUL SEMUA SET PERISAI MENGIKUT LOKASI";
+
+/**/
+"Text0ID"="PILIH SET ARMOR ANDA";
+
+/**/
+"Text17ID"="PILIH KEMAMPUAN YANG DIINGINKAN";
+
+/**/
+"Text18ID"="Keupayaan Amiibo";
+
+/**/
+"Text19ID"="Keupayaan fius";
+
+/**/
+"Text20ID"="Keupayaan naik";
+
+/**/
+"Text21ID"="Kebolehan mengingat kembali";
+
+/**/
+"Text22ID"="Keupayaan kamera";
+
+/**/
+
+"Text30ID"="Isu Ketersambungan";
+"Text31ID"="Sambungan Internet kelihatan di luar talian ☹️";
+
+
+
+

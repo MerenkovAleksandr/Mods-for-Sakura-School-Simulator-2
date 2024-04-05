@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="b5l-m8-eaB" customClass="TWContentSelectorCollectionViewCell_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="227" height="215"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="227" height="215"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="1000" image="icon_delivery" translatesAutoresizingMaskIntoConstraints="NO" id="kCh-8D-HQo">
+                        <rect key="frame" x="38.333333333333329" y="24" width="150.66666666666669" height="150.66666666666666"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="kCh-8D-HQo" secondAttribute="height" id="PRa-iR-jTw"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="751" insetsLayoutMarginsFromSafeArea="NO" text="LABEL" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t62-M6-SdU">
+                        <rect key="frame" x="24" y="178.66666666666666" width="179" height="20.333333333333343"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gtk-Rg-sWA">
+                        <rect key="frame" x="0.0" y="0.0" width="227" height="215"/>
+                        <color key="backgroundColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="J10-9d-2RL">
+                        <rect key="frame" x="57" y="52" width="113" height="111"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="J10-9d-2RL" secondAttribute="height" id="XAe-eB-8NP"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="kCh-8D-HQo" firstAttribute="centerX" secondItem="b5l-m8-eaB" secondAttribute="centerX" id="1DE-Pe-hLm"/>
+                <constraint firstAttribute="trailing" secondItem="Gtk-Rg-sWA" secondAttribute="trailing" id="3Is-vD-Aif"/>
+                <constraint firstItem="t62-M6-SdU" firstAttribute="leading" secondItem="b5l-m8-eaB" secondAttribute="leading" constant="24" id="6gC-DT-not"/>
+                <constraint firstItem="Gtk-Rg-sWA" firstAttribute="top" secondItem="b5l-m8-eaB" secondAttribute="top" id="GY4-TZ-NAh"/>
+                <constraint firstItem="J10-9d-2RL" firstAttribute="centerY" secondItem="b5l-m8-eaB" secondAttribute="centerY" id="Jjy-qz-4ll"/>
+                <constraint firstItem="J10-9d-2RL" firstAttribute="height" secondItem="kCh-8D-HQo" secondAttribute="height" multiplier="0.75" id="Kk3-WV-I58"/>
+                <constraint firstItem="Gtk-Rg-sWA" firstAttribute="leading" secondItem="b5l-m8-eaB" secondAttribute="leading" id="RTz-Cv-oCV"/>
+                <constraint firstItem="t62-M6-SdU" firstAttribute="top" secondItem="kCh-8D-HQo" secondAttribute="bottom" constant="4" id="XpR-xC-8T5"/>
+                <constraint firstItem="kCh-8D-HQo" firstAttribute="top" secondItem="b5l-m8-eaB" secondAttribute="top" constant="24" id="XqW-Ok-SCF"/>
+                <constraint firstAttribute="bottom" secondItem="Gtk-Rg-sWA" secondAttribute="bottom" id="abZ-gw-BIa"/>
+                <constraint firstItem="J10-9d-2RL" firstAttribute="centerX" secondItem="b5l-m8-eaB" secondAttribute="centerX" id="b6b-WY-Epo"/>
+                <constraint firstAttribute="bottom" secondItem="t62-M6-SdU" secondAttribute="bottom" constant="16" id="mLp-g3-z9e"/>
+                <constraint firstAttribute="trailing" secondItem="t62-M6-SdU" secondAttribute="trailing" constant="24" id="pMR-eM-v95"/>
+            </constraints>
+            <size key="customSize" width="227" height="215"/>
+            <connections>
+                <outlet property="ivContentImage" destination="kCh-8D-HQo" id="tY9-u4-U2H"/>
+                <outlet property="ivContentLock" destination="J10-9d-2RL" id="bRx-ow-LEm"/>
+                <outlet property="lblContentTitle" destination="t62-M6-SdU" id="SJS-vg-FsI"/>
+                <outlet property="vContentLock" destination="Gtk-Rg-sWA" id="vQW-wJ-nXt"/>
+            </connections>
+            <point key="canvasLocation" x="-359.5419847328244" y="-29.929577464788736"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icon_delivery" width="256" height="256"/>
+        <image name="lock.fill" catalog="system" width="125" height="128"/>
+    </resources>
+</document>

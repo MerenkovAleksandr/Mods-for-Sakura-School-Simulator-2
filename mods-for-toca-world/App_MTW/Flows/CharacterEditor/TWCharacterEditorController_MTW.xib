@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TWCharacterEditorController_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="o1q-WC-TAx" id="JpZ-kl-hRL"/>
+                <outlet property="btnDone" destination="rLG-14-NQ8" id="1JW-cb-eJv"/>
+                <outlet property="cvCategory" destination="ChC-4a-cNF" id="PS9-yq-wpX"/>
+                <outlet property="cvElement" destination="wvQ-A0-xdH" id="Blr-9I-Fgz"/>
+                <outlet property="ivBackBtn" destination="hwJ-ar-Ofn" id="a5W-Fj-TOw"/>
+                <outlet property="lblCategory" destination="8uT-W5-wV8" id="fiT-vu-lQV"/>
+                <outlet property="vCharacter" destination="BU3-Ob-rLE" id="xJ2-df-Byq"/>
+                <outlet property="vColorPicker" destination="6O1-AA-0YQ" id="1bU-ig-DaV"/>
+                <outlet property="vToolbar" destination="dyF-9o-cMo" id="iLY-uj-KQT"/>
+                <outlet property="view" destination="iN0-l3-epB" id="7je-oL-2bN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dyF-9o-cMo" customClass="TWEditorToolbarView" customModule="mods_for_toca_world" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="569.66666666666663" width="428" height="356.33333333333337"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="zQ6-qA-TPY">
+                            <rect key="frame" x="18" y="24" width="392" height="306.33333333333331"/>
+                            <subviews>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ChC-4a-cNF">
+                                    <rect key="frame" x="0.0" y="0.0" width="392" height="80"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="80" id="O9Q-ym-aQS"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6bm-9W-aIq">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uT-W5-wV8">
+                                    <rect key="frame" x="0.0" y="82" width="392" height="20.333333333333329"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wvQ-A0-xdH">
+                                    <rect key="frame" x="0.0" y="104.33333333333337" width="392" height="100"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="nq6-nd-P1W"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gBe-Mq-6Ul">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6O1-AA-0YQ" customClass="TWColorPicker_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="206.33333333333337" width="392" height="100"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="9IR-ox-hcz"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="separatorColor"/>
+                    <constraints>
+                        <constraint firstItem="zQ6-qA-TPY" firstAttribute="leading" secondItem="dyF-9o-cMo" secondAttribute="leading" constant="18" id="CJm-Je-Mer">
+                            <variation key="heightClass=regular-widthClass=regular" constant="24"/>
+                        </constraint>
+                        <constraint firstItem="zQ6-qA-TPY" firstAttribute="top" secondItem="dyF-9o-cMo" secondAttribute="top" constant="24" id="b2a-so-qAl"/>
+                        <constraint firstAttribute="trailing" secondItem="zQ6-qA-TPY" secondAttribute="trailing" constant="18" id="mom-V9-oNa">
+                            <variation key="heightClass=regular-widthClass=regular" constant="24"/>
+                        </constraint>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BU3-Ob-rLE">
+                    <rect key="frame" x="12.666666666666657" y="107.00000000000003" width="402.66666666666674" height="402.66666666666674"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="BU3-Ob-rLE" secondAttribute="height" id="CXX-av-48F"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLG-14-NQ8" customClass="TWBaseButton_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
+                    <rect key="frame" x="268" y="541.66666666666663" width="160" height="64"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="FHj-sE-ovN">
+                            <variation key="heightClass=regular-widthClass=regular" constant="240"/>
+                        </constraint>
+                        <constraint firstAttribute="height" constant="64" id="Wf4-tc-KeH">
+                            <variation key="heightClass=regular-widthClass=regular" constant="96"/>
+                        </constraint>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <connections>
+                        <action selector="doneButtonAction_MTW:" destination="-1" eventType="touchUpInside" id="JlG-jk-dN7"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_editor_back" translatesAutoresizingMaskIntoConstraints="NO" id="hwJ-ar-Ofn">
+                    <rect key="frame" x="24" y="59" width="90" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="hwJ-ar-Ofn" secondAttribute="height" multiplier="1.5:1" id="Yz7-JU-Dc1"/>
+                        <constraint firstAttribute="height" constant="60" id="kdq-Mc-Wx0"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o1q-WC-TAx" customClass="TWActivityIndicator_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
+                    <rect key="frame" x="190" y="284.33333333333331" width="48" height="48"/>
+                    <color key="backgroundColor" systemColor="separatorColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="UFv-ch-2Da"/>
+                        <constraint firstAttribute="width" secondItem="o1q-WC-TAx" secondAttribute="height" id="mKG-2B-HCt"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5LF-Ao-qPb">
+                    <rect key="frame" x="45" y="65" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="5LF-Ao-qPb" secondAttribute="height" id="arm-Zg-Oq2"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="32" minY="12" maxX="32" maxY="12"/>
+                    <state key="normal" image="icon_navigation_back"/>
+                    <connections>
+                        <action selector="backButtonAction_MTW:" destination="-1" eventType="touchUpInside" id="5EG-4Y-O7M"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="separatorColor"/>
+            <constraints>
+                <constraint firstItem="BU3-Ob-rLE" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8Pk-5z-XEO"/>
+                <constraint firstItem="rLG-14-NQ8" firstAttribute="trailing" secondItem="dyF-9o-cMo" secondAttribute="trailing" id="9Bl-Mg-wE1"/>
+                <constraint firstItem="5LF-Ao-qPb" firstAttribute="height" secondItem="hwJ-ar-Ofn" secondAttribute="height" multiplier="0.8" id="Ch7-LX-hMb"/>
+                <constraint firstItem="BU3-Ob-rLE" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="60" id="JVf-p0-NHg"/>
+                <constraint firstItem="5LF-Ao-qPb" firstAttribute="centerX" secondItem="hwJ-ar-Ofn" secondAttribute="centerX" id="Ls3-Wh-gth"/>
+                <constraint firstItem="5LF-Ao-qPb" firstAttribute="centerY" secondItem="hwJ-ar-Ofn" secondAttribute="centerY" id="O2Y-7w-3Oh"/>
+                <constraint firstAttribute="bottom" secondItem="dyF-9o-cMo" secondAttribute="bottom" id="RFS-Ya-4PX"/>
+                <constraint firstItem="dyF-9o-cMo" firstAttribute="top" secondItem="BU3-Ob-rLE" secondAttribute="bottom" constant="60" id="Ras-Q6-VrO"/>
+                <constraint firstItem="dyF-9o-cMo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Riw-bE-dnc"/>
+                <constraint firstItem="dyF-9o-cMo" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Y0c-sH-Rv5"/>
+                <constraint firstItem="hwJ-ar-Ofn" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="a2V-um-yrX"/>
+                <constraint firstItem="o1q-WC-TAx" firstAttribute="centerY" secondItem="BU3-Ob-rLE" secondAttribute="centerY" id="dxg-ay-AUc"/>
+                <constraint firstItem="hwJ-ar-Ofn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="eIu-s8-zQ7"/>
+                <constraint firstItem="o1q-WC-TAx" firstAttribute="centerX" secondItem="BU3-Ob-rLE" secondAttribute="centerX" id="hV1-c0-hYm"/>
+                <constraint firstItem="dyF-9o-cMo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="l9W-u3-63Q"/>
+                <constraint firstItem="rLG-14-NQ8" firstAttribute="bottom" secondItem="dyF-9o-cMo" secondAttribute="top" constant="36" id="pgv-y7-zB4"/>
+                <constraint firstItem="zQ6-qA-TPY" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="7.9999999999997726" id="u4u-6k-ztH"/>
+            </constraints>
+            <point key="canvasLocation" x="318.22429906542055" y="18.142548596112313"/>
+        </view>
+        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="aPi-HL-jiE">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <point key="canvasLocation" x="50" y="-366"/>
+        </imageView>
+    </objects>
+    <resources>
+        <image name="icon_editor_back" width="256" height="196"/>
+        <image name="icon_navigation_back" width="148" height="256"/>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

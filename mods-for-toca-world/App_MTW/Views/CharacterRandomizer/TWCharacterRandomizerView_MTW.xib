@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TWCharacterRandomizerView_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
+            <connections>
+                <outlet property="btnDownload" destination="Acd-br-wod" id="bTm-gQ-ZMr"/>
+                <outlet property="ivContent" destination="sOm-XK-SUj" id="PDj-j0-voi"/>
+                <outlet property="ivPlaceholder" destination="ybo-1U-xVO" id="AF4-2G-XfY"/>
+                <outlet property="ivResultBackground" destination="ON4-DN-Fob" id="Iq4-64-qmI"/>
+                <outlet property="lblCoundownTimer" destination="3iE-4d-lgT" id="cXn-lb-D6w"/>
+                <outlet property="view" destination="skG-CT-zSj" id="bGN-NA-U8X"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="skG-CT-zSj">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Acd-br-wod" customClass="TWBaseButton_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
+                    <rect key="frame" x="19.666666666666657" y="788" width="353.66666666666674" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="3J7-ZN-J6i">
+                            <variation key="heightClass=regular-widthClass=regular" constant="128"/>
+                        </constraint>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <connections>
+                        <action selector="btnAction:" destination="-1" eventType="touchUpInside" id="CfK-Y2-Vzu"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_randomizer_character" translatesAutoresizingMaskIntoConstraints="NO" id="ON4-DN-Fob">
+                    <rect key="frame" x="-125.66666666666669" y="48" width="644.33333333333348" height="644"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ON4-DN-Fob" secondAttribute="height" id="gfK-Se-cES"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iE-4d-lgT">
+                    <rect key="frame" x="19.666666666666657" y="716" width="353.66666666666674" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="6iG-py-a04"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sOm-XK-SUj">
+                    <rect key="frame" x="-93.333333333333314" y="80.333333333333314" width="579.66666666666663" height="579.33333333333348"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="sOm-XK-SUj" secondAttribute="height" id="vFv-gk-DmO"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_randomizer_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="ybo-1U-xVO">
+                    <rect key="frame" x="68.666666666666671" y="48" width="255.66666666666663" height="644"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" systemColor="separatorColor"/>
+            <constraints>
+                <constraint firstItem="3iE-4d-lgT" firstAttribute="top" secondItem="ybo-1U-xVO" secondAttribute="bottom" constant="24" id="2Ba-gq-MEp"/>
+                <constraint firstItem="ybo-1U-xVO" firstAttribute="centerX" secondItem="skG-CT-zSj" secondAttribute="centerX" id="8Rz-sw-Pn9"/>
+                <constraint firstItem="3iE-4d-lgT" firstAttribute="centerX" secondItem="skG-CT-zSj" secondAttribute="centerX" id="ANi-rr-LRs"/>
+                <constraint firstItem="ybo-1U-xVO" firstAttribute="width" secondItem="skG-CT-zSj" secondAttribute="width" multiplier="0.65" id="QHf-cn-fhd"/>
+                <constraint firstItem="ON4-DN-Fob" firstAttribute="centerX" secondItem="skG-CT-zSj" secondAttribute="centerX" id="ToM-0h-3Ph"/>
+                <constraint firstItem="3iE-4d-lgT" firstAttribute="width" secondItem="Acd-br-wod" secondAttribute="width" id="Yrn-bD-Htr"/>
+                <constraint firstItem="Acd-br-wod" firstAttribute="bottom" secondItem="skG-CT-zSj" secondAttribute="bottom" id="bmV-R5-qmY"/>
+                <constraint firstItem="3iE-4d-lgT" firstAttribute="top" secondItem="ON4-DN-Fob" secondAttribute="bottom" constant="24" id="ouP-Zt-xZO"/>
+                <constraint firstItem="sOm-XK-SUj" firstAttribute="centerX" secondItem="ON4-DN-Fob" secondAttribute="centerX" id="p8s-jw-c6p"/>
+                <constraint firstItem="ybo-1U-xVO" firstAttribute="top" secondItem="skG-CT-zSj" secondAttribute="top" constant="48" id="pZ0-Uv-C1n"/>
+                <constraint firstItem="sOm-XK-SUj" firstAttribute="height" secondItem="ON4-DN-Fob" secondAttribute="height" multiplier="0.9" id="qBN-sZ-fY3"/>
+                <constraint firstItem="Acd-br-wod" firstAttribute="centerX" secondItem="skG-CT-zSj" secondAttribute="centerX" id="qW3-wa-xhb"/>
+                <constraint firstItem="Acd-br-wod" firstAttribute="width" secondItem="skG-CT-zSj" secondAttribute="width" multiplier="0.6" id="u6e-Mf-DDV"/>
+                <constraint firstItem="Acd-br-wod" firstAttribute="width" secondItem="skG-CT-zSj" secondAttribute="width" multiplier="0.9" id="vqE-aS-ihp"/>
+                <constraint firstItem="sOm-XK-SUj" firstAttribute="centerY" secondItem="ON4-DN-Fob" secondAttribute="centerY" id="wiO-0d-sJO"/>
+                <constraint firstItem="Acd-br-wod" firstAttribute="top" secondItem="3iE-4d-lgT" secondAttribute="bottom" constant="24" id="xHO-IA-Ojp"/>
+                <constraint firstItem="ON4-DN-Fob" firstAttribute="top" secondItem="skG-CT-zSj" secondAttribute="top" constant="48" id="zaV-3h-loo"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="u6e-Mf-DDV"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=regular">
+                <mask key="constraints">
+                    <include reference="u6e-Mf-DDV"/>
+                    <include reference="vqE-aS-ihp"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="-83.206106870229007" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_randomizer_character" width="512" height="512"/>
+        <image name="bg_randomizer_placeholder" width="448" height="780"/>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

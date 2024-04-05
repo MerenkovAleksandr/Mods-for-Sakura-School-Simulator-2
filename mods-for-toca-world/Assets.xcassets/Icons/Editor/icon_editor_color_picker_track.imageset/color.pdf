@@ -1,0 +1,103 @@
+%PDF-1.7
+
+1 0 obj
+  << /Length 2 0 R
+     /Range [ 0.000000 1.000000 0.000000 1.000000 0.000000 1.000000 ]
+     /Domain [ 0.000000 1.000000 ]
+     /FunctionType 4
+  >>
+stream
+{  0.850980 exch 0.850980 exch 0.850980 exch dup 0.000000 gt { exch pop exch pop exch pop dup 0.000000 sub 1.589542 mul 0.850980 add exch dup 0.000000 sub -9.077125 mul 0.850980 add exch dup 0.000000 sub -0.757127 mul 0.850980 add exch } if dup 0.093750 gt { exch pop exch pop exch pop dup 0.093750 sub -5.855640 mul 1.000000 add exch dup 0.093750 sub 0.000000 mul 0.000000 add exch dup 0.093750 sub 2.077811 mul 0.780000 add exch } if dup 0.199631 gt { exch pop exch pop exch pop dup 0.199631 sub -3.519152 mul 0.380000 add exch dup 0.199631 sub 0.000000 mul 0.000000 add exch dup 0.199631 sub 0.000000 mul 1.000000 add exch } if dup 0.301928 gt { exch pop exch pop exch pop dup 0.301928 sub -0.187841 mul 0.020000 add exch dup 0.301928 sub 7.701500 mul 0.000000 add exch dup 0.301928 sub 0.000000 mul 1.000000 add exch } if dup 0.408401 gt { exch pop exch pop exch pop dup 0.408401 sub 0.000000 mul 0.000000 add exch dup 0.408401 sub 2.052836 mul 0.820000 add exch dup 0.408401 sub -6.842794 mul 1.000000 add exch } if dup 0.496084 gt { exch pop exch pop exch pop dup 0.496084 sub 0.208259 mul 0.000000 add exch dup 0.496084 sub 0.000000 mul 1.000000 add exch dup 0.496084 sub -4.165180 mul 0.400000 add exch } if dup 0.592119 gt { exch pop exch pop exch pop dup 0.592119 sub 5.422591 mul 0.020000 add exch dup 0.592119 sub 0.000000 mul 1.000000 add exch dup 0.592119 sub 0.000000 mul 0.000000 add exch } if dup 0.702767 gt { exch pop exch pop exch pop dup 0.702767 sub 3.191498 mul 0.620000 add exch dup 0.702767 sub -1.022742 mul 1.000000 add exch dup 0.702767 sub 1.763723 mul 0.000000 add exch } if dup 0.811327 gt { exch pop exch pop exch pop dup 0.811327 sub 0.327764 mul 0.966471 add exch dup 0.811327 sub -3.997861 mul 0.888971 add exch dup 0.811327 sub -1.871706 mul 0.191471 add exch } if dup 0.913625 gt { exch pop exch pop exch pop dup 0.913625 sub 0.000000 mul 1.000000 add exch dup 0.913625 sub -5.557152 mul 0.480000 add exch dup 0.913625 sub 0.000000 mul 0.000000 add exch } if dup 1.000000 gt { exch pop exch pop exch pop 1.000000 exch 0.000000 exch 0.000000 exch } if pop }
+endstream
+endobj
+
+2 0 obj
+  2093
+endobj
+
+3 0 obj
+  << /Pattern << /P1 << /Matrix [ 674.011963 0.000421 -0.000421 674.011963 -2.011542 -658.011963 ]
+                        /Shading << /Coords [ 0.000000 0.000000 1.000000 0.000000 ]
+                                    /ColorSpace /DeviceRGB
+                                    /Function 1 0 R
+                                    /Domain [ 0.000000 1.000000 ]
+                                    /ShadingType 2
+                                    /Extend [ true true ]
+                                 >>
+                        /PatternType 2
+                        /Type /Pattern
+                     >> >> >>
+endobj
+
+4 0 obj
+  << /Length 5 0 R >>
+stream
+/DeviceRGB CS
+/DeviceRGB cs
+q
+1.000000 0.000000 -0.000000 1.000000 0.000000 0.000000 cm
+/Pattern cs
+/P1 scn
+0.000000 8.000000 m
+0.000000 12.418278 3.581722 16.000000 8.000000 16.000000 c
+664.000000 16.000000 l
+668.418274 16.000000 672.000000 12.418278 672.000000 8.000000 c
+672.000000 8.000000 l
+672.000000 3.581722 668.418274 0.000000 664.000000 0.000000 c
+8.000010 0.000000 l
+3.581732 0.000000 0.000000 3.581722 0.000000 8.000000 c
+0.000000 8.000000 l
+h
+f
+n
+Q
+
+endstream
+endobj
+
+5 0 obj
+  462
+endobj
+
+6 0 obj
+  << /Annots []
+     /Type /Page
+     /MediaBox [ 0.000000 0.000000 672.000000 16.000000 ]
+     /Resources 3 0 R
+     /Contents 4 0 R
+     /Parent 7 0 R
+  >>
+endobj
+
+7 0 obj
+  << /Kids [ 6 0 R ]
+     /Count 1
+     /Type /Pages
+  >>
+endobj
+
+8 0 obj
+  << /Pages 7 0 R
+     /Type /Catalog
+  >>
+endobj
+
+xref
+0 9
+0000000000 65535 f
+0000000010 00000 n
+0000002287 00000 n
+0000002310 00000 n
+0000002939 00000 n
+0000003457 00000 n
+0000003479 00000 n
+0000003653 00000 n
+0000003727 00000 n
+trailer
+<< /ID [ (some) (id) ]
+   /Root 8 0 R
+   /Size 9
+>>
+startxref
+3786
+%%EOF

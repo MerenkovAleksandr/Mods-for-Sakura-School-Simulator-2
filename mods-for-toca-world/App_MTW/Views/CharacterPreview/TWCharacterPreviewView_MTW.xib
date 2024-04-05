@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TWCharacterPreviewView_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
+            <connections>
+                <outlet property="btnDownload" destination="B8a-5y-lPb" id="VjQ-ne-Az7"/>
+                <outlet property="ivContent" destination="BxA-Ff-xU0" id="Cu0-o0-jHN"/>
+                <outlet property="vBubble" destination="ZIi-6K-FIJ" id="F3Y-Xl-pUS"/>
+                <outlet property="vSubMenu" destination="fdN-yw-KLq" id="Pdj-LF-LyD"/>
+                <outlet property="view" destination="iN0-l3-epB" id="9r1-Ay-rej"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="758"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3g-mp-hS0" customClass="TWCharacterCoverView_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
+                    <rect key="frame" x="24" y="12" width="345" height="658"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BxA-Ff-xU0">
+                            <rect key="frame" x="12" y="24" width="321" height="610"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="separatorColor"/>
+                    <constraints>
+                        <constraint firstItem="BxA-Ff-xU0" firstAttribute="centerX" secondItem="P3g-mp-hS0" secondAttribute="centerX" id="2fg-Bd-0RN"/>
+                        <constraint firstItem="BxA-Ff-xU0" firstAttribute="centerY" secondItem="P3g-mp-hS0" secondAttribute="centerY" id="Ioq-31-hSr"/>
+                        <constraint firstItem="BxA-Ff-xU0" firstAttribute="top" secondItem="P3g-mp-hS0" secondAttribute="top" constant="24" id="Pls-AO-E2a"/>
+                        <constraint firstAttribute="trailing" secondItem="BxA-Ff-xU0" secondAttribute="trailing" constant="12" id="ZRK-Zq-Det"/>
+                        <constraint firstAttribute="bottom" secondItem="BxA-Ff-xU0" secondAttribute="bottom" constant="24" id="kDe-T5-fEP"/>
+                        <constraint firstItem="BxA-Ff-xU0" firstAttribute="leading" secondItem="P3g-mp-hS0" secondAttribute="leading" constant="12" id="zkb-1p-jAA"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIi-6K-FIJ" customClass="TWBubbleView_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
+                    <rect key="frame" x="23.999999999999993" y="12" width="85.333333333333314" height="48"/>
+                    <color key="backgroundColor" systemColor="separatorColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ZIi-6K-FIJ" secondAttribute="height" multiplier="32:18" id="Rqs-iz-TeD"/>
+                        <constraint firstAttribute="height" constant="48" id="bst-zL-aY9"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdN-yw-KLq" customClass="TWSubMenu_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
+                    <rect key="frame" x="66.666666666666671" y="60" width="120.00000000000001" height="100"/>
+                    <color key="backgroundColor" systemColor="separatorColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="7wL-2a-vrU">
+                            <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                        </constraint>
+                        <constraint firstAttribute="width" constant="120" id="peN-XV-Idv">
+                            <variation key="heightClass=regular-widthClass=regular" constant="180"/>
+                        </constraint>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8a-5y-lPb" customClass="TWBaseButton_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
+                    <rect key="frame" x="36" y="694" width="321" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="GZI-wv-Klg">
+                            <variation key="heightClass=regular-widthClass=regular" constant="128"/>
+                        </constraint>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <connections>
+                        <action selector="downloadBtnAction:" destination="-1" eventType="touchUpInside" id="XcA-De-NWj"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="separatorColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="P3g-mp-hS0" secondAttribute="trailing" constant="24" id="6Ry-ZC-FOg"/>
+                <constraint firstItem="B8a-5y-lPb" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="Bb8-g2-HtD"/>
+                <constraint firstItem="ZIi-6K-FIJ" firstAttribute="leading" secondItem="P3g-mp-hS0" secondAttribute="leading" id="GMX-r0-HTu"/>
+                <constraint firstItem="B8a-5y-lPb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="36" id="Io6-zE-NW8"/>
+                <constraint firstItem="B8a-5y-lPb" firstAttribute="top" secondItem="P3g-mp-hS0" secondAttribute="bottom" constant="24" id="d6v-Ox-A8L"/>
+                <constraint firstItem="P3g-mp-hS0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="dV9-ez-jJq"/>
+                <constraint firstItem="fdN-yw-KLq" firstAttribute="top" secondItem="ZIi-6K-FIJ" secondAttribute="bottom" id="gUg-1A-r6n"/>
+                <constraint firstItem="ZIi-6K-FIJ" firstAttribute="top" secondItem="P3g-mp-hS0" secondAttribute="top" id="sVB-JE-tPg"/>
+                <constraint firstAttribute="trailing" secondItem="B8a-5y-lPb" secondAttribute="trailing" constant="36" id="whF-Pn-ELL"/>
+                <constraint firstItem="fdN-yw-KLq" firstAttribute="leading" secondItem="ZIi-6K-FIJ" secondAttribute="centerX" id="x71-1m-RuF"/>
+                <constraint firstItem="P3g-mp-hS0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="z2c-il-Iuu"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="130.53435114503816" y="63.380281690140848"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

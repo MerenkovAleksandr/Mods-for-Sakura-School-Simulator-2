@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="j5A-xg-08J" customClass="TWContentPlainCollectionViewCell_MTW" customModule="template" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="192"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Kxc-he-pRb">
+                <rect key="frame" x="0.0" y="0.0" width="376" height="192"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="deV-dr-KGd">
+                        <rect key="frame" x="174.33333333333337" y="24" width="177.66666666666663" height="144"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jjl-zj-9rt" customClass="TWImageView_MTW" customModule="template" customModuleProvider="target">
+                        <rect key="frame" x="24" y="28.666666666666671" width="134.33333333333334" height="134.66666666666663"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Jjl-zj-9rt" secondAttribute="height" id="tse-2M-48t"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Jjl-zj-9rt" firstAttribute="height" secondItem="Kxc-he-pRb" secondAttribute="height" multiplier="0.7" id="N2c-PV-W1h"/>
+                    <constraint firstItem="Jjl-zj-9rt" firstAttribute="centerY" secondItem="Kxc-he-pRb" secondAttribute="centerY" id="VXp-6x-oME"/>
+                    <constraint firstAttribute="trailing" secondItem="deV-dr-KGd" secondAttribute="trailing" constant="24" id="XMI-xW-VXi">
+                        <variation key="heightClass=regular-widthClass=regular" constant="36"/>
+                    </constraint>
+                    <constraint firstItem="Jjl-zj-9rt" firstAttribute="leading" secondItem="Kxc-he-pRb" secondAttribute="leading" constant="24" id="ho5-rz-cC0">
+                        <variation key="heightClass=regular-widthClass=regular" constant="36"/>
+                    </constraint>
+                    <constraint firstItem="deV-dr-KGd" firstAttribute="top" secondItem="Kxc-he-pRb" secondAttribute="top" constant="24" id="kZa-6t-hht"/>
+                    <constraint firstItem="deV-dr-KGd" firstAttribute="leading" secondItem="Jjl-zj-9rt" secondAttribute="trailing" constant="16" id="mS8-k7-jfE"/>
+                    <constraint firstAttribute="bottom" secondItem="deV-dr-KGd" secondAttribute="bottom" constant="24" id="ryB-Qr-cME"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="376" height="192"/>
+            <connections>
+                <outlet property="ivContent" destination="Jjl-zj-9rt" id="cZO-XG-Vxl"/>
+                <outlet property="lblContentTitle" destination="deV-dr-KGd" id="ysF-GG-soc"/>
+            </connections>
+            <point key="canvasLocation" x="203" y="-10"/>
+        </collectionViewCell>
+    </objects>
+</document>
