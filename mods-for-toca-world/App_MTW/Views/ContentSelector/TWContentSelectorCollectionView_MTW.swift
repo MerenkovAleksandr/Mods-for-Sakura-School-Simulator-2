@@ -126,7 +126,7 @@ private extension TWContentSelectorCollectionView_MTW {
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .fractionalHeight(0.2))
+                                               heightDimension: .fractionalHeight(0.25))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                        subitems: [item])
@@ -135,7 +135,8 @@ private extension TWContentSelectorCollectionView_MTW {
                                                       bottom: 2.0,
                                                       trailing: .zero)
         
-        group.contentInsets = .init(top: .zero, leading: 21.0, bottom: .zero, trailing: 21.0)
+        group.contentInsets = .init(top: 15.0, leading: 21.0, bottom: .zero, trailing: 21.0)
+        group.interItemSpacing = .fixed(15)
         
         return .init(group: group)
     }
@@ -165,11 +166,11 @@ private extension TWContentSelectorCollectionView_MTW {
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .fractionalHeight(0.1))
+                                               heightDimension: .fractionalHeight(0.135))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                        subitems: [item])
-        group.contentInsets = .init(top: .zero, leading: 21.0, bottom: .zero, trailing: 21.0)
+        group.contentInsets = .init(top: 15.0, leading: 21.0, bottom: .zero, trailing: 21.0)
         
         return .init(group: group)
     }

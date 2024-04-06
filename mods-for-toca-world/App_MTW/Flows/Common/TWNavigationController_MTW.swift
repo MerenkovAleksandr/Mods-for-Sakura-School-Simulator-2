@@ -44,7 +44,7 @@ class TWNavigationController_MTW: TWBaseController_MTW {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(vOffset)
             $0.centerX.equalToSuperview()
             $0.width.equalToSuperview().multipliedBy(iPad ? 0.7 : 0.9)
-            $0.height.equalTo(vNavigation.snp.width).multipliedBy(1.0/6.0)
+            $0.height.equalTo(vNavigation.snp.width).multipliedBy(1.0/4.0)
         }
     }
     

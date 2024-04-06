@@ -67,7 +67,7 @@ class TWPlainTextCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
     }
     
     override var cornerRadius: CGFloat {
-        adjustedRect.height / 2
+        adjustedRect.height / 4
     }
     
     override var backgroundFillColor: UIColor {

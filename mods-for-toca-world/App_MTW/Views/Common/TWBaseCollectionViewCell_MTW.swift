@@ -13,7 +13,7 @@ class TWBaseCollectionViewCell_MTW: UICollectionViewCell {
     var accentLayer = CALayer()
     
     var borderWidth: CGFloat {
-       iPad ? 6.0 : 3.0
+        iPad ? 6.0 : 1.0
     }
     
     var adjustment: CGFloat {

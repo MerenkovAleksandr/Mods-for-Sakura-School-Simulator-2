@@ -37,11 +37,11 @@ final class TWContentSelectorCollectionViewCell_MTW: TWBaseCollectionViewCell_MT
     }
     
     override var gradientEndPoint: CGPoint {
-        .init(x: 1.0, y: 1.0)
+        .init(x: 10.0, y: 10.0)
     }
     
     override var cornerRadius: CGFloat {
-        adjustedRect.height / 4
+        adjustedRect.height / 10
     }
     
     override var backgroundFillColor: UIColor {
