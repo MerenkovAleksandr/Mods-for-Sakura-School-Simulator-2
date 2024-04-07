@@ -27,8 +27,9 @@ private extension TWContentCategoryBubbleCollectionViewCell_MTW {
     
     func drawCoverLayer() {
         let cover = CALayer()
-        cover.frame = bounds
-        cover.contents = drawSelected ? #imageLiteral(resourceName: "icon_bubble").cgImage : #imageLiteral(resourceName: "icon_bubble_plain").cgImage
+        let updateBounds = CGRect(x: 0, y: 0, width: bounds.width + 8.0, height: bounds.height)
+        cover.frame = updateBounds
+        cover.contents = drawSelected ? #imageLiteral(resourceName: "icon_bubble_category_selected").cgImage : #imageLiteral(resourceName: "icon_bubble_category").cgImage
         
         coverLayer.removeFromSuperlayer()
         coverLayer = cover

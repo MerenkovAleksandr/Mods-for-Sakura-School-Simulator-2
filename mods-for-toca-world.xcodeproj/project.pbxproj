@@ -496,9 +496,9 @@
 		F431ADB82A6E7C7000F1A450 /* ContentCategory */ = {
 			isa = PBXGroup;
 			children = (
-				F4C18DAC2A83E0EF00DE280B /* TWContentCategoryBubbleCollectionViewCell_MTW.swift */,
 				F431ADB92A6E7C8F00F1A450 /* TWContentCategorySelectorView_MTW.swift */,
 				F431ADBB2A6E7EA700F1A450 /* TWContentCategoryCollectionViewCell_MTW.swift */,
+				F4C18DAC2A83E0EF00DE280B /* TWContentCategoryBubbleCollectionViewCell_MTW.swift */,
 			);
 			path = ContentCategory;
 			sourceTree = "<group>";

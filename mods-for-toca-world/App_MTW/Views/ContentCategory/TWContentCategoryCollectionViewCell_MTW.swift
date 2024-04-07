@@ -14,8 +14,8 @@ class TWContentCategoryCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
     
     var foregroundColor: UIColor {
         drawSelected
-        ? TWColors_MTW.bubbleViewTextColor
-        : TWColors_MTW.contentSelectorCellForeground
+        ? TWColors_MTW.contentCategoryCellSelectedForeground
+        : TWColors_MTW.contentCategoryCellForeground
     }
     
     override var adjustment: CGFloat { 4.0 }
@@ -45,6 +45,42 @@ class TWContentCategoryCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
         drawSelected
         ? TWColors_MTW.bubbleViewForegroundColor
         : TWColors_MTW.contentSelectorCellBackground
+    }
+    
+    override func drawBackgroundLayer_MTW() {
+        let path = UIBezierPath()
+        path.move(to: CGPoint(x: 25, y: 5))
+        path.addLine(to: CGPoint(x: bounds.width - 20, y: 5))
+        path.addArc(withCenter: CGPoint(x: bounds.width - 20, y: 22), radius: 17, startAngle: -.pi/2, endAngle: .pi/2, clockwise: true)
+        path.addLine(to: CGPoint(x: 25, y: 48))
+        path.addArc(withCenter: CGPoint(x: 25, y: 27), radius: 21, startAngle: .pi/2, endAngle:-.pi , clockwise: true)
+        path.addLine(to: CGPoint(x: 4, y: 30))
+        path.addArc(withCenter: CGPoint(x: 25, y: 26), radius: 21, startAngle: -.pi, endAngle: -.pi/2, clockwise: true)
+        
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        mask.lineWidth = borderWidth
+        mask.strokeColor = UIColor.black.cgColor
+        mask.fillColor = nil
+        
+        gradientLayer.removeFromSuperlayer()
+        gradientLayer = {
+            let layer = CAGradientLayer()
+            
+            layer.frame = bounds
+            layer.colors = gradientColors
+            layer.startPoint = gradientStartPoint
+            layer.endPoint = gradientEndPoint
+            layer.mask = mask
+            
+            return layer
+        }()
+        
+        layer.insertSublayer(gradientLayer, at: 0)
+        
+        backgroundFillColor.setFill()
+        
+        path.fill()
     }
     
     override init(frame: CGRect) {

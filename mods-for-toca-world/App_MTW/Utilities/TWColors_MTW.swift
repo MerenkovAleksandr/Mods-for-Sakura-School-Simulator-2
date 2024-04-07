@@ -25,6 +25,9 @@ final class TWColors_MTW {
     static let contentSelectorCellGradientEnd = #colorLiteral(red: 0.8941176471, green: 0.5607843137, blue: 0.7254901961, alpha: 1)
     static let contentSelectorCellBackground = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     static let contentSelectorCellForeground = #colorLiteral(red: 0.9176470588, green: 0.4274509804, blue: 0.662745098, alpha: 1)
+    // Content Category Cell Default
+    static let contentCategoryCellSelectedForeground = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    static let contentCategoryCellForeground = #colorLiteral(red: 0.9450980392, green: 0.7411764706, blue: 0.8392156863, alpha: 1)
     // Content Selector Cell Selected
     static let contentSelectorCellSelectedGradientStart = #colorLiteral(red: 0.8941176471, green: 0.5607843137, blue: 0.7254901961, alpha: 1)
     static let contentSelectorCellSelectedGradientEnd = #colorLiteral(red: 0.8941176471, green: 0.5607843137, blue: 0.7254901961, alpha: 1)
