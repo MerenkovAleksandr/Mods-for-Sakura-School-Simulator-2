@@ -34,7 +34,7 @@ final class TWColors_MTW {
     static let bubbleViewGradientStart = #colorLiteral(red: 1, green: 0.5215686275, blue: 0.7137254902, alpha: 1)
     static let bubbleViewGradientEnd = #colorLiteral(red: 1, green: 0.2666666667, blue: 0.5607843137, alpha: 1)
     static let bubbleViewForegroundColor = #colorLiteral(red: 0.9882352941, green: 0.3843137255, blue: 0.6274509804, alpha: 1)
-    static let bubbleViewTextColor = #colorLiteral(red: 1, green: 0.9087039828, blue: 0.9435891509, alpha: 1)
+    static let bubbleViewTextColor = #colorLiteral(red: 0.9254901961, green: 0.5803921569, blue: 0.7490196078, alpha: 1)
     // Editor
     static let thumbColor = #colorLiteral(red: 0.01568627451, green: 0.8784313725, blue: 0.8039215686, alpha: 1)
     static let deleteButtonForeground = #colorLiteral(red: 1, green: 0.4274509804, blue: 0.3882352941, alpha: 1)

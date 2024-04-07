@@ -57,7 +57,7 @@ enum TWContentType_MTW: Int, CaseIterable {
         case .editor:
             return ""
         case .set:
-            key = "House ideas"
+            key = "Sets"
         case .mod:
             key = "Mods"
         case .wallpaper:

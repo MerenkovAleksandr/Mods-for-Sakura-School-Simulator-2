@@ -103,7 +103,7 @@ extension TWContentCollectionViewCell_MTW {
 private extension TWContentCollectionViewCell_MTW {
     
     var favouriteToggleImage: UIImage {
-        isFavourite ? #imageLiteral(resourceName: "icon_star_selected") : #imageLiteral(resourceName: "icon_star")
+        isFavourite ? #imageLiteral(resourceName: "favourite_selected") : #imageLiteral(resourceName: "favourite")
     }
     
     var foregroundColor: UIColor {

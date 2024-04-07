@@ -62,16 +62,16 @@ class TWBaseView_MTW: UIView {
     }
     
     var backgroundLayerPath: UIBezierPath {
-//        .init(roundedRect: adjustedRect, cornerRadius: cornerRadius)
-        let path = UIBezierPath()
-        path.move(to: CGPoint(x: 25, y: 5))
-        path.addLine(to: CGPoint(x: bounds.width - 40, y: 15))
-        path.addArc(withCenter: CGPoint(x: bounds.width - 40, y: 44), radius: 29, startAngle: -.pi/2, endAngle: .pi/2, clockwise: true)
-        path.addLine(to: CGPoint(x: 25, y: 81))
-        path.addArc(withCenter: CGPoint(x: 25, y:60), radius: 21, startAngle: .pi/2, endAngle:-.pi , clockwise: true)
-        path.addLine(to: CGPoint(x: 4, y: 30))
-        path.addArc(withCenter: CGPoint(x: 25, y: 26), radius: 21, startAngle: -.pi, endAngle: -.pi/2, clockwise: true)
-        return path
+        .init(roundedRect: adjustedRect, cornerRadius: cornerRadius)
+//        let path = UIBezierPath()
+//        path.move(to: CGPoint(x: 25, y: 5))
+//        path.addLine(to: CGPoint(x: bounds.width - 40, y: 15))
+//        path.addArc(withCenter: CGPoint(x: bounds.width - 40, y: 44), radius: 29, startAngle: -.pi/2, endAngle: .pi/2, clockwise: true)
+//        path.addLine(to: CGPoint(x: 25, y: 81))
+//        path.addArc(withCenter: CGPoint(x: 25, y:60), radius: 21, startAngle: .pi/2, endAngle:-.pi , clockwise: true)
+//        path.addLine(to: CGPoint(x: 4, y: 30))
+//        path.addArc(withCenter: CGPoint(x: 25, y: 26), radius: 21, startAngle: -.pi, endAngle: -.pi/2, clockwise: true)
+//        return path
     }
     
     override init(frame: CGRect) {

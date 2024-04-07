@@ -63,14 +63,17 @@ private extension TWBubbleView_MTW {
     
     func layoutViews() {
         lblTitle.snp.makeConstraints {
-            $0.leading.equalToSuperview().offset(offset)
-            $0.trailing.equalToSuperview().inset(offset)
-            $0.top.equalToSuperview().offset(offset)
-            $0.bottom.equalToSuperview().inset(offset)
+            $0.leading.equalToSuperview()
+            $0.top.equalToSuperview().offset(-offset)
+            $0.trailing.equalToSuperview()
+            $0.bottom.equalToSuperview().inset(offset * 3)
         }
         
         ivContent.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.leading.equalToSuperview().offset(-offset)
+            $0.top.equalToSuperview().offset(-offset)
+            $0.width.equalTo(70)
+            $0.height.equalTo(27)
         }
     }
     

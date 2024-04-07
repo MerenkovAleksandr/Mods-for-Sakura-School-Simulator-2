@@ -10,7 +10,7 @@ import UIKit
 enum TWContentSelectorItem_MTW: String, CaseIterable {
     case mods = "Mods"
     case maps = "Maps"
-    case sets = "House ideas"
+    case sets = "Sets"
     case wallpapers = "Wallpapers"
     case characters = "Characters"
     case sounds = "Sounds"
