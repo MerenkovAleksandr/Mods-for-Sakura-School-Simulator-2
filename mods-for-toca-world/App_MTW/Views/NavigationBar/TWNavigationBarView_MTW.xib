@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TWNavigationBarView_MTW" customModule="template" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TWNavigationBarView_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
             <connections>
                 <outlet property="btnLeading" destination="XCh-G6-D0g" id="q9H-po-0Wv"/>
                 <outlet property="btnTrailing" destination="ldk-e7-Mz9" id="pUr-yE-QyG"/>
@@ -21,13 +22,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAVIGATION TITLE!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.55000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="kA3-yG-lNV">
-                    <rect key="frame" x="95.333333333333343" y="12" width="504.33333333333326" height="64"/>
+                    <rect key="frame" x="83.333333333333314" y="12" width="516.33333333333348" height="64"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCh-G6-D0g">
-                    <rect key="frame" x="36" y="26.333333333333332" width="35.333333333333343" height="35.333333333333343"/>
+                    <rect key="frame" x="24.000000000000004" y="26.333333333333332" width="35.333333333333343" height="35.333333333333343"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="XCh-G6-D0g" secondAttribute="height" id="GGy-xH-9o1"/>
                     </constraints>
@@ -38,6 +39,9 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldk-e7-Mz9">
                     <rect key="frame" x="623.66666666666663" y="26.333333333333332" width="35.333333333333371" height="35.333333333333343"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ldk-e7-Mz9" secondAttribute="height" id="YGb-8c-zIu"/>
+                    </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <connections>
                         <action selector="trailingBarBtnAction:" destination="-1" eventType="touchUpInside" id="Gz2-Ax-Q7u"/>
@@ -51,14 +55,13 @@
                 <constraint firstAttribute="trailing" secondItem="ldk-e7-Mz9" secondAttribute="trailing" constant="36" id="6k2-6w-PT2">
                     <variation key="heightClass=regular-widthClass=regular" constant="48"/>
                 </constraint>
-                <constraint firstItem="XCh-G6-D0g" firstAttribute="leading" secondItem="vai-NI-NAI" secondAttribute="leading" constant="36" id="9pz-Qk-d2A">
+                <constraint firstItem="XCh-G6-D0g" firstAttribute="leading" secondItem="vai-NI-NAI" secondAttribute="leading" constant="24" id="9pz-Qk-d2A">
                     <variation key="heightClass=regular-widthClass=regular" constant="48"/>
                 </constraint>
                 <constraint firstItem="kA3-yG-lNV" firstAttribute="top" secondItem="vai-NI-NAI" secondAttribute="top" constant="12" id="9wO-Yx-R15"/>
                 <constraint firstItem="kA3-yG-lNV" firstAttribute="leading" secondItem="XCh-G6-D0g" secondAttribute="trailing" constant="24" id="Kvi-Xh-gNy"/>
                 <constraint firstItem="ldk-e7-Mz9" firstAttribute="centerY" secondItem="vai-NI-NAI" secondAttribute="centerY" id="Q4B-UZ-POX"/>
                 <constraint firstAttribute="bottom" secondItem="kA3-yG-lNV" secondAttribute="bottom" constant="12" id="XWa-NC-wZz"/>
-                <constraint firstItem="ldk-e7-Mz9" firstAttribute="width" secondItem="ldk-e7-Mz9" secondAttribute="height" id="YGb-8c-zIu"/>
                 <constraint firstItem="ldk-e7-Mz9" firstAttribute="height" secondItem="vai-NI-NAI" secondAttribute="height" multiplier="0.4" id="dM5-2F-wMp"/>
                 <constraint firstItem="ldk-e7-Mz9" firstAttribute="leading" secondItem="kA3-yG-lNV" secondAttribute="trailing" constant="24" id="hgw-zP-bXk"/>
                 <constraint firstItem="XCh-G6-D0g" firstAttribute="centerY" secondItem="vai-NI-NAI" secondAttribute="centerY" id="u6p-EX-srh"/>

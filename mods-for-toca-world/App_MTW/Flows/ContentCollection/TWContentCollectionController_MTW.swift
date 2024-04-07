@@ -41,16 +41,12 @@ final class TWContentCollectionController_MTW: TWNavigationController_MTW {
         navigationController?.popViewController(animated: false)
     }
     
-    override func didTapTrailingBarBtn() {
-        vContentCollection.isSearching.toggle()
-        updateSearchViews()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureCollectionView_MTW()
         layoutCollectionView()
+        showSearchView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -81,11 +77,11 @@ final class TWContentCollectionController_MTW: TWNavigationController_MTW {
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(vOffset)
             make.centerX.equalTo(view)
             make.width.equalTo(view).multipliedBy(iPad ? 0.7 : 0.9)
-            make.height.equalTo(vNavigation.snp.width).multipliedBy(1.0/6.0)
+            make.height.equalTo(vNavigation.snp.width).multipliedBy(1.0/4.0)
         }
         
         vContent.snp.makeConstraints { make in
-            make.top.equalTo(vNavigation.snp.bottom)
+            make.top.equalTo(vNavigation.snp.bottom).offset(vOffset)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
@@ -158,6 +154,11 @@ private extension TWContentCollectionController_MTW {
         }
         navigationController?.pushViewController(controller,
                                                  animated: false)
+    }
+    
+    func showSearchView() {
+        vContentCollection.isSearching.toggle()
+        updateSearchViews()
     }
 
 }

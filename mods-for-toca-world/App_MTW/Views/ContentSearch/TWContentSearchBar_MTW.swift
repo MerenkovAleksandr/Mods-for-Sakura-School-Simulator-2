@@ -58,8 +58,15 @@ final class TWContentSearchBar_MTW: TWBaseView_MTW {
     }
     
     override var cornerRadius: CGFloat {
-        searchBarTextField.bounds.height / 2
+        searchBarTextField.bounds.height / 3
     }
+    
+//    override var adjustedRect: CGRect {
+//        .init(x: adjustment,
+//              y: adjustment,
+//              width: bounds.width - sizeAdjustment,
+//              height: 52)
+//    }
     
     override var backgroundLayerPath: UIBezierPath {
         .init(roundedRect: adjustedRect, cornerRadius: cornerRadius)

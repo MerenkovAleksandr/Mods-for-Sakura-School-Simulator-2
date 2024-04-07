@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,13 +35,13 @@
                             <rect key="frame" x="0.0" y="4" width="585" height="97.666666666666671"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="icon_search" translatesAutoresizingMaskIntoConstraints="NO" id="FLm-Yy-Mac">
-                                    <rect key="frame" x="36" y="29.333333333333336" width="39" height="39.000000000000007"/>
+                                    <rect key="frame" x="10" y="23.666666666666671" width="50" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="FLm-Yy-Mac" secondAttribute="height" id="6m5-KN-ZRq"/>
                                     </constraints>
                                 </imageView>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iXt-aV-Smu" customClass="TWContentSearchBarTextField_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
-                                    <rect key="frame" x="83.000000000000028" y="9.6666666666666643" width="376.66666666666674" height="78"/>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iXt-aV-Smu" customClass="TWContentSearchBarTextField_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
+                                    <rect key="frame" x="73" y="10" width="343" height="78"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
@@ -55,17 +55,17 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="iXt-aV-Smu" firstAttribute="leading" secondItem="FLm-Yy-Mac" secondAttribute="trailing" constant="8" symbolic="YES" id="2wJ-qw-IcX"/>
+                                <constraint firstItem="iXt-aV-Smu" firstAttribute="leading" secondItem="FLm-Yy-Mac" secondAttribute="trailing" constant="13" id="2wJ-qw-IcX"/>
                                 <constraint firstAttribute="trailing" secondItem="CkS-35-Ihw" secondAttribute="trailing" constant="36" id="3Ti-gK-ndN">
                                     <variation key="heightClass=regular-widthClass=regular" constant="49"/>
                                 </constraint>
-                                <constraint firstItem="FLm-Yy-Mac" firstAttribute="height" secondItem="ZuW-MV-vDX" secondAttribute="height" multiplier="0.4" id="IxX-vL-M4U"/>
+                                <constraint firstItem="FLm-Yy-Mac" firstAttribute="height" secondItem="ZuW-MV-vDX" secondAttribute="height" multiplier="0.4" constant="10.93333333333333" id="IxX-vL-M4U"/>
                                 <constraint firstItem="iXt-aV-Smu" firstAttribute="centerY" secondItem="ZuW-MV-vDX" secondAttribute="centerY" id="QNs-gm-O4t"/>
                                 <constraint firstItem="FLm-Yy-Mac" firstAttribute="centerY" secondItem="ZuW-MV-vDX" secondAttribute="centerY" id="Vic-g4-gdp"/>
                                 <constraint firstAttribute="width" secondItem="ZuW-MV-vDX" secondAttribute="height" multiplier="6" id="ZVz-RZ-ggM"/>
                                 <constraint firstItem="CkS-35-Ihw" firstAttribute="top" secondItem="ZuW-MV-vDX" secondAttribute="top" id="aAZ-gn-UbW"/>
                                 <constraint firstItem="CkS-35-Ihw" firstAttribute="leading" secondItem="iXt-aV-Smu" secondAttribute="trailing" constant="12" id="dSP-tt-PBa"/>
-                                <constraint firstItem="FLm-Yy-Mac" firstAttribute="leading" secondItem="ZuW-MV-vDX" secondAttribute="leading" constant="36" id="iXj-GE-0jG">
+                                <constraint firstItem="FLm-Yy-Mac" firstAttribute="leading" secondItem="ZuW-MV-vDX" secondAttribute="leading" constant="10" id="iXj-GE-0jG">
                                     <variation key="heightClass=regular-widthClass=regular" constant="48"/>
                                 </constraint>
                                 <constraint firstAttribute="bottom" secondItem="CkS-35-Ihw" secondAttribute="bottom" id="mjT-nj-KVM"/>
@@ -100,7 +100,7 @@
         </view>
     </objects>
     <resources>
-        <image name="icon_search" width="257" height="256"/>
+        <image name="icon_search" width="28" height="28"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
