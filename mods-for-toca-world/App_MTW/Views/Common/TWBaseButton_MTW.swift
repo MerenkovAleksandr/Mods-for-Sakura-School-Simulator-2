@@ -90,8 +90,17 @@ class TWBaseButton_MTW: UIButton {
     }
     
     func drawBackgroundLayer_MTW() {
-        let path = UIBezierPath(roundedRect: adjustedRect,
-                                cornerRadius: cornerRadius)
+        let path = UIBezierPath()
+        path.move(to: CGPoint(x: 25, y: 2))
+        path.addLine(to: CGPoint(x: bounds.width - 40, y: 10))
+        path.addArc(withCenter: CGPoint(x: bounds.width - 40, y: 29), radius: 19, startAngle: 3 * .pi/2, endAngle: 2 * .pi , clockwise: true)
+        path.addLine(to: CGPoint(x: bounds.width - 20, y: 32))
+        path.addArc(withCenter: CGPoint(x: bounds.width - 40, y: 39), radius: 19, startAngle: 2 * .pi, endAngle: .pi/2 , clockwise: true)
+        path.addLine(to: CGPoint(x: 25, y: 56))
+        path.addArc(withCenter: CGPoint(x: 25, y:42), radius: 14, startAngle: .pi/2, endAngle:-.pi , clockwise: true)
+        path.addLine(to: CGPoint(x: 10, y: 24))
+        path.addArc(withCenter: CGPoint(x: 25, y: 16), radius: 14, startAngle: -.pi, endAngle: -.pi/2, clockwise: true)
+        
         let mask = CAShapeLayer()
         mask.path = path.cgPath
         mask.lineWidth = borderWidth

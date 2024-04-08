@@ -98,11 +98,11 @@ extension TWContentDetailsView_MTW {
 private extension TWContentDetailsView_MTW {
     
     var foregroundColor: UIColor {
-        TWColors_MTW.navigationBarForeground
+        TWColors_MTW.contentDetailsViewForeground
     }
     
     var favouriteToggleImage: UIImage {
-        isFavourite ? #imageLiteral(resourceName: "icon_star_selected") : #imageLiteral(resourceName: "icon_star")
+        isFavourite ? #imageLiteral(resourceName: "favourite_selected") : #imageLiteral(resourceName: "favourite")
     }
     
     func loadFromNib() {

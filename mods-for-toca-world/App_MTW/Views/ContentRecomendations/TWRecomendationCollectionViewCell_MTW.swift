@@ -35,7 +35,7 @@ private extension TWRecomendationCollectionViewCell_MTW {
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 8.0
-        imageView.layer.borderWidth = 2.0
+        imageView.layer.borderWidth = 1.0
         imageView.layer.borderColor = TWColors_MTW.bubbleViewForegroundColor.cgColor
         
         makeLayout()
