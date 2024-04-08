@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,16 +18,16 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ZyK-4n-v0J">
-                        <rect key="frame" x="16" y="16" width="206" height="253"/>
+                        <rect key="frame" x="12" y="12" width="214" height="261"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" verticalCompressionResistancePriority="749" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M80-c7-mrs" customClass="TWImageView_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="206" height="206"/>
+                                <rect key="frame" x="0.0" y="0.0" width="214" height="214"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="M80-c7-mrs" secondAttribute="height" multiplier="1:1" id="STm-fl-H8X"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="752" insetsLayoutMarginsFromSafeArea="NO" text="LABEL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrJ-Ly-xvg">
-                                <rect key="frame" x="0.0" y="210" width="206" height="43"/>
+                                <rect key="frame" x="0.0" y="218" width="214" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -58,12 +58,12 @@
             <constraints>
                 <constraint firstItem="wAF-48-OfN" firstAttribute="top" secondItem="WeN-br-Zd4" secondAttribute="top" id="Dqr-9X-0IC"/>
                 <constraint firstAttribute="trailing" secondItem="1mD-Ta-FuF" secondAttribute="trailing" id="Vs7-6R-42m"/>
-                <constraint firstAttribute="bottom" secondItem="ZyK-4n-v0J" secondAttribute="bottom" constant="16" id="bhv-C2-l4O"/>
+                <constraint firstAttribute="bottom" secondItem="ZyK-4n-v0J" secondAttribute="bottom" constant="12" id="bhv-C2-l4O"/>
                 <constraint firstItem="1mD-Ta-FuF" firstAttribute="top" secondItem="WeN-br-Zd4" secondAttribute="top" id="sgm-XB-oo4"/>
                 <constraint firstItem="wAF-48-OfN" firstAttribute="leading" secondItem="WeN-br-Zd4" secondAttribute="leading" id="siy-tO-Agq"/>
-                <constraint firstAttribute="trailing" secondItem="ZyK-4n-v0J" secondAttribute="trailing" constant="16" id="uXX-ZR-HQx"/>
-                <constraint firstItem="ZyK-4n-v0J" firstAttribute="leading" secondItem="WeN-br-Zd4" secondAttribute="leading" constant="16" id="wi1-Xw-9lc"/>
-                <constraint firstItem="ZyK-4n-v0J" firstAttribute="top" secondItem="WeN-br-Zd4" secondAttribute="top" constant="16" id="zxx-2Z-2Ko"/>
+                <constraint firstAttribute="trailing" secondItem="ZyK-4n-v0J" secondAttribute="trailing" constant="12" id="uXX-ZR-HQx"/>
+                <constraint firstItem="ZyK-4n-v0J" firstAttribute="leading" secondItem="WeN-br-Zd4" secondAttribute="leading" constant="12" id="wi1-Xw-9lc"/>
+                <constraint firstItem="ZyK-4n-v0J" firstAttribute="top" secondItem="WeN-br-Zd4" secondAttribute="top" constant="12" id="zxx-2Z-2Ko"/>
             </constraints>
             <size key="customSize" width="238" height="285"/>
             <connections>

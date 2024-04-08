@@ -76,8 +76,8 @@ private extension TWImageView_MTW {
         addSubview(indicator)
         addSubview(ivNewCharacter)
         contentMode = .scaleAspectFill
-        backgroundColor = TWColors_MTW.navigationBarForeground
-        tintColor = TWColors_MTW.navigationBarBackground
+        backgroundColor = TWColors_MTW.imageViewBackground
+        tintColor = TWColors_MTW.imageViewForeground
         
         makeLayout()
         

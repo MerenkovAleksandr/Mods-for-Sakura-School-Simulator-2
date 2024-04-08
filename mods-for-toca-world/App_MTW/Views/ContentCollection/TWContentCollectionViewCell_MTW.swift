@@ -86,10 +86,12 @@ extension TWContentCollectionViewCell_MTW {
         
         if let character {
             ivContent.image = character.image
+            ivContent.backgroundColor = UIColor.white
             vBubble.makeInteractive { [weak self] in
                 guard let self else { return }
                 self.didCallSubMenu?(self.vBubble, character) }
         } else {
+            ivContent.backgroundColor = TWColors_MTW.imageViewEmptyBackground
             vBubble.hide_MTW()
             ivContent.createNewCharacter()
         }

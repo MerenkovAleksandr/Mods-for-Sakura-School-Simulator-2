@@ -766,8 +766,8 @@
 		F491B1F42A7A9D8700F4CD6B /* CharacterPreview */ = {
 			isa = PBXGroup;
 			children = (
-				F491B1F02A7A8CD500F4CD6B /* TWCharacterPreviewView_MTW.xib */,
 				F491B1F22A7A8D1400F4CD6B /* TWCharacterPreviewView_MTW.swift */,
+				F491B1F02A7A8CD500F4CD6B /* TWCharacterPreviewView_MTW.xib */,
 			);
 			path = CharacterPreview;
 			sourceTree = "<group>";
