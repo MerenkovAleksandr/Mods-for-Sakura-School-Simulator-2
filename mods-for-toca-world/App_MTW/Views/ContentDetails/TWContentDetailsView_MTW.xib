@@ -24,13 +24,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="MJ1-Jq-yiM">
-                    <rect key="frame" x="21" y="21" width="207" height="427"/>
+                    <rect key="frame" x="10" y="5" width="229" height="443"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9nW-9m-tAx">
-                            <rect key="frame" x="0.0" y="0.0" width="207" height="207"/>
+                            <rect key="frame" x="0.0" y="0.0" width="229" height="229"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" verticalCompressionResistancePriority="752" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHp-Xi-qpA" customClass="TWImageView_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="207" height="207"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="229" height="229"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="cHp-Xi-qpA" secondAttribute="height" id="FWr-OO-4c8"/>
                                     </constraints>
@@ -45,13 +45,13 @@
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" insetsLayoutMarginsFromSafeArea="NO" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3t-Uo-t68">
-                            <rect key="frame" x="0.0" y="241" width="207" height="20.333333333333314"/>
+                            <rect key="frame" x="0.0" y="263" width="229" height="20.333333333333314"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" insetsLayoutMarginsFromSafeArea="NO" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIy-zP-Eof">
-                            <rect key="frame" x="0.0" y="295.33333333333331" width="207" height="131.66666666666669"/>
+                            <rect key="frame" x="0.0" y="317.33333333333331" width="229" height="125.66666666666669"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -66,24 +66,24 @@
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b67-Jc-DOW" customClass="TWBubbleView_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="74.666666666666671" height="42"/>
+                    <rect key="frame" x="0.0" y="4" width="49.666666666666664" height="23.333333333333332"/>
                     <color key="backgroundColor" systemColor="separatorColor"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="b67-Jc-DOW" secondAttribute="height" multiplier="32:18" id="V9V-MF-McN"/>
+                        <constraint firstAttribute="width" secondItem="b67-Jc-DOW" secondAttribute="height" multiplier="29:18" constant="12" id="V9V-MF-McN"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="HR5-mz-5ml" secondAttribute="trailing" id="1ZL-9R-cRb"/>
-                <constraint firstAttribute="trailing" secondItem="MJ1-Jq-yiM" secondAttribute="trailing" constant="21" id="4K1-02-eP2"/>
+                <constraint firstAttribute="trailing" secondItem="MJ1-Jq-yiM" secondAttribute="trailing" constant="10" id="4K1-02-eP2"/>
                 <constraint firstItem="b67-Jc-DOW" firstAttribute="leading" secondItem="YSr-aa-6yY" secondAttribute="leading" id="Re0-EN-vUP"/>
-                <constraint firstItem="b67-Jc-DOW" firstAttribute="top" secondItem="YSr-aa-6yY" secondAttribute="top" id="V6v-BD-UNV"/>
+                <constraint firstItem="b67-Jc-DOW" firstAttribute="top" secondItem="YSr-aa-6yY" secondAttribute="top" constant="4" id="V6v-BD-UNV"/>
                 <constraint firstAttribute="bottom" secondItem="MJ1-Jq-yiM" secondAttribute="bottom" constant="21" id="Wer-fV-9tZ"/>
-                <constraint firstItem="b67-Jc-DOW" firstAttribute="width" secondItem="YSr-aa-6yY" secondAttribute="width" multiplier="0.3" id="abA-37-9uE"/>
+                <constraint firstItem="b67-Jc-DOW" firstAttribute="width" secondItem="YSr-aa-6yY" secondAttribute="width" multiplier="0.2" id="abA-37-9uE"/>
                 <constraint firstItem="HR5-mz-5ml" firstAttribute="top" secondItem="YSr-aa-6yY" secondAttribute="top" id="jKy-p6-eA4"/>
-                <constraint firstItem="MJ1-Jq-yiM" firstAttribute="top" secondItem="YSr-aa-6yY" secondAttribute="top" constant="21" id="olY-Fh-doh"/>
-                <constraint firstItem="MJ1-Jq-yiM" firstAttribute="leading" secondItem="YSr-aa-6yY" secondAttribute="leading" constant="21" id="xNG-oM-RKZ"/>
+                <constraint firstItem="MJ1-Jq-yiM" firstAttribute="top" secondItem="YSr-aa-6yY" secondAttribute="top" constant="5" id="olY-Fh-doh"/>
+                <constraint firstItem="MJ1-Jq-yiM" firstAttribute="leading" secondItem="YSr-aa-6yY" secondAttribute="leading" constant="10" id="xNG-oM-RKZ"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
