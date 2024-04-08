@@ -87,11 +87,13 @@ final class TWSoundsCollectionController_MTW: TWContentPlainCollectionController
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .absolute(80.0))
+                                               heightDimension: .absolute(95.0))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                        subitems: [item])
-        group.contentInsets = .init(top: .zero, leading: 42.0, bottom: .zero, trailing: 42.0)
+        group.contentInsets = .init(top: 15.0, leading: 20.0, bottom: .zero, trailing: 20.0)
+        
+        group.interItemSpacing = .fixed(15.0)
         
         let section = NSCollectionLayoutSection(group: group)
         

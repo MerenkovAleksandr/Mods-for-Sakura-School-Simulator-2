@@ -27,10 +27,10 @@ enum TWContentSelectorItem_MTW: String, CaseIterable {
     
     var isContentLocked: Bool {
         switch self {
-        case .mods:
-            return !IAPManager_MTW.shared.isFirstFuncEnabled
-        case .characters:
-            return !IAPManager_MTW.shared.isSecondFuncEnabled
+//        case .mods:
+//            return !IAPManager_MTW.shared.isFirstFuncEnabled
+//        case .characters:
+//            return !IAPManager_MTW.shared.isSecondFuncEnabled
         default:
             return false
         }
