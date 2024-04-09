@@ -36,7 +36,7 @@ final class TWCharacterEditorController_MTW: TWBaseController_MTW {
     @IBOutlet private var cvCategory: UICollectionView!
     @IBOutlet private var lblCategory: UILabel!
     @IBOutlet private var vColorPicker: TWColorPicker_MTW!
-    @IBOutlet private var btnDone: TWBaseButton_MTW!
+    @IBOutlet private var btnDone: TWCharacterEditorEditButton_MTW!
     @IBOutlet private var vToolbar: TWEditorToolbarView!
     @IBOutlet private var ivBackBtn: UIImageView!
     @IBOutlet private var activityIndicator: TWActivityIndicator_MTW!
@@ -157,7 +157,7 @@ private extension TWCharacterEditorController_MTW {
                                                comment: "")
         btnDone.setAttributedTitle(TWAttributtedStrings_MTW
             .barAttrString(with: localizedTitle,
-                           foregroundColor: TWColors_MTW.bubbleViewTextColor),
+                           foregroundColor: TWColors_MTW.buttonForegroundColor),
                                        for: .normal)
     }
     
@@ -204,7 +204,7 @@ private extension TWCharacterEditorController_MTW {
         cvCategory.allowsMultipleSelection = false
         cvCategory.showsVerticalScrollIndicator = false
         cvCategory.showsHorizontalScrollIndicator = false
-        cvCategory.collectionViewLayout = collectionViewLayout(item: 60.0)
+        cvCategory.collectionViewLayout = collectionViewLayout(item: 70.0)
         cvCategory.register(CategoryCell.self,
                             forCellWithReuseIdentifier: CategoryCell.reuseIdentifier)
     }
@@ -257,7 +257,7 @@ private extension TWCharacterEditorController_MTW {
             cvElement.alpha = 1.0
             cvElement.show_MTW()
             configureColorPicker(configurator.character.color,
-                                 visibility: false)
+                                 visibility: true)
         }
     }
     

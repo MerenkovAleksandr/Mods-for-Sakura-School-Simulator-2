@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B81B6B5D2A91F90D00C4A2FA /* TWArray_MTW+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81B6B5C2A91F90D00C4A2FA /* TWArray_MTW+Extension.swift */; };
+		BB52388C2BC55D6900848901 /* TWChatacterEditorEditButton_MTW.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB52388B2BC55D6900848901 /* TWChatacterEditorEditButton_MTW.swift */; };
 		F431ADA42A6E4C9400F1A450 /* TWContentModel_MTW.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431ADA32A6E4C9400F1A450 /* TWContentModel_MTW.swift */; };
 		F431ADA72A6E4EEF00F1A450 /* TWContentCollectionController_MTW.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431ADA62A6E4EEF00F1A450 /* TWContentCollectionController_MTW.swift */; };
 		F431ADA92A6E519700F1A450 /* TWContentCollectionView_MTW.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431ADA82A6E519700F1A450 /* TWContentCollectionView_MTW.swift */; };
@@ -214,6 +215,7 @@
 
 /* Begin PBXFileReference section */
 		B81B6B5C2A91F90D00C4A2FA /* TWArray_MTW+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TWArray_MTW+Extension.swift"; sourceTree = "<group>"; };
+		BB52388B2BC55D6900848901 /* TWChatacterEditorEditButton_MTW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWChatacterEditorEditButton_MTW.swift; sourceTree = "<group>"; };
 		F431ADA32A6E4C9400F1A450 /* TWContentModel_MTW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWContentModel_MTW.swift; sourceTree = "<group>"; };
 		F431ADA62A6E4EEF00F1A450 /* TWContentCollectionController_MTW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWContentCollectionController_MTW.swift; sourceTree = "<group>"; };
 		F431ADA82A6E519700F1A450 /* TWContentCollectionView_MTW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWContentCollectionView_MTW.swift; sourceTree = "<group>"; };
@@ -564,6 +566,7 @@
 			isa = PBXGroup;
 			children = (
 				F4782C232A717274003ACE37 /* TWCharacterRenderView_MTW.swift */,
+				BB52388B2BC55D6900848901 /* TWChatacterEditorEditButton_MTW.swift */,
 			);
 			path = CharacterEditor;
 			sourceTree = "<group>";
@@ -1386,6 +1389,7 @@
 				F48081202A6C29D7007845BC /* TWPreloader_MTW.swift in Sources */,
 				F431ADA72A6E4EEF00F1A450 /* TWContentCollectionController_MTW.swift in Sources */,
 				F4782C282A726114003ACE37 /* TWEditorMockupSet_MTW.swift in Sources */,
+				BB52388C2BC55D6900848901 /* TWChatacterEditorEditButton_MTW.swift in Sources */,
 				FEC8BA352A617C48009833DD /* extensions-freeform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
