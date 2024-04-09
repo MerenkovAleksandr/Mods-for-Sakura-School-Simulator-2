@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pga-Bp-eJS" customClass="TWCharacterEditorCollectionViewCell_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="238" height="285"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="238" height="285"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="nbG-k5-wcE">
+                        <rect key="frame" x="12" y="12" width="214" height="261"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" verticalCompressionResistancePriority="749" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJu-CE-mWY" customClass="TWImageView_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="214" height="214"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NJu-CE-mWY" secondAttribute="height" multiplier="1:1" id="Frg-jp-B7y"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="752" insetsLayoutMarginsFromSafeArea="NO" text="LABEL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMz-vw-hKA">
+                                <rect key="frame" x="0.0" y="218" width="214" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q9z-Sx-Stg" customClass="TWBubbleView_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
+                        <rect key="frame" x="194" y="4" width="64" height="45.666666666666664"/>
+                        <color key="backgroundColor" systemColor="separatorColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Q9z-Sx-Stg" secondAttribute="height" multiplier="32:18" constant="-17" id="jHr-qL-0en"/>
+                            <constraint firstAttribute="width" constant="64" id="pg4-1m-uct">
+                                <variation key="heightClass=regular-widthClass=regular" constant="96"/>
+                            </constraint>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="nbG-k5-wcE" firstAttribute="leading" secondItem="pga-Bp-eJS" secondAttribute="leading" constant="12" id="5Tb-ru-rtb"/>
+                <constraint firstItem="Q9z-Sx-Stg" firstAttribute="top" secondItem="pga-Bp-eJS" secondAttribute="top" constant="4" id="6e9-G6-D5f"/>
+                <constraint firstItem="nbG-k5-wcE" firstAttribute="top" secondItem="pga-Bp-eJS" secondAttribute="top" constant="12" id="9Fu-Ix-HI6"/>
+                <constraint firstAttribute="bottom" secondItem="nbG-k5-wcE" secondAttribute="bottom" constant="12" id="C2N-zZ-WNN"/>
+                <constraint firstAttribute="trailing" secondItem="Q9z-Sx-Stg" secondAttribute="trailing" constant="-20" id="MTV-1g-Rbi"/>
+                <constraint firstAttribute="trailing" secondItem="nbG-k5-wcE" secondAttribute="trailing" constant="12" id="Yqg-av-gEZ"/>
+            </constraints>
+            <size key="customSize" width="238" height="285"/>
+            <connections>
+                <outlet property="ivContent" destination="NJu-CE-mWY" id="41V-49-pMW"/>
+                <outlet property="lblTitle" destination="GMz-vw-hKA" id="QW0-4K-BrC"/>
+                <outlet property="vBubble" destination="Q9z-Sx-Stg" id="bSG-I1-bV8"/>
+            </connections>
+            <point key="canvasLocation" x="90.07633587786259" y="8.8028169014084519"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="separatorColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

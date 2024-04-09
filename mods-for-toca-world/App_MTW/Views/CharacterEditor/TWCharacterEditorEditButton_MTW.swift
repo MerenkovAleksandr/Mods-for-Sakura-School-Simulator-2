@@ -1,5 +1,5 @@
 //
-//  TWChatacterEditorEditButton_MTW.swift
+//  TWCharacterEditorEditButton_MTW.swift
 //  mods-for-toca-world
 //
 //  Created by Александр Меренков on 09.04.2024.

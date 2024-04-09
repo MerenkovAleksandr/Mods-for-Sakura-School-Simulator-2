@@ -45,6 +45,10 @@ extension TWBubbleView_MTW {
         configureActionButton()
     }
     
+    func updateImageViewForEdit() {
+        ivContent.image = #imageLiteral(resourceName: "elipsis")
+    }
+    
 }
 
 // MARK: - Private API

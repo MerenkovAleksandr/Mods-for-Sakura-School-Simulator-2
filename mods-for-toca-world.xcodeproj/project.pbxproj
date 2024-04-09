@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B81B6B5D2A91F90D00C4A2FA /* TWArray_MTW+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81B6B5C2A91F90D00C4A2FA /* TWArray_MTW+Extension.swift */; };
-		BB52388C2BC55D6900848901 /* TWChatacterEditorEditButton_MTW.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB52388B2BC55D6900848901 /* TWChatacterEditorEditButton_MTW.swift */; };
+		BB52388C2BC55D6900848901 /* TWCharacterEditorEditButton_MTW.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB52388B2BC55D6900848901 /* TWCharacterEditorEditButton_MTW.swift */; };
+		BB5238902BC5740200848901 /* TWCharacterEditorCollectionViewCell_MTW.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB52388F2BC5740200848901 /* TWCharacterEditorCollectionViewCell_MTW.swift */; };
+		BB5238942BC5748800848901 /* TWCharacterEditorCollectionViewCell_MTW.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB5238932BC5748800848901 /* TWCharacterEditorCollectionViewCell_MTW.xib */; };
 		F431ADA42A6E4C9400F1A450 /* TWContentModel_MTW.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431ADA32A6E4C9400F1A450 /* TWContentModel_MTW.swift */; };
 		F431ADA72A6E4EEF00F1A450 /* TWContentCollectionController_MTW.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431ADA62A6E4EEF00F1A450 /* TWContentCollectionController_MTW.swift */; };
 		F431ADA92A6E519700F1A450 /* TWContentCollectionView_MTW.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431ADA82A6E519700F1A450 /* TWContentCollectionView_MTW.swift */; };
@@ -215,7 +217,9 @@
 
 /* Begin PBXFileReference section */
 		B81B6B5C2A91F90D00C4A2FA /* TWArray_MTW+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TWArray_MTW+Extension.swift"; sourceTree = "<group>"; };
-		BB52388B2BC55D6900848901 /* TWChatacterEditorEditButton_MTW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWChatacterEditorEditButton_MTW.swift; sourceTree = "<group>"; };
+		BB52388B2BC55D6900848901 /* TWCharacterEditorEditButton_MTW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWCharacterEditorEditButton_MTW.swift; sourceTree = "<group>"; };
+		BB52388F2BC5740200848901 /* TWCharacterEditorCollectionViewCell_MTW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWCharacterEditorCollectionViewCell_MTW.swift; sourceTree = "<group>"; };
+		BB5238932BC5748800848901 /* TWCharacterEditorCollectionViewCell_MTW.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TWCharacterEditorCollectionViewCell_MTW.xib; sourceTree = "<group>"; };
 		F431ADA32A6E4C9400F1A450 /* TWContentModel_MTW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWContentModel_MTW.swift; sourceTree = "<group>"; };
 		F431ADA62A6E4EEF00F1A450 /* TWContentCollectionController_MTW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWContentCollectionController_MTW.swift; sourceTree = "<group>"; };
 		F431ADA82A6E519700F1A450 /* TWContentCollectionView_MTW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWContentCollectionView_MTW.swift; sourceTree = "<group>"; };
@@ -566,7 +570,9 @@
 			isa = PBXGroup;
 			children = (
 				F4782C232A717274003ACE37 /* TWCharacterRenderView_MTW.swift */,
-				BB52388B2BC55D6900848901 /* TWChatacterEditorEditButton_MTW.swift */,
+				BB52388B2BC55D6900848901 /* TWCharacterEditorEditButton_MTW.swift */,
+				BB52388F2BC5740200848901 /* TWCharacterEditorCollectionViewCell_MTW.swift */,
+				BB5238932BC5748800848901 /* TWCharacterEditorCollectionViewCell_MTW.xib */,
 			);
 			path = CharacterEditor;
 			sourceTree = "<group>";
@@ -1231,6 +1237,7 @@
 				F431ADB32A6E582E00F1A450 /* TWContentSearchBar_MTW.xib in Resources */,
 				F48081522A6D15C3007845BC /* Baloo2-Bold.ttf in Resources */,
 				FEC8BA432A617C48009833DD /* PremiumMainController_MTW.xib in Resources */,
+				BB5238942BC5748800848901 /* TWCharacterEditorCollectionViewCell_MTW.xib in Resources */,
 				FEC8B9CA2A6179A6009833DD /* Assets.xcassets in Resources */,
 				F48081562A6D15C7007845BC /* Baloo2-SemiBold.ttf in Resources */,
 				FEC8BA4B2A617C48009833DD /* ReusableView_MTW.xib in Resources */,
@@ -1381,6 +1388,7 @@
 				F480815C2A6D27A3007845BC /* TWContentSelectorCollectionView_MTW.swift in Sources */,
 				FEC8BA9C2A617FE6009833DD /* ConstraintMakerEditable.swift in Sources */,
 				F431ADA92A6E519700F1A450 /* TWContentCollectionView_MTW.swift in Sources */,
+				BB5238902BC5740200848901 /* TWCharacterEditorCollectionViewCell_MTW.swift in Sources */,
 				FEC8BA5E2A617E6A009833DD /* Configurations_MTW.swift in Sources */,
 				F4782C242A717274003ACE37 /* TWCharacterRenderView_MTW.swift in Sources */,
 				FEC8BA442A617C48009833DD /* PremiumMainController_MTW.swift in Sources */,
@@ -1389,7 +1397,7 @@
 				F48081202A6C29D7007845BC /* TWPreloader_MTW.swift in Sources */,
 				F431ADA72A6E4EEF00F1A450 /* TWContentCollectionController_MTW.swift in Sources */,
 				F4782C282A726114003ACE37 /* TWEditorMockupSet_MTW.swift in Sources */,
-				BB52388C2BC55D6900848901 /* TWChatacterEditorEditButton_MTW.swift in Sources */,
+				BB52388C2BC55D6900848901 /* TWCharacterEditorEditButton_MTW.swift in Sources */,
 				FEC8BA352A617C48009833DD /* extensions-freeform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

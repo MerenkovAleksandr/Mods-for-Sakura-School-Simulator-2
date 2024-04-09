@@ -16,7 +16,7 @@ final class TWCharacterSelectorController_MTW: TWContentPlainCollectionControlle
      
      typealias DataSource = UICollectionViewDiffableDataSource<Int, SelectorItem>
      typealias Snapshot = NSDiffableDataSourceSnapshot<Int, SelectorItem>
-     typealias Cell = TWContentCollectionViewCell_MTW
+     typealias Cell = TWCharacterEditorCollectionViewCell_MTW
      
      private var dataSource: DataSource?
      private var content: [TWCharacterPreview_MTW] = []
