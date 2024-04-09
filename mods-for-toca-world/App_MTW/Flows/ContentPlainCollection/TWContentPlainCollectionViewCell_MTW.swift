@@ -13,7 +13,7 @@ class TWContentPlainCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
     @IBOutlet var lblContentTitle: UILabel!
     
     override var cornerRadius: CGFloat {
-        bounds.height / 4
+        bounds.height / 8
     }
     
     var foregroundColor: UIColor {
@@ -55,7 +55,7 @@ class TWContentPlainCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        ivContent.setCornerRadius_MTW(8.0)
+        ivContent.setCornerRadius_MTW(16.0)
     }
     
     override var isHighlighted: Bool {

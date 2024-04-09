@@ -4,7 +4,7 @@ import UIKit
 class SliderCellView: UIView {
     
     private var fontName: String = "SFProText-Bold"
-    private var textColot: UIColor = UIColor.white
+    private var textColot: UIColor = UIColor.blue
     
     lazy var titleLabel: UILabel = {
         var label = UILabel()

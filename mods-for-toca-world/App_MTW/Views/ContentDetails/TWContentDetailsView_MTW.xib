@@ -27,31 +27,31 @@
                     <rect key="frame" x="10" y="5" width="229" height="443"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9nW-9m-tAx">
-                            <rect key="frame" x="0.0" y="0.0" width="229" height="229"/>
+                            <rect key="frame" x="0.0" y="0.0" width="229" height="154"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" verticalCompressionResistancePriority="752" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHp-Xi-qpA" customClass="TWImageView_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="229" height="229"/>
+                                    <rect key="frame" x="0.0" y="4" width="229" height="150"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" secondItem="cHp-Xi-qpA" secondAttribute="height" id="FWr-OO-4c8"/>
+                                        <constraint firstAttribute="width" secondItem="cHp-Xi-qpA" secondAttribute="height" constant="79" id="FWr-OO-4c8"/>
                                     </constraints>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="cHp-Xi-qpA" firstAttribute="centerX" secondItem="9nW-9m-tAx" secondAttribute="centerX" id="FTs-jz-xeX"/>
-                                <constraint firstItem="cHp-Xi-qpA" firstAttribute="top" secondItem="9nW-9m-tAx" secondAttribute="top" id="SLC-VI-j0P"/>
+                                <constraint firstItem="cHp-Xi-qpA" firstAttribute="top" secondItem="9nW-9m-tAx" secondAttribute="top" constant="4" id="SLC-VI-j0P"/>
                                 <constraint firstAttribute="bottom" secondItem="cHp-Xi-qpA" secondAttribute="bottom" id="XL6-t6-Nu7"/>
                                 <constraint firstItem="cHp-Xi-qpA" firstAttribute="width" secondItem="9nW-9m-tAx" secondAttribute="width" id="uda-6M-3hh"/>
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" insetsLayoutMarginsFromSafeArea="NO" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3t-Uo-t68">
-                            <rect key="frame" x="0.0" y="263" width="229" height="20.333333333333314"/>
+                            <rect key="frame" x="0.0" y="188" width="229" height="20.333333333333343"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" insetsLayoutMarginsFromSafeArea="NO" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIy-zP-Eof">
-                            <rect key="frame" x="0.0" y="317.33333333333331" width="229" height="125.66666666666669"/>
+                            <rect key="frame" x="0.0" y="242.33333333333337" width="229" height="200.66666666666663"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>

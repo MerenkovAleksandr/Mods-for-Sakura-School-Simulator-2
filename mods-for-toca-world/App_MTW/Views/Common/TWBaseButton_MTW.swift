@@ -139,7 +139,7 @@ class TWBaseButton_MTW: UIButton {
     }
     
     func configure_MTW(with localizedTitle: String) {
-        let foregroundColor = TWColors_MTW.bubbleViewTextColor
+        let foregroundColor = TWColors_MTW.buttonForegroundColor
             .withAlphaComponent(opacity)
         let attributtedTitle = TWAttributtedStrings_MTW
             .barAttrString(with: localizedTitle,

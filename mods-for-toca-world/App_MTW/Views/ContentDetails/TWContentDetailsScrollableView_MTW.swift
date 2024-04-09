@@ -99,7 +99,7 @@ private extension TWContentDetailsScrollableView_MTW {
         
         btnDownload.setAttributedTitle(TWAttributtedStrings_MTW
             .barAttrString(with: localizedTitle,
-                           foregroundColor: TWColors_MTW.bubbleViewTextColor),
+                           foregroundColor: TWColors_MTW.buttonForegroundColor),
                                        for: .normal)
     }
     

@@ -121,7 +121,7 @@ private extension TWContentDetailsView_MTW {
             lblTitle.show_MTW()
             lblTitle.attributedText = TWAttributtedStrings_MTW
                 .contentDetailTitleAttrString(with: localizedString,
-                                              foregroundColor: foregroundColor)
+                                              foregroundColor: TWColors_MTW.contentDetailsTitleForeground)
             lblTitle.adjustsFontSizeToFitWidth = false
             return
         }
