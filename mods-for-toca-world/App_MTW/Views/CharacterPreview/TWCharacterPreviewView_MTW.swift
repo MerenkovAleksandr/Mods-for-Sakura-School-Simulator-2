@@ -65,7 +65,7 @@ private extension TWCharacterPreviewView_MTW {
         let localizedTitle = NSLocalizedString("Text52ID", comment: "")
         btnDownload.setAttributedTitle(TWAttributtedStrings_MTW
             .barAttrString(with: localizedTitle,
-                           foregroundColor: TWColors_MTW.bubbleViewTextColor),
+                           foregroundColor: TWColors_MTW.buttonForegroundColor),
                                        for: .normal)
     }
     

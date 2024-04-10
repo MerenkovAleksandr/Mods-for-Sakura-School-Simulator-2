@@ -61,13 +61,6 @@ final class TWContentSearchBar_MTW: TWBaseView_MTW {
         searchBarTextField.bounds.height / 3
     }
     
-//    override var adjustedRect: CGRect {
-//        .init(x: adjustment,
-//              y: adjustment,
-//              width: bounds.width - sizeAdjustment,
-//              height: 52)
-//    }
-    
     override var backgroundLayerPath: UIBezierPath {
         .init(roundedRect: adjustedRect, cornerRadius: cornerRadius)
     }
@@ -174,7 +167,7 @@ private extension TWContentSearchBar_MTW {
     }
     
     var searchBarTintColor: UIColor {
-        TWColors_MTW.navigationBarForeground
+        TWColors_MTW.navigationSearchForeground
     }
     
     func configureSubviews_MTW() {
@@ -196,7 +189,7 @@ private extension TWContentSearchBar_MTW {
     }
     
     func configureCloseButton() {
-        let localizedString = NSLocalizedString("Text37ID", comment: "")
+        let localizedString = NSLocalizedString("Text37ID", comment: "").uppercased()
         let attributtedString = TWAttributtedStrings_MTW
             .searchBarAttrString(with: localizedString,
                                  foregroundColor: searchBarTintColor)

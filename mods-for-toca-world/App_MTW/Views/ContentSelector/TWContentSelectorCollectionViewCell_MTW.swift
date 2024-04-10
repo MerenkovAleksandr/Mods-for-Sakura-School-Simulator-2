@@ -62,7 +62,7 @@ final class TWContentSelectorCollectionViewCell_MTW: TWBaseCollectionViewCell_MT
             return
         }
         
-        drawAccent()
+//        drawAccent()
     }
     
     override func prepareForReuse() {

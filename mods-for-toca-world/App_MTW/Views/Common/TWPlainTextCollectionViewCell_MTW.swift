@@ -84,7 +84,7 @@ class TWPlainTextCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
             return
         }
         
-        drawAccent()
+//        drawAccent()
     }
     
 }

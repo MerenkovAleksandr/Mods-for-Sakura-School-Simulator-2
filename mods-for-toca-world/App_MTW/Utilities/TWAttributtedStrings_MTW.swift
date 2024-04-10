@@ -66,8 +66,8 @@ final class TWAttributtedStrings_MTW {
     -> NSAttributedString {
         .compose(localizedString: localizedString,
                  kern: -1.5,
-                 font: .defaultFont(.semiBold, size: 24.0),
-                 paragraphStyle: .aligned(.right),
+                 font: .defaultFont(.medium, size: 20.0),
+                 paragraphStyle: .aligned(.center),
                  foregroundcolor: foregroundColor)
     }
     

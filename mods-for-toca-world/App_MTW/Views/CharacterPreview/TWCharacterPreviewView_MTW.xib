@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,10 +23,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3g-mp-hS0" customClass="TWCharacterCoverView_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
-                    <rect key="frame" x="24" y="12" width="345" height="658"/>
+                    <rect key="frame" x="24" y="12" width="345" height="610"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BxA-Ff-xU0">
-                            <rect key="frame" x="12" y="24" width="321" height="610"/>
+                            <rect key="frame" x="12" y="24" width="321" height="562"/>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" systemColor="separatorColor"/>
@@ -60,7 +60,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8a-5y-lPb" customClass="TWBaseButton_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
-                    <rect key="frame" x="36" y="694" width="321" height="64"/>
+                    <rect key="frame" x="36" y="646" width="321" height="64"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="64" id="GZI-wv-Klg">
                             <variation key="heightClass=regular-widthClass=regular" constant="128"/>
@@ -76,7 +76,7 @@
             <color key="backgroundColor" systemColor="separatorColor"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="P3g-mp-hS0" secondAttribute="trailing" constant="24" id="6Ry-ZC-FOg"/>
-                <constraint firstItem="B8a-5y-lPb" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="Bb8-g2-HtD"/>
+                <constraint firstItem="B8a-5y-lPb" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" constant="-48" id="Bb8-g2-HtD"/>
                 <constraint firstItem="ZIi-6K-FIJ" firstAttribute="leading" secondItem="P3g-mp-hS0" secondAttribute="leading" id="GMX-r0-HTu"/>
                 <constraint firstItem="B8a-5y-lPb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="36" id="Io6-zE-NW8"/>
                 <constraint firstItem="B8a-5y-lPb" firstAttribute="top" secondItem="P3g-mp-hS0" secondAttribute="bottom" constant="24" id="d6v-Ox-A8L"/>
@@ -95,7 +95,7 @@
     </objects>
     <resources>
         <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

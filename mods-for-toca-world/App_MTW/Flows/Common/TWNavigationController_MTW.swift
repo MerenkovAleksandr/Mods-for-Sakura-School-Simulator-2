@@ -19,7 +19,7 @@ class TWNavigationController_MTW: TWBaseController_MTW {
     var trailingBarIcon: UIImage? { nil }
     
     var vOffset: CGFloat {
-        iPad ? 24.0 : 12.0
+        iPad ? 24.0 : 2.0
     }
     
     override func viewDidLoad() {
@@ -53,7 +53,8 @@ class TWNavigationController_MTW: TWBaseController_MTW {
             $0.top.equalTo(vNavigation.snp.bottom).offset(vOffset)
             $0.leading.equalTo(view)
             $0.trailing.equalTo(view)
-            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(12.0)
+//            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(12.0)
+            $0.bottom.equalTo(view.snp.bottom).inset(4.0)
         }
     }
     
