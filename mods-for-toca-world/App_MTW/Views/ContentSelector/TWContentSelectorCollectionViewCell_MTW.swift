@@ -14,6 +14,8 @@ final class TWContentSelectorCollectionViewCell_MTW: TWBaseCollectionViewCell_MT
     @IBOutlet private var ivContentLock: UIImageView!
     @IBOutlet private var vContentLock: UIView!
     
+    private var backgrountColorToSet: UIColor = .clear
+    
     override var isHighlighted: Bool {
         didSet {
             updateApperance()
@@ -45,13 +47,7 @@ final class TWContentSelectorCollectionViewCell_MTW: TWBaseCollectionViewCell_MT
     }
     
     override var backgroundFillColor: UIColor {
-        drawSelected
-        ? TWColors_MTW
-            .contentSelectorCellSelectedBackground
-            
-        : TWColors_MTW
-            .contentSelectorCellBackground
-            
+        backgrountColorToSet
     }
     
     override func draw(_ rect: CGRect) {
@@ -62,7 +58,6 @@ final class TWContentSelectorCollectionViewCell_MTW: TWBaseCollectionViewCell_MT
             return
         }
         
-//        drawAccent()
     }
     
     override func prepareForReuse() {
@@ -81,8 +76,11 @@ extension TWContentSelectorCollectionViewCell_MTW {
     
     func configure_MTW(with item: TWContentSelectorItem_MTW,
                    isContentLocked: Bool = false) {
+
         configureContentImage(item.image)
         configureTitleLabel(with: item.localizedTitle)
+
+        backgrountColorToSet = item.backgroundColor
         
         ivContentLock.visibility(isVisible: isContentLocked)
         vContentLock.visibility(isVisible: isContentLocked)
@@ -106,9 +104,7 @@ private extension TWContentSelectorCollectionViewCell_MTW {
     }
     
     var foregoundColor: UIColor {
-        drawSelected
-        ? TWColors_MTW.contentSelectorCellSelectedForeground
-        : TWColors_MTW.contentSelectorCellForeground
+        TWColors_MTW.contentCellForeground
     }
     
     var defaultGradientColors: [CGColor] {[

@@ -43,11 +43,8 @@ final class TWColors_MTW {
     static let imageViewForeground = #colorLiteral(red: 0.9254901961, green: 0.5803921569, blue: 0.7490196078, alpha: 1)
     static let imageViewEmptyBackground = #colorLiteral(red: 0.8509803922, green: 0.8509803922, blue: 0.8509803922, alpha: 1)
     // Bubble Button Colors
-//    static let bubbleViewGradientStart = #colorLiteral(red: 1, green: 0.5215686275, blue: 0.7137254902, alpha: 1)
-//    static let bubbleViewGradientEnd = #colorLiteral(red: 1, green: 0.2666666667, blue: 0.5607843137, alpha: 1)
     static let bubbleViewGradientStart = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
     static let bubbleViewGradientEnd = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
-//    static let bubbleViewForegroundColor = #colorLiteral(red: 0.9882352941, green: 0.3843137255, blue: 0.6274509804, alpha: 1)
     static let bubbleViewForegroundColor = #colorLiteral(red: 1, green: 0.7647058824, blue: 0.3764705882, alpha: 1)
     static let bubbleViewTextColor = #colorLiteral(red: 0.9254901961, green: 0.5803921569, blue: 0.7490196078, alpha: 1)
     // Button
@@ -57,4 +54,9 @@ final class TWColors_MTW {
     static let deleteButtonForeground = #colorLiteral(red: 1, green: 0.4274509804, blue: 0.3882352941, alpha: 1)
     // Characters
     static let charactersImageBackground = #colorLiteral(red: 0.8980392157, green: 0.8549019608, blue: 0.9529411765, alpha: 1)
+    // Menu Cell
+    static let menuOrangeCellBackground = #colorLiteral(red: 1, green: 0.7647058824, blue: 0.3764705882, alpha: 1)
+    static let menuBlueCellBackground = #colorLiteral(red: 0.03137254902, green: 0.4784313725, blue: 0.8431372549, alpha: 1)
+    static let menuCrimsonCellBackground = #colorLiteral(red: 1, green: 0.6862745098, blue: 0.768627451, alpha: 1)
+    static let menuPurpleCellBackground = #colorLiteral(red: 0.6470588235, green: 0.3803921569, blue: 0.768627451, alpha: 1)
 }

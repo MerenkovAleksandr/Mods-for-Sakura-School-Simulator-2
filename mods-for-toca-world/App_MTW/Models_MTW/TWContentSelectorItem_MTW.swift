@@ -8,8 +8,8 @@
 import UIKit
 
 enum TWContentSelectorItem_MTW: String, CaseIterable {
-    case mods = "Mods"
     case maps = "Maps"
+    case mods = "Mods"
     case sets = "Sets"
     case wallpapers = "Wallpapers"
     case characters = "Characters"
@@ -22,7 +22,7 @@ enum TWContentSelectorItem_MTW: String, CaseIterable {
     }
     
     static var subSectionItems: [TWContentSelectorItem_MTW] {
-        []
+        [.sets, .wallpapers, .characters, .sounds, .characterRandomizer, .guides]
     }
     
     var isContentLocked: Bool {
@@ -33,6 +33,19 @@ enum TWContentSelectorItem_MTW: String, CaseIterable {
 //            return !IAPManager_MTW.shared.isSecondFuncEnabled
         default:
             return false
+        }
+    }
+    
+    var backgroundColor: UIColor {
+        switch self {
+        case .maps, .guides:
+            return TWColors_MTW.menuOrangeCellBackground
+        case .mods, .characters, .sounds:
+            return TWColors_MTW.menuBlueCellBackground
+        case .sets, .characterRandomizer:
+            return TWColors_MTW.menuCrimsonCellBackground
+        case .wallpapers:
+            return TWColors_MTW.menuPurpleCellBackground
         }
     }
     

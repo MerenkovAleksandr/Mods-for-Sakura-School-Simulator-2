@@ -51,7 +51,7 @@ final class TWAttributtedStrings_MTW {
         if UIScreen.main.nativeBounds.height < 2436, !iPad {
             size = 20.0
         } else {
-            size = iPad ? 36.0 : 21.0
+            size = iPad ? 36.0 : 24.0
         }
         
         return .compose(localizedString: localizedString,

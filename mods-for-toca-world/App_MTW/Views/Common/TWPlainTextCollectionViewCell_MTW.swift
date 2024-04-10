@@ -67,7 +67,7 @@ class TWPlainTextCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
     }
     
     override var cornerRadius: CGFloat {
-        adjustedRect.height / 4
+        adjustedRect.height / 8
     }
     
     override var backgroundFillColor: UIColor {
@@ -84,7 +84,6 @@ class TWPlainTextCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
             return
         }
         
-//        drawAccent()
     }
     
 }
@@ -94,7 +93,6 @@ class TWPlainTextCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
 extension TWPlainTextCollectionViewCell_MTW {
     
     func configure_MTW(with item: TWContentSelectorItem_MTW) {
-        
         configureTitleLabel(with: item.localizedTitle)
         
         setNeedsDisplay()
@@ -102,7 +100,7 @@ extension TWPlainTextCollectionViewCell_MTW {
     
     func configure_MTW(with title: String, isLoading: Bool = false) {
         isInactive = isLoading
-        
+
         configureTitleLabel(with: title)
         
         if isLoading {
@@ -125,9 +123,6 @@ private extension TWPlainTextCollectionViewCell_MTW {
     }
     
     var foregoundColor: UIColor {
-//        drawSelected
-//        ? TWColors_MTW.contentSelectorCellSelectedForeground.withAlphaComponent(opacity)
-//        : TWColors_MTW.contentSelectorCellForeground.withAlphaComponent(opacity)
         TWColors_MTW.contentCellForeground
     }
     

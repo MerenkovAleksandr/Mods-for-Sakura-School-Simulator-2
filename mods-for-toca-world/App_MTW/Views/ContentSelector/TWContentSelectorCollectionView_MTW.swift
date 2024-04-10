@@ -22,7 +22,7 @@ final class TWContentSelectorCollectionView_MTW: UIView {
     typealias DataSource = UICollectionViewDiffableDataSource<Section, Item>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Item>
     typealias Cell = TWContentSelectorCollectionViewCell_MTW
-    typealias PlainTextCell = TWPlainTextCollectionViewCell_MTW
+    typealias PlainTextCell = TWContentSelectorCollectionViewCell_MTW
     
     weak var delegate: TWContentSelectorDelegate_MTW?
     
@@ -57,7 +57,7 @@ extension TWContentSelectorCollectionView_MTW: UICollectionViewDelegate {
               let section = Section(rawValue: indexPath.section) else {
             return
         }
-        
+
         let item = snapshot.itemIdentifiers(inSection: section)[indexPath.row]
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
@@ -108,12 +108,10 @@ private extension TWContentSelectorCollectionView_MTW {
             (sectionIndex: Int, environment: NSCollectionLayoutEnvironment)
             -> NSCollectionLayoutSection? in
             switch Section.allCases[sectionIndex] {
-            default:
+            case .mainSection:
                 return self.generateMainSectionLayout()
-//            case .mainSection:
-//                return self.generateMainSectionLayout()
-//            case .subSection:
-//                return self.generateSubSectionLayout()
+            case .subSection:
+                return self.generateSubSectionLayout()
             }
         }
     }
@@ -123,12 +121,14 @@ private extension TWContentSelectorCollectionView_MTW {
     }
     
     func generateMainSectionLayoutPhone() -> NSCollectionLayoutSection {
+        
+        
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33),
-                                              heightDimension: .fractionalHeight(1.1))
+                                              heightDimension: .fractionalHeight(1.4))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .fractionalHeight(0.25))
+                                               heightDimension: .fractionalHeight(0.24))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                        subitems: [item])
@@ -137,7 +137,7 @@ private extension TWContentSelectorCollectionView_MTW {
                                                       bottom: 2.0,
                                                       trailing: .zero)
         
-        group.contentInsets = .init(top: 25.0, leading: 21.0, bottom: .zero, trailing: 21.0)
+        group.contentInsets = .init(top: 15.0, leading: 21.0, bottom: .zero, trailing: 21.0)
         group.interItemSpacing = .fixed(10)
         
         return .init(group: group)
@@ -163,16 +163,22 @@ private extension TWContentSelectorCollectionView_MTW {
     }
     
     func generateSubSectionLayoutPhone() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                              heightDimension: .fractionalHeight(1.0))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33),
+                                              heightDimension: .fractionalHeight(1.8))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .fractionalHeight(0.135))
+                                               heightDimension: .fractionalHeight(0.25))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                        subitems: [item])
-        group.contentInsets = .init(top: 15.0, leading: 21.0, bottom: .zero, trailing: 21.0)
+        group.contentInsets = NSDirectionalEdgeInsets(top: 2.0,
+                                                      leading: .zero,
+                                                      bottom: 2.0,
+                                                      trailing: .zero)
+        
+        group.contentInsets = .init(top: 85.0, leading: 21.0, bottom: .zero, trailing: 21.0)
+        group.interItemSpacing = .fixed(10)
         
         return .init(group: group)
     }
@@ -197,7 +203,7 @@ private extension TWContentSelectorCollectionView_MTW {
     func registerCells_MTW() {
         collectionView.register(Cell.nib,
                                 forCellWithReuseIdentifier: Cell.reuseIdentifier)
-        collectionView.register(PlainTextCell.self,
+        collectionView.register(PlainTextCell.nib,
                                 forCellWithReuseIdentifier: PlainTextCell.reuseIdentifier)
     }
     
@@ -208,14 +214,15 @@ private extension TWContentSelectorCollectionView_MTW {
                let cell = collectionView
                 .dequeueReusableCell(withReuseIdentifier: PlainTextCell.reuseIdentifier,
                                      for: indexPath) as? PlainTextCell {
-                cell.configure_MTW(with: item)
                 
+                cell.configure_MTW(with: item)
                 return cell
             }
             
             if let cell = collectionView
                 .dequeueReusableCell(withReuseIdentifier: Cell.reuseIdentifier,
                                      for: indexPath) as? Cell {
+                
                 cell.configure_MTW(with: item,
                                isContentLocked: item.isContentLocked)
                 
