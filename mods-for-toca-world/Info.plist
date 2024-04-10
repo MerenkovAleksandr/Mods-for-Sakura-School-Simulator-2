@@ -8,6 +8,7 @@
 	<string>22192-19DD0</string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Anton-Regular.ttf</string>
 		<string>SFProText-Bold.ttf</string>
 		<string>Baloo2-Regular.ttf</string>
 		<string>Baloo2-Medium.ttf</string>

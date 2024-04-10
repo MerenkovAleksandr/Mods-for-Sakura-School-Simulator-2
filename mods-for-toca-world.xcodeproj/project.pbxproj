@@ -11,6 +11,7 @@
 		BB52388C2BC55D6900848901 /* TWCharacterEditorEditButton_MTW.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB52388B2BC55D6900848901 /* TWCharacterEditorEditButton_MTW.swift */; };
 		BB5238902BC5740200848901 /* TWCharacterEditorCollectionViewCell_MTW.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB52388F2BC5740200848901 /* TWCharacterEditorCollectionViewCell_MTW.swift */; };
 		BB5238942BC5748800848901 /* TWCharacterEditorCollectionViewCell_MTW.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB5238932BC5748800848901 /* TWCharacterEditorCollectionViewCell_MTW.xib */; };
+		BBD05D2A2BC72B8E004A03B3 /* Anton-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBD05D292BC72B8E004A03B3 /* Anton-Regular.ttf */; };
 		F431ADA42A6E4C9400F1A450 /* TWContentModel_MTW.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431ADA32A6E4C9400F1A450 /* TWContentModel_MTW.swift */; };
 		F431ADA72A6E4EEF00F1A450 /* TWContentCollectionController_MTW.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431ADA62A6E4EEF00F1A450 /* TWContentCollectionController_MTW.swift */; };
 		F431ADA92A6E519700F1A450 /* TWContentCollectionView_MTW.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431ADA82A6E519700F1A450 /* TWContentCollectionView_MTW.swift */; };
@@ -220,6 +221,7 @@
 		BB52388B2BC55D6900848901 /* TWCharacterEditorEditButton_MTW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWCharacterEditorEditButton_MTW.swift; sourceTree = "<group>"; };
 		BB52388F2BC5740200848901 /* TWCharacterEditorCollectionViewCell_MTW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWCharacterEditorCollectionViewCell_MTW.swift; sourceTree = "<group>"; };
 		BB5238932BC5748800848901 /* TWCharacterEditorCollectionViewCell_MTW.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TWCharacterEditorCollectionViewCell_MTW.xib; sourceTree = "<group>"; };
+		BBD05D292BC72B8E004A03B3 /* Anton-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Anton-Regular.ttf"; sourceTree = "<group>"; };
 		F431ADA32A6E4C9400F1A450 /* TWContentModel_MTW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWContentModel_MTW.swift; sourceTree = "<group>"; };
 		F431ADA62A6E4EEF00F1A450 /* TWContentCollectionController_MTW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWContentCollectionController_MTW.swift; sourceTree = "<group>"; };
 		F431ADA82A6E519700F1A450 /* TWContentCollectionView_MTW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWContentCollectionView_MTW.swift; sourceTree = "<group>"; };
@@ -733,6 +735,7 @@
 		F48081592A6D1B81007845BC /* Resources_MTW */ = {
 			isa = PBXGroup;
 			children = (
+				BBD05D292BC72B8E004A03B3 /* Anton-Regular.ttf */,
 				F48081402A6D0388007845BC /* Baloo2-Bold.ttf */,
 				F480813E2A6D0388007845BC /* Baloo2-ExtraBold.ttf */,
 				F48081422A6D0389007845BC /* Baloo2-Medium.ttf */,
@@ -1214,6 +1217,7 @@
 			files = (
 				F4DB77EB2A8A8D0300B3E720 /* TransactionView_MTW.xib in Resources */,
 				F48081532A6D15C7007845BC /* Baloo2-Regular.ttf in Resources */,
+				BBD05D2A2BC72B8E004A03B3 /* Anton-Regular.ttf in Resources */,
 				F48081552A6D15C7007845BC /* Baloo2-Medium.ttf in Resources */,
 				F4BC630B2A6FCDEF00B0F981 /* TWContentDetailsScrollableView_MTW.xib in Resources */,
 				F467405A2A714D9400EDA646 /* TWCharacterEditorController_MTW.xib in Resources */,

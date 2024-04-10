@@ -18,7 +18,7 @@ final class TWFonts_MTW {
     }
     
     class func defaultFont(for style: FontStyle, size: CGFloat) -> UIFont {
-        .init(name: .init(format: "Baloo2-%@", style.rawValue), size: size)!
+        .init(name: .init(format: "Anton-Regular", style.rawValue), size: size)!
     }
     
 }
