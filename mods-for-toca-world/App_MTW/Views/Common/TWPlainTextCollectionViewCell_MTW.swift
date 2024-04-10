@@ -11,6 +11,7 @@ class TWPlainTextCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
     
     var opacity: CGFloat { isInactive ? 0.5 : 1.0 }
     
+    private var ivPlayStatus = UIImageView()
     private var lblContentTitle = UILabel()
     private var indicator : UIActivityIndicatorView = {
         let view = UIActivityIndicatorView()
@@ -40,6 +41,7 @@ class TWPlainTextCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
         backgroundColor = .clear
         
         contentView.backgroundColor = .clear
+        contentView.addSubview(ivPlayStatus)
         contentView.addSubview(lblContentTitle)
         contentView.addSubview(indicator)
         
@@ -67,7 +69,7 @@ class TWPlainTextCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
     }
     
     override var cornerRadius: CGFloat {
-        adjustedRect.height / 8
+        adjustedRect.height / 3.5
     }
     
     override var backgroundFillColor: UIColor {
@@ -101,6 +103,8 @@ extension TWPlainTextCollectionViewCell_MTW {
     func configure_MTW(with title: String, isLoading: Bool = false) {
         isInactive = isLoading
 
+        configureImageView()
+        
         configureTitleLabel(with: title)
         
         if isLoading {
@@ -123,7 +127,7 @@ private extension TWPlainTextCollectionViewCell_MTW {
     }
     
     var foregoundColor: UIColor {
-        TWColors_MTW.contentCellForeground
+        TWColors_MTW.soundCellForeground
     }
     
     var defaultGradientColors: [CGColor] {[
@@ -141,10 +145,15 @@ private extension TWPlainTextCollectionViewCell_MTW {
         setNeedsDisplay()
     }
     
+    func configureImageView() {
+        ivPlayStatus.image = #imageLiteral(resourceName: "icon_play")
+    }
+    
     func configureTitleLabel(with title: String) {
         lblContentTitle.attributedText = TWAttributtedStrings_MTW
             .contentSelectorItemAttrString(with: title,
                                            foregroundColor: foregoundColor)
+        lblContentTitle.textAlignment = .left
         lblContentTitle.sizeToFit()
     }
     
@@ -154,8 +163,16 @@ private extension TWPlainTextCollectionViewCell_MTW {
     }
     
     func makeLayout() {
+        ivPlayStatus.snp.makeConstraints {
+            $0.leading.equalToSuperview().offset(10.0)
+            $0.top.equalToSuperview().offset(8.0)
+            $0.bottom.equalToSuperview().inset(8.0)
+            $0.width.equalTo(62)
+            $0.centerY.equalToSuperview()
+        }
+        
         lblContentTitle.snp.makeConstraints {
-            $0.leading.equalToSuperview().offset(24.0)
+            $0.leading.equalTo(ivPlayStatus.snp.trailing).offset(10.0)
             $0.trailing.equalToSuperview().inset(24.0)
             $0.top.equalToSuperview().offset(16.0)
             $0.bottom.equalToSuperview().inset(16.0)

@@ -27,6 +27,8 @@ final class TWColors_MTW {
     static let contentSelectorCellBackground = #colorLiteral(red: 0.03137254902, green: 0.4784313725, blue: 0.8431372549, alpha: 1)
     static let contentSelectorCellForeground = #colorLiteral(red: 0.9176470588, green: 0.4274509804, blue: 0.662745098, alpha: 1)
     static let contentCellForeground = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    // Sound Cell
+    static let soundCellForeground = #colorLiteral(red: 0.8980392157, green: 0.8549019608, blue: 0.9529411765, alpha: 1)
     // Content Category Cell Default
     static let contentCategoryCellSelectedForeground = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     static let contentCategoryCellForeground = #colorLiteral(red: 0.9450980392, green: 0.7411764706, blue: 0.8392156863, alpha: 1)
