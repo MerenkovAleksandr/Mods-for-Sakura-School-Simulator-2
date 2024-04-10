@@ -75,7 +75,7 @@ extension TWCharacterEditorCollectionViewCell_MTW {
         
         if let character {
             ivContent.image = character.image
-            ivContent.backgroundColor = TWColors_MTW.contentSelectorCellBackground
+            ivContent.backgroundColor = TWColors_MTW.imageViewEmptyBackground
             vBubble.makeInteractive { [weak self] in
                 guard let self else { return }
                 self.didCallSubMenu?(self.vBubble, character) }

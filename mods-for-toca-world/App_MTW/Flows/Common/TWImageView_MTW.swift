@@ -94,7 +94,7 @@ private extension TWImageView_MTW {
         ivNewCharacter.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.centerY.equalToSuperview()
-            $0.width.height.equalToSuperview().dividedBy(5.0)
+            $0.width.height.equalToSuperview().dividedBy(4.0)
         }
     }
 

@@ -36,7 +36,7 @@ final class TWCharacterEditorController_MTW: TWBaseController_MTW {
     @IBOutlet private var cvCategory: UICollectionView!
     @IBOutlet private var lblCategory: UILabel!
     @IBOutlet private var vColorPicker: TWColorPicker_MTW!
-    @IBOutlet private var btnDone: TWCharacterEditorEditButton_MTW!
+    @IBOutlet private var btnDone: TWBaseButton_MTW!
     @IBOutlet private var vToolbar: TWEditorToolbarView!
     @IBOutlet private var ivBackBtn: UIImageView!
     @IBOutlet private var activityIndicator: TWActivityIndicator_MTW!

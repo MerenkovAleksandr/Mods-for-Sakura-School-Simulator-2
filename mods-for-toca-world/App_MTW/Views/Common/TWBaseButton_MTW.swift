@@ -94,7 +94,7 @@ class TWBaseButton_MTW: UIButton {
                                 cornerRadius: cornerRadius)
         let mask = CAShapeLayer()
         mask.path = path.cgPath
-        mask.lineWidth = borderWidth
+//        mask.lineWidth = borderWidth
         mask.strokeColor = UIColor.black.cgColor
         mask.fillColor = nil
         

@@ -41,6 +41,7 @@ extension TWCharacterPreviewView_MTW {
     
     func configure(_ preview: TWCharacterPreview_MTW) {
         ivContent.image = preview.image
+        ivContent.backgroundColor = TWColors_MTW.charactersImageBackground
     }
     
 }
