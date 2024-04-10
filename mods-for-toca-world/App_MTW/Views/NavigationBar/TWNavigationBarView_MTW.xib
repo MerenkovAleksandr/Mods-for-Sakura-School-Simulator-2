@@ -22,13 +22,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAVIGATION TITLE!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.55000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="kA3-yG-lNV">
-                    <rect key="frame" x="83.333333333333314" y="12" width="516.33333333333348" height="64"/>
+                    <rect key="frame" x="76.666666666666686" y="12" width="523" height="64"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCh-G6-D0g">
-                    <rect key="frame" x="24.000000000000004" y="26.333333333333332" width="35.333333333333343" height="35.333333333333343"/>
+                    <rect key="frame" x="0.0" y="17.666666666666668" width="52.666666666666671" height="52.666666666666657"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="XCh-G6-D0g" secondAttribute="height" id="GGy-xH-9o1"/>
                     </constraints>
@@ -50,12 +50,12 @@
             </subviews>
             <color key="backgroundColor" systemColor="separatorColor"/>
             <constraints>
-                <constraint firstItem="XCh-G6-D0g" firstAttribute="height" secondItem="vai-NI-NAI" secondAttribute="height" multiplier="0.4" id="19O-Q5-gaE"/>
+                <constraint firstItem="XCh-G6-D0g" firstAttribute="height" secondItem="vai-NI-NAI" secondAttribute="height" multiplier="0.6" id="19O-Q5-gaE"/>
                 <constraint firstItem="kA3-yG-lNV" firstAttribute="centerY" secondItem="vai-NI-NAI" secondAttribute="centerY" id="4U5-Dy-l1o"/>
                 <constraint firstAttribute="trailing" secondItem="ldk-e7-Mz9" secondAttribute="trailing" constant="36" id="6k2-6w-PT2">
                     <variation key="heightClass=regular-widthClass=regular" constant="48"/>
                 </constraint>
-                <constraint firstItem="XCh-G6-D0g" firstAttribute="leading" secondItem="vai-NI-NAI" secondAttribute="leading" constant="24" id="9pz-Qk-d2A">
+                <constraint firstItem="XCh-G6-D0g" firstAttribute="leading" secondItem="vai-NI-NAI" secondAttribute="leading" id="9pz-Qk-d2A">
                     <variation key="heightClass=regular-widthClass=regular" constant="48"/>
                 </constraint>
                 <constraint firstItem="kA3-yG-lNV" firstAttribute="top" secondItem="vai-NI-NAI" secondAttribute="top" constant="12" id="9wO-Yx-R15"/>

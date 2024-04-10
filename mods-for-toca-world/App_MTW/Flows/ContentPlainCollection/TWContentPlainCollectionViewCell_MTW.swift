@@ -13,13 +13,14 @@ class TWContentPlainCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
     @IBOutlet var lblContentTitle: UILabel!
     
     override var cornerRadius: CGFloat {
-        bounds.height / 8
+        bounds.height / 4
     }
     
     var foregroundColor: UIColor {
-        isHighlighted
-        ? TWColors_MTW.contentSelectorCellSelectedForeground
-        : TWColors_MTW.contentSelectorCellForeground
+//        isHighlighted
+//        ? TWColors_MTW.contentSelectorCellSelectedForeground
+//        : TWColors_MTW.contentSelectorCellForeground
+        TWColors_MTW.contentCellForeground
     }
     
     override var gradientColors: [CGColor] {

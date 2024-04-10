@@ -93,16 +93,16 @@ class TWContentPlainCollectionController_MTW: TWNavigationController_MTW {
     
     func generateLayoutPhone() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                              heightDimension: .fractionalHeight(1.3))
+                                              heightDimension: .fractionalHeight(0.8))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .fractionalHeight(0.18))
+                                               heightDimension: .fractionalHeight(0.17))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                        subitems: [item])
-        group.contentInsets = .init(top: 35.0, leading: 0, bottom: 0, trailing: 0)
-        group.interItemSpacing = .fixed(35)
+        group.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)
+//        group.interItemSpacing = .fixed(10)
         
         let section = NSCollectionLayoutSection(group: group)
         

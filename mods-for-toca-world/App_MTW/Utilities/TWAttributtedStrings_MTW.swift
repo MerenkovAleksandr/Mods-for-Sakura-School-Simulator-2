@@ -115,11 +115,11 @@ final class TWAttributtedStrings_MTW {
     -> NSAttributedString {
         .compose(localizedString: localizedString,
                  kern: -0.5,
-                 font: .defaultFont(.medium,
-                                    size: iPad ? 24.0 : 16.0),
+                 font: .defaultFont(.semiBold,
+                                    size: iPad ? 24.0 : 15.0),
                  paragraphStyle: .aligned(.left,
                                           lineBrakeMode: .byTruncatingTail,
-                                          lineHeightMultiple: 0.8),
+                                          lineHeightMultiple: 0.9),
                  foregroundcolor: foregroundColor)
     }
     
@@ -128,8 +128,8 @@ final class TWAttributtedStrings_MTW {
     -> NSAttributedString {
         .compose(localizedString: localizedString,
                  kern: -0.5,
-                 font: .defaultFont(.medium,
-                                    size: iPad ? 36.0 : 20.0),
+                 font: .defaultFont(.regular,
+                                    size: iPad ? 36.0 : 21.0),
                  paragraphStyle: .aligned(.center,
                                           lineBrakeMode: .byTruncatingTail,
                                           lineHeightMultiple: 0.8),

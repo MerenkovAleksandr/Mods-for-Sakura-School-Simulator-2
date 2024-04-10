@@ -24,7 +24,7 @@ final class TWColors_MTW {
     // Content Selector Cell Default
     static let contentSelectorCellGradientStart = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
     static let contentSelectorCellGradientEnd = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
-    static let contentSelectorCellBackground = #colorLiteral(red: 0.01568627451, green: 0.3725490196, blue: 0.662745098, alpha: 1)
+    static let contentSelectorCellBackground = #colorLiteral(red: 0.03137254902, green: 0.4784313725, blue: 0.8431372549, alpha: 1)
     static let contentSelectorCellForeground = #colorLiteral(red: 0.9176470588, green: 0.4274509804, blue: 0.662745098, alpha: 1)
     static let contentCellForeground = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     // Content Category Cell Default
@@ -36,8 +36,8 @@ final class TWColors_MTW {
     static let contentSelectorCellSelectedBackground = #colorLiteral(red: 0.9450980392, green: 0.7411764706, blue: 0.8392156863, alpha: 1)
     static let contentSelectorCellSelectedForeground = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     // Content Details View
-    static let contentDetailsTitleForeground = #colorLiteral(red: 0.9176470588, green: 0.4274509804, blue: 0.662745098, alpha: 1)
-    static let contentDetailsViewForeground = #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1)
+    static let contentDetailsTitleForeground = #colorLiteral(red: 0.8980392157, green: 0.8549019608, blue: 0.9529411765, alpha: 1)
+    static let contentDetailsViewForeground = #colorLiteral(red: 0.8980392157, green: 0.8549019608, blue: 0.9529411765, alpha: 1)
     // Image View
     static let imageViewBackground = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     static let imageViewForeground = #colorLiteral(red: 0.9254901961, green: 0.5803921569, blue: 0.7490196078, alpha: 1)
