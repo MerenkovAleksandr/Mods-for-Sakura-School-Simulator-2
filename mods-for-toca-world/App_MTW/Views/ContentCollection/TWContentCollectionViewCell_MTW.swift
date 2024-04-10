@@ -133,7 +133,6 @@ private extension TWContentCollectionViewCell_MTW {
     
     func configureAttributes(_ attributes: TWContentAttributes_MTW?) {
         vBubble.visibility(isVisible: attributes?.new ?? false)
-        
         configureFavouriteImageView()
     }
     
@@ -147,6 +146,7 @@ private extension TWContentCollectionViewCell_MTW {
     func configureFavouriteImageView() {
         ivFavourite.show_MTW()
         ivFavourite.image = favouriteToggleImage
+        ivFavourite.backgroundColor = TWColors_MTW.contentSelectorCellBackground
         
         configureIsFavouriteTap()
     }

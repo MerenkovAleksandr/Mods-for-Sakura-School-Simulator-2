@@ -45,9 +45,9 @@
                         </constraints>
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favourite" translatesAutoresizingMaskIntoConstraints="NO" id="1mD-Ta-FuF">
-                        <rect key="frame" x="202" y="0.0" width="36" height="36"/>
+                        <rect key="frame" x="206" y="12" width="20" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="36" id="UK9-n7-ANs">
+                            <constraint firstAttribute="width" constant="20" id="UK9-n7-ANs">
                                 <variation key="heightClass=regular-widthClass=regular" constant="48"/>
                             </constraint>
                             <constraint firstAttribute="width" secondItem="1mD-Ta-FuF" secondAttribute="height" multiplier="1:1" id="zxe-P4-opc"/>
@@ -57,9 +57,9 @@
             </view>
             <constraints>
                 <constraint firstItem="wAF-48-OfN" firstAttribute="top" secondItem="WeN-br-Zd4" secondAttribute="top" constant="4" id="Dqr-9X-0IC"/>
-                <constraint firstAttribute="trailing" secondItem="1mD-Ta-FuF" secondAttribute="trailing" id="Vs7-6R-42m"/>
+                <constraint firstAttribute="trailing" secondItem="1mD-Ta-FuF" secondAttribute="trailing" constant="12" id="Vs7-6R-42m"/>
                 <constraint firstAttribute="bottom" secondItem="ZyK-4n-v0J" secondAttribute="bottom" constant="12" id="bhv-C2-l4O"/>
-                <constraint firstItem="1mD-Ta-FuF" firstAttribute="top" secondItem="WeN-br-Zd4" secondAttribute="top" id="sgm-XB-oo4"/>
+                <constraint firstItem="1mD-Ta-FuF" firstAttribute="top" secondItem="WeN-br-Zd4" secondAttribute="top" constant="12" id="sgm-XB-oo4"/>
                 <constraint firstItem="wAF-48-OfN" firstAttribute="leading" secondItem="WeN-br-Zd4" secondAttribute="leading" id="siy-tO-Agq"/>
                 <constraint firstAttribute="trailing" secondItem="ZyK-4n-v0J" secondAttribute="trailing" constant="12" id="uXX-ZR-HQx"/>
                 <constraint firstItem="ZyK-4n-v0J" firstAttribute="leading" secondItem="WeN-br-Zd4" secondAttribute="leading" constant="12" id="wi1-Xw-9lc"/>
@@ -76,7 +76,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="favourite" width="36" height="36"/>
+        <image name="favourite" width="16" height="20"/>
         <systemColor name="separatorColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
