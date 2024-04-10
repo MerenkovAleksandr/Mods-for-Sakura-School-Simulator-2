@@ -108,10 +108,12 @@ private extension TWContentSelectorCollectionView_MTW {
             (sectionIndex: Int, environment: NSCollectionLayoutEnvironment)
             -> NSCollectionLayoutSection? in
             switch Section.allCases[sectionIndex] {
-            case .mainSection:
+            default:
                 return self.generateMainSectionLayout()
-            case .subSection:
-                return self.generateSubSectionLayout()
+//            case .mainSection:
+//                return self.generateMainSectionLayout()
+//            case .subSection:
+//                return self.generateSubSectionLayout()
             }
         }
     }
@@ -121,8 +123,8 @@ private extension TWContentSelectorCollectionView_MTW {
     }
     
     func generateMainSectionLayoutPhone() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
-                                              heightDimension: .fractionalHeight(1.0))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33),
+                                              heightDimension: .fractionalHeight(1.1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
@@ -135,8 +137,8 @@ private extension TWContentSelectorCollectionView_MTW {
                                                       bottom: 2.0,
                                                       trailing: .zero)
         
-        group.contentInsets = .init(top: 15.0, leading: 21.0, bottom: .zero, trailing: 21.0)
-        group.interItemSpacing = .fixed(15)
+        group.contentInsets = .init(top: 25.0, leading: 21.0, bottom: .zero, trailing: 21.0)
+        group.interItemSpacing = .fixed(10)
         
         return .init(group: group)
     }

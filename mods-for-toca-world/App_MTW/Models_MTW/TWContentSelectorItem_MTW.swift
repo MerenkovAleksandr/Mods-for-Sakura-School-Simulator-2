@@ -18,11 +18,11 @@ enum TWContentSelectorItem_MTW: String, CaseIterable {
     case guides = "Guides"
     
     static var mainSectionItems: [TWContentSelectorItem_MTW] {
-        TWContentSelectorItem_MTW.allCases.dropLast(2)
+        TWContentSelectorItem_MTW.allCases
     }
     
     static var subSectionItems: [TWContentSelectorItem_MTW] {
-        [.characterRandomizer, .guides]
+        []
     }
     
     var isContentLocked: Bool {
@@ -81,8 +81,10 @@ extension TWContentSelectorItem_MTW {
             return #imageLiteral(resourceName: "icon_children")
         case .sounds:
             return #imageLiteral(resourceName: "icon_volume")
-        default:
-            return nil
+        case .characterRandomizer:
+            return #imageLiteral(resourceName: "icon_random")
+        case .guides:
+            return #imageLiteral(resourceName: "icon_guides")
         }
     }
     

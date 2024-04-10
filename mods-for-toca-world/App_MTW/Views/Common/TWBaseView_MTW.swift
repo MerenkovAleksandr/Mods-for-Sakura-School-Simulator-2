@@ -17,7 +17,7 @@ class TWBaseView_MTW: UIView {
     }
     
     var adjustment: CGFloat {
-        borderWidth * 2
+        borderWidth * 20
     }
     
     var sizeAdjustment: CGFloat {
@@ -77,7 +77,7 @@ class TWBaseView_MTW: UIView {
     
     override func draw(_ rect: CGRect) {
         drawBackgroundLayer_MTW()
-        drawAccent()
+//        drawAccent()
     }
     
     func commonInit_MTW() {
@@ -112,14 +112,14 @@ class TWBaseView_MTW: UIView {
         path.fill()
     }
     
-    func drawAccent() {
-        let accent = CALayer()
-        accent.frame = adjustedAccentRect
-        accent.contents = #imageLiteral(resourceName: "accent").cgImage
-        
-        accentLayer.removeFromSuperlayer()
-        accentLayer = accent
-        
-        layer.insertSublayer(accentLayer, at: 1)
-    }
+//    func drawAccent() {
+//        let accent = CALayer()
+//        accent.frame = adjustedAccentRect
+//        accent.contents = #imageLiteral(resourceName: "accent").cgImage
+//        
+//        accentLayer.removeFromSuperlayer()
+//        accentLayer = accent
+//        
+//        layer.insertSublayer(accentLayer, at: 1)
+//    }
 }

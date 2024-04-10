@@ -41,7 +41,7 @@ final class TWContentSelectorCollectionViewCell_MTW: TWBaseCollectionViewCell_MT
     }
     
     override var cornerRadius: CGFloat {
-        adjustedRect.height / 10
+        adjustedRect.height / 8
     }
     
     override var backgroundFillColor: UIColor {
@@ -51,7 +51,7 @@ final class TWContentSelectorCollectionViewCell_MTW: TWBaseCollectionViewCell_MT
             
         : TWColors_MTW
             .contentSelectorCellBackground
-            
+        
     }
     
     override func draw(_ rect: CGRect) {

@@ -15,15 +15,15 @@ final class TWColors_MTW {
     static let progressBarForeground = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     static let progressBarText = #colorLiteral(red: 0.9879999757, green: 0.3840000033, blue: 0.6269999743, alpha: 1)
     // MARK: - Navigation Bar Colors
-    static let navigationBarGradientStart = #colorLiteral(red: 0.8941176471, green: 0.5607843137, blue: 0.7254901961, alpha: 1)
-    static let navigationBarGradientEnd = #colorLiteral(red: 0.8941176471, green: 0.5607843137, blue: 0.7254901961, alpha: 1)
+    static let navigationBarGradientStart = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+    static let navigationBarGradientEnd = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 0)
     static let navigationBarBackground = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-    static let navigationBarForeground = #colorLiteral(red: 0.9176470588, green: 0.4274509804, blue: 0.662745098, alpha: 1)
+    static let navigationBarForeground = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     static let navigationSearchForeground = #colorLiteral(red: 0.9450980392, green: 0.7411764706, blue: 0.8392156863, alpha: 1)
     // MARK: - Content Selector Colors
     // Content Selector Cell Default
-    static let contentSelectorCellGradientStart = #colorLiteral(red: 0.8941176471, green: 0.5607843137, blue: 0.7254901961, alpha: 1)
-    static let contentSelectorCellGradientEnd = #colorLiteral(red: 0.8941176471, green: 0.5607843137, blue: 0.7254901961, alpha: 1)
+    static let contentSelectorCellGradientStart = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+    static let contentSelectorCellGradientEnd = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
     static let contentSelectorCellBackground = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     static let contentSelectorCellForeground = #colorLiteral(red: 0.9176470588, green: 0.4274509804, blue: 0.662745098, alpha: 1)
     // Content Category Cell Default
