@@ -171,7 +171,7 @@ private extension TWContentRecomendationsView_MTW {
     func generateLayoutPhone() -> UICollectionViewLayout {
         let collectionViewLayout = UICollectionViewFlowLayout()
         collectionViewLayout.scrollDirection = .horizontal
-        collectionViewLayout.itemSize = .init(width: 88.0, height: 88.0)
+        collectionViewLayout.itemSize = .init(width: 159.0, height: 199.0)
         collectionViewLayout.minimumLineSpacing = 12.0
         collectionViewLayout.minimumInteritemSpacing = 12.0
         collectionViewLayout.sectionInset = .init(top: .zero,

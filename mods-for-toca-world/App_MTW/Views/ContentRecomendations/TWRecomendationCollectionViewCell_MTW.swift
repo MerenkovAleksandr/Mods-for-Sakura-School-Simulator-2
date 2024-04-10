@@ -11,6 +11,22 @@ final class TWRecomendationCollectionViewCell_MTW: UICollectionViewCell {
     
     var imageView = TWImageView_MTW(frame: .zero)
     
+    var favouriteView: UIView = {
+        let view = UIView()
+        let iv = UIImageView()
+        iv.image = #imageLiteral(resourceName: "favourite")
+        view.addSubview(iv)
+        iv.translatesAutoresizingMaskIntoConstraints = false
+        iv.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        iv.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        iv.widthAnchor.constraint(equalToConstant: 14).isActive = true
+        iv.heightAnchor.constraint(equalToConstant: 18).isActive = true
+        view.layer.cornerRadius = 8.0
+        view.clipsToBounds = true
+        view.backgroundColor = TWColors_MTW.contentSelectorCellBackground
+        return view
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit_MTW()
@@ -32,11 +48,21 @@ private extension TWRecomendationCollectionViewCell_MTW {
         
         addSubview(imageView)
         
+        layer.cornerRadius = 8.0
+        clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 8.0
-        imageView.layer.borderWidth = 1.0
-        imageView.layer.borderColor = TWColors_MTW.bubbleViewForegroundColor.cgColor
+        imageView.layer.cornerRadius = 18.0
+        imageView.layer.borderWidth = 10.0
+        imageView.layer.borderColor = TWColors_MTW.contentSelectorCellBackground.cgColor
+        
+        addSubview(favouriteView)
+        
+        favouriteView.translatesAutoresizingMaskIntoConstraints = false
+        favouriteView.topAnchor.constraint(equalTo: topAnchor, constant: 6).isActive = true
+        favouriteView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8).isActive = true
+        favouriteView.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        favouriteView.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
         makeLayout()
     }
