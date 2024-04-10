@@ -24,8 +24,9 @@ final class TWColors_MTW {
     // Content Selector Cell Default
     static let contentSelectorCellGradientStart = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
     static let contentSelectorCellGradientEnd = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
-    static let contentSelectorCellBackground = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    static let contentSelectorCellBackground = #colorLiteral(red: 0.01568627451, green: 0.3725490196, blue: 0.662745098, alpha: 1)
     static let contentSelectorCellForeground = #colorLiteral(red: 0.9176470588, green: 0.4274509804, blue: 0.662745098, alpha: 1)
+    static let contentCellForeground = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     // Content Category Cell Default
     static let contentCategoryCellSelectedForeground = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     static let contentCategoryCellForeground = #colorLiteral(red: 0.9450980392, green: 0.7411764706, blue: 0.8392156863, alpha: 1)
@@ -42,10 +43,12 @@ final class TWColors_MTW {
     static let imageViewForeground = #colorLiteral(red: 0.9254901961, green: 0.5803921569, blue: 0.7490196078, alpha: 1)
     static let imageViewEmptyBackground = #colorLiteral(red: 1, green: 0.9058823529, blue: 0.9333333333, alpha: 1)
     // Bubble Button Colors
-    static let bubbleViewGradientStart = #colorLiteral(red: 1, green: 0.5215686275, blue: 0.7137254902, alpha: 1)
-    static let bubbleViewGradientEnd = #colorLiteral(red: 1, green: 0.2666666667, blue: 0.5607843137, alpha: 1)
+//    static let bubbleViewGradientStart = #colorLiteral(red: 1, green: 0.5215686275, blue: 0.7137254902, alpha: 1)
+//    static let bubbleViewGradientEnd = #colorLiteral(red: 1, green: 0.2666666667, blue: 0.5607843137, alpha: 1)
+    static let bubbleViewGradientStart = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+    static let bubbleViewGradientEnd = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
 //    static let bubbleViewForegroundColor = #colorLiteral(red: 0.9882352941, green: 0.3843137255, blue: 0.6274509804, alpha: 1)
-    static let bubbleViewForegroundColor = #colorLiteral(red: 0.9176470588, green: 0.4274509804, blue: 0.662745098, alpha: 1)
+    static let bubbleViewForegroundColor = #colorLiteral(red: 1, green: 0.7647058824, blue: 0.3764705882, alpha: 1)
     static let bubbleViewTextColor = #colorLiteral(red: 0.9254901961, green: 0.5803921569, blue: 0.7490196078, alpha: 1)
     // Button
     static let buttonForegroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)

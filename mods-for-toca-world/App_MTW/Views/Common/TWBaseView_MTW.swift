@@ -17,7 +17,7 @@ class TWBaseView_MTW: UIView {
     }
     
     var adjustment: CGFloat {
-        borderWidth * 20
+        borderWidth * 2
     }
     
     var sizeAdjustment: CGFloat {

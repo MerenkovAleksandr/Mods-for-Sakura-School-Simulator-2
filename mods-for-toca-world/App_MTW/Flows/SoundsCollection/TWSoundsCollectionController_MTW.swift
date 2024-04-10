@@ -82,7 +82,7 @@ final class TWSoundsCollectionController_MTW: TWContentPlainCollectionController
     }
     
     override func generateLayoutPhone() -> UICollectionViewLayout {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                               heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         

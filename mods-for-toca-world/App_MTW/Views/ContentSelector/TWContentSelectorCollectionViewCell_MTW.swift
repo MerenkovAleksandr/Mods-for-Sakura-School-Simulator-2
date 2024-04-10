@@ -51,7 +51,7 @@ final class TWContentSelectorCollectionViewCell_MTW: TWBaseCollectionViewCell_MT
             
         : TWColors_MTW
             .contentSelectorCellBackground
-        
+            
     }
     
     override func draw(_ rect: CGRect) {

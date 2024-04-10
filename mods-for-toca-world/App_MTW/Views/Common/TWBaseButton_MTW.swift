@@ -82,7 +82,7 @@ class TWBaseButton_MTW: UIButton {
     
     override func draw(_ rect: CGRect) {
         drawBackgroundLayer_MTW()
-        drawAccent()
+//        drawAccent()
     }
     
     func commonInit_MTW() {
@@ -90,17 +90,8 @@ class TWBaseButton_MTW: UIButton {
     }
     
     func drawBackgroundLayer_MTW() {
-        let path = UIBezierPath()
-        path.move(to: CGPoint(x: 25, y: 2))
-        path.addLine(to: CGPoint(x: bounds.width - 40, y: 10))
-        path.addArc(withCenter: CGPoint(x: bounds.width - 40, y: 29), radius: 19, startAngle: 3 * .pi/2, endAngle: 2 * .pi , clockwise: true)
-        path.addLine(to: CGPoint(x: bounds.width - 20, y: 32))
-        path.addArc(withCenter: CGPoint(x: bounds.width - 40, y: 39), radius: 19, startAngle: 2 * .pi, endAngle: .pi/2 , clockwise: true)
-        path.addLine(to: CGPoint(x: 25, y: 56))
-        path.addArc(withCenter: CGPoint(x: 25, y:42), radius: 14, startAngle: .pi/2, endAngle:-.pi , clockwise: true)
-        path.addLine(to: CGPoint(x: 10, y: 24))
-        path.addArc(withCenter: CGPoint(x: 25, y: 16), radius: 14, startAngle: -.pi, endAngle: -.pi/2, clockwise: true)
-        
+        let path = UIBezierPath(roundedRect: adjustedRect,
+                                cornerRadius: cornerRadius)
         let mask = CAShapeLayer()
         mask.path = path.cgPath
         mask.lineWidth = borderWidth
@@ -127,17 +118,17 @@ class TWBaseButton_MTW: UIButton {
         path.fill()
     }
     
-    func drawAccent() {
-        let accent = CALayer()
-        accent.frame = adjustedAccentRect
-        accent.contents = #imageLiteral(resourceName: "accent").cgImage
-        
-        accentLayer.removeFromSuperlayer()
-        accentLayer = accent
-        
-        layer.insertSublayer(gradientLayer, at: 2)
-    }
-    
+//    func drawAccent() {
+//        let accent = CALayer()
+//        accent.frame = adjustedAccentRect
+//        accent.contents = #imageLiteral(resourceName: "accent").cgImage
+//        
+//        accentLayer.removeFromSuperlayer()
+//        accentLayer = accent
+//        
+//        layer.insertSublayer(gradientLayer, at: 2)
+//    }
+//    
     func configure_MTW(with localizedTitle: String) {
         let foregroundColor = TWColors_MTW.buttonForegroundColor
             .withAlphaComponent(opacity)

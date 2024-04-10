@@ -125,9 +125,10 @@ private extension TWPlainTextCollectionViewCell_MTW {
     }
     
     var foregoundColor: UIColor {
-        drawSelected
-        ? TWColors_MTW.contentSelectorCellSelectedForeground.withAlphaComponent(opacity)
-        : TWColors_MTW.contentSelectorCellForeground.withAlphaComponent(opacity)
+//        drawSelected
+//        ? TWColors_MTW.contentSelectorCellSelectedForeground.withAlphaComponent(opacity)
+//        : TWColors_MTW.contentSelectorCellForeground.withAlphaComponent(opacity)
+        TWColors_MTW.contentCellForeground
     }
     
     var defaultGradientColors: [CGColor] {[
