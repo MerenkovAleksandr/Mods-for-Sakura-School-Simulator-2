@@ -172,10 +172,11 @@ private extension TWCharacterSelectorController_MTW {
      
      func toggleSubMenu(sender: UIView, character: TWCharacterPreview_MTW) {
           let sourceRect = sender.convert(sender.bounds, to: view)
-          let origin = CGPoint(x: sourceRect.midX, y: sourceRect.midY)
+          let origin = CGPoint(x: sourceRect.minX - 80, y: sourceRect.midY - 10)
+          let deleteOrigin = CGPoint(x: sourceRect.minX - 80, y: sourceRect.minY + 30)
           let size: CGSize = view.iPad
           ? .init(width: 180.0, height: 150.0)
-          : .init(width: 120.0, height: 100.0)
+          : .init(width: 120.0, height: 117.0)
           let frame = CGRect(origin: origin, size: size)
           let coverView = UIView(frame: view.bounds)
           let subMenu = TWSubMenu_MTW(frame: frame)

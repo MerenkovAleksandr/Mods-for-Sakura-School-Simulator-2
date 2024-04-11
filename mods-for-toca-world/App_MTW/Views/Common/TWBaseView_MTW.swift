@@ -77,7 +77,6 @@ class TWBaseView_MTW: UIView {
     
     override func draw(_ rect: CGRect) {
         drawBackgroundLayer_MTW()
-//        drawAccent()
     }
     
     func commonInit_MTW() {
@@ -112,14 +111,5 @@ class TWBaseView_MTW: UIView {
         path.fill()
     }
     
-//    func drawAccent() {
-//        let accent = CALayer()
-//        accent.frame = adjustedAccentRect
-//        accent.contents = #imageLiteral(resourceName: "accent").cgImage
-//        
-//        accentLayer.removeFromSuperlayer()
-//        accentLayer = accent
-//        
-//        layer.insertSublayer(accentLayer, at: 1)
-//    }
+
 }

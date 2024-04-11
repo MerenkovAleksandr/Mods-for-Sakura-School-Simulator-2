@@ -61,4 +61,7 @@ final class TWColors_MTW {
     static let menuBlueCellBackground = #colorLiteral(red: 0.03137254902, green: 0.4784313725, blue: 0.8431372549, alpha: 1)
     static let menuCrimsonCellBackground = #colorLiteral(red: 1, green: 0.6862745098, blue: 0.768627451, alpha: 1)
     static let menuPurpleCellBackground = #colorLiteral(red: 0.6470588235, green: 0.3803921569, blue: 0.768627451, alpha: 1)
+    // SubMenu
+    static let buttonEditBackground = #colorLiteral(red: 1, green: 0.7647058824, blue: 0.3764705882, alpha: 1)
+    static let buttonDeleteBackground = #colorLiteral(red: 0.8156862745, green: 0.2, blue: 0.2117647059, alpha: 1)
 }
