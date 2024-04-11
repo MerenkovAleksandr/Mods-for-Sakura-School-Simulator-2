@@ -216,18 +216,17 @@ private extension TWContentCollectionView_MTW {
     }
     
     func generateSectionLayoutPhone() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                               heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .fractionalWidth(0.55))
+                                               heightDimension: .fractionalWidth(0.3))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                        subitems: [item])
 
-        group.contentInsets = .init(top: 15.0, leading: 21.0, bottom: .zero, trailing: 21.0)
-        group.interItemSpacing = .fixed(15)
+        group.contentInsets = .init(top: 5.0, leading: 21.0, bottom: .zero, trailing: 21.0)
         
         return .init(group: group)
     }

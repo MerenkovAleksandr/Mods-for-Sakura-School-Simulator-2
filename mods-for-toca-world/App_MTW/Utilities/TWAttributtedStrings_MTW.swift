@@ -42,6 +42,21 @@ final class TWAttributtedStrings_MTW {
                         foregroundcolor: foregroundColor)
     }
     
+    class func barNewAttrString(with localizedString: String,
+                             foregroundColor: UIColor) -> NSAttributedString {
+        let size: CGFloat = iPad ? 44.0 : 17.0
+        let lineSpacing: CGFloat = iPad ? .zero : 20.0
+        let kern = iPad ? -2.0 : -0.5
+        
+        return .compose(localizedString: localizedString,
+                        kern: kern,
+                        font: .defaultFont(.semiBold,
+                                           size: size),
+                        paragraphStyle: .aligned(.center,
+                                                 lineSpacing: lineSpacing),
+                        foregroundcolor: foregroundColor)
+    }
+    
     class func contentSelectorItemAttrString(with localizedString: String,
                                              foregroundColor: UIColor)
     -> NSAttributedString {
@@ -105,7 +120,7 @@ final class TWAttributtedStrings_MTW {
     -> NSAttributedString {
         .compose(localizedString: "...",
                  kern: -0.5,
-                 font: .defaultFont(.semiBold, size: 40.0),
+                 font: .defaultFont(.regular, size: 17.0),
                  paragraphStyle: .aligned(.center, lineHeightMultiple: 0.7),
                  foregroundcolor: foregroundColor)
     }
@@ -115,8 +130,8 @@ final class TWAttributtedStrings_MTW {
     -> NSAttributedString {
         .compose(localizedString: localizedString,
                  kern: -0.5,
-                 font: .defaultFont(.semiBold,
-                                    size: iPad ? 24.0 : 15.0),
+                 font: .defaultFont(.regular,
+                                    size: iPad ? 24.0 : 24.0),
                  paragraphStyle: .aligned(.left,
                                           lineBrakeMode: .byTruncatingTail,
                                           lineHeightMultiple: 0.9),

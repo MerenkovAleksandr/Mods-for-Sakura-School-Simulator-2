@@ -68,16 +68,16 @@ private extension TWBubbleView_MTW {
     func layoutViews() {
         lblTitle.snp.makeConstraints {
             $0.leading.equalToSuperview()
-            $0.top.equalToSuperview().offset(-offset)
+            $0.top.equalToSuperview().offset(offset * 3)
             $0.trailing.equalToSuperview()
             $0.bottom.equalToSuperview().inset(offset * 3)
         }
         
         ivContent.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(-offset)
-            $0.top.equalToSuperview().offset(-offset)
-            $0.width.equalTo(70)
-            $0.height.equalTo(27)
+            $0.top.equalToSuperview()
+            $0.trailing.equalToSuperview()
+            $0.bottom.equalToSuperview()
         }
     }
     
@@ -87,8 +87,9 @@ private extension TWBubbleView_MTW {
         lblTitle.numberOfLines = 1
         
         lblTitle.attributedText = TWAttributtedStrings_MTW
-            .barAttrString(with: localizedTitle,
+            .barNewAttrString(with: localizedTitle,
                            foregroundColor: foregroundColor)
+        lblTitle.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 4)
         
         addSubview(lblTitle)
     }

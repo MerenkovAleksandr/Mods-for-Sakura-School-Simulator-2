@@ -10,24 +10,25 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WeN-br-Zd4" customClass="TWContentCollectionViewCell_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="238" height="285"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WeN-br-Zd4" customClass="TWContentCollectionViewCell_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="632" height="263"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="238" height="285"/>
+                <rect key="frame" x="0.0" y="0.0" width="632" height="263"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ZyK-4n-v0J">
-                        <rect key="frame" x="12" y="12" width="214" height="261"/>
+                        <rect key="frame" x="12" y="12" width="301" height="239"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" verticalCompressionResistancePriority="749" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M80-c7-mrs" customClass="TWImageView_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="214" height="214"/>
+                                <rect key="frame" x="0.0" y="0.0" width="301" height="215"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="M80-c7-mrs" secondAttribute="height" multiplier="1:1" id="STm-fl-H8X"/>
+                                    <constraint firstAttribute="height" constant="215" id="Kfs-qG-q1q"/>
+                                    <constraint firstAttribute="width" secondItem="M80-c7-mrs" secondAttribute="height" multiplier="14:10" id="STm-fl-H8X"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="752" insetsLayoutMarginsFromSafeArea="NO" text="LABEL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrJ-Ly-xvg">
-                                <rect key="frame" x="0.0" y="218" width="214" height="43"/>
+                                <rect key="frame" x="0.0" y="219" width="301" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -35,44 +36,63 @@
                         </subviews>
                     </stackView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wAF-48-OfN" customClass="TWBubbleView_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="4" width="64" height="36"/>
+                        <rect key="frame" x="-25" y="-10" width="84" height="47.333333333333336"/>
                         <color key="backgroundColor" systemColor="separatorColor"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="wAF-48-OfN" secondAttribute="height" multiplier="32:18" id="TkO-o6-xzu"/>
-                            <constraint firstAttribute="width" constant="64" id="pwQ-nJ-SSa">
+                            <constraint firstAttribute="width" constant="84" id="pwQ-nJ-SSa">
                                 <variation key="heightClass=regular-widthClass=regular" constant="96"/>
                             </constraint>
                         </constraints>
                     </view>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favourite" translatesAutoresizingMaskIntoConstraints="NO" id="1mD-Ta-FuF">
-                        <rect key="frame" x="206" y="12" width="20" height="20"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bQ-zu-719">
+                        <rect key="frame" x="328" y="12" width="272" height="239"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="752" insetsLayoutMarginsFromSafeArea="NO" text="LABEL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ays-E8-VkH">
+                                <rect key="frame" x="0.0" y="94.333333333333329" width="50" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favourite" translatesAutoresizingMaskIntoConstraints="NO" id="1mD-Ta-FuF">
+                                <rect key="frame" x="60" y="94.666666666666671" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="UK9-n7-ANs">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="48"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" secondItem="1mD-Ta-FuF" secondAttribute="height" multiplier="1:1" id="zxe-P4-opc"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <constraints>
-                            <constraint firstAttribute="width" constant="20" id="UK9-n7-ANs">
-                                <variation key="heightClass=regular-widthClass=regular" constant="48"/>
-                            </constraint>
-                            <constraint firstAttribute="width" secondItem="1mD-Ta-FuF" secondAttribute="height" multiplier="1:1" id="zxe-P4-opc"/>
+                            <constraint firstItem="1mD-Ta-FuF" firstAttribute="centerY" secondItem="1bQ-zu-719" secondAttribute="centerY" constant="-15" id="7PF-DH-aZi"/>
+                            <constraint firstItem="1mD-Ta-FuF" firstAttribute="leading" secondItem="ays-E8-VkH" secondAttribute="trailing" constant="10" id="EdP-Zn-fFg"/>
+                            <constraint firstItem="ays-E8-VkH" firstAttribute="centerY" secondItem="1bQ-zu-719" secondAttribute="centerY" constant="-15" id="Io5-fz-5oa"/>
+                            <constraint firstItem="ays-E8-VkH" firstAttribute="leading" secondItem="1bQ-zu-719" secondAttribute="leading" id="tBP-wx-lYx"/>
                         </constraints>
-                    </imageView>
+                    </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="wAF-48-OfN" firstAttribute="top" secondItem="WeN-br-Zd4" secondAttribute="top" constant="4" id="Dqr-9X-0IC"/>
-                <constraint firstAttribute="trailing" secondItem="1mD-Ta-FuF" secondAttribute="trailing" constant="12" id="Vs7-6R-42m"/>
+                <constraint firstItem="wAF-48-OfN" firstAttribute="top" secondItem="WeN-br-Zd4" secondAttribute="top" constant="-10" id="Dqr-9X-0IC"/>
+                <constraint firstAttribute="bottom" secondItem="1bQ-zu-719" secondAttribute="bottom" constant="12" id="FsA-kh-aZL"/>
+                <constraint firstAttribute="trailing" secondItem="1bQ-zu-719" secondAttribute="trailing" constant="32" id="GhE-Zo-VGm"/>
+                <constraint firstItem="1bQ-zu-719" firstAttribute="centerY" secondItem="WeN-br-Zd4" secondAttribute="centerY" id="IgG-PH-p0h"/>
+                <constraint firstItem="ZyK-4n-v0J" firstAttribute="leading" secondItem="WeN-br-Zd4" secondAttribute="leading" constant="12" id="XGo-Md-GAp"/>
                 <constraint firstAttribute="bottom" secondItem="ZyK-4n-v0J" secondAttribute="bottom" constant="12" id="bhv-C2-l4O"/>
-                <constraint firstItem="1mD-Ta-FuF" firstAttribute="top" secondItem="WeN-br-Zd4" secondAttribute="top" constant="12" id="sgm-XB-oo4"/>
-                <constraint firstItem="wAF-48-OfN" firstAttribute="leading" secondItem="WeN-br-Zd4" secondAttribute="leading" id="siy-tO-Agq"/>
-                <constraint firstAttribute="trailing" secondItem="ZyK-4n-v0J" secondAttribute="trailing" constant="12" id="uXX-ZR-HQx"/>
-                <constraint firstItem="ZyK-4n-v0J" firstAttribute="leading" secondItem="WeN-br-Zd4" secondAttribute="leading" constant="12" id="wi1-Xw-9lc"/>
+                <constraint firstItem="1bQ-zu-719" firstAttribute="leading" secondItem="M80-c7-mrs" secondAttribute="trailing" constant="15" id="g2i-5h-jaw"/>
+                <constraint firstItem="1bQ-zu-719" firstAttribute="top" secondItem="WeN-br-Zd4" secondAttribute="top" constant="12" id="h66-yE-C3Z"/>
+                <constraint firstItem="wAF-48-OfN" firstAttribute="leading" secondItem="WeN-br-Zd4" secondAttribute="leading" constant="-25" id="siy-tO-Agq"/>
                 <constraint firstItem="ZyK-4n-v0J" firstAttribute="top" secondItem="WeN-br-Zd4" secondAttribute="top" constant="12" id="zxx-2Z-2Ko"/>
             </constraints>
-            <size key="customSize" width="238" height="285"/>
+            <size key="customSize" width="632" height="263"/>
             <connections>
                 <outlet property="ivContent" destination="M80-c7-mrs" id="DVW-OU-Q8Z"/>
                 <outlet property="ivFavourite" destination="1mD-Ta-FuF" id="E3u-Wh-0CF"/>
-                <outlet property="lblTitle" destination="nrJ-Ly-xvg" id="fCr-5Q-H4z"/>
+                <outlet property="lblTitle" destination="ays-E8-VkH" id="R2j-2k-5Fb"/>
                 <outlet property="vBubble" destination="wAF-48-OfN" id="JCf-eV-nYa"/>
             </connections>
-            <point key="canvasLocation" x="90.07633587786259" y="8.8028169014084519"/>
+            <point key="canvasLocation" x="390.83969465648852" y="1.0563380281690142"/>
         </collectionViewCell>
     </objects>
     <resources>

@@ -109,7 +109,7 @@ private extension TWContentCollectionViewCell_MTW {
     }
     
     var foregroundColor: UIColor {
-        TWColors_MTW.navigationBarForeground
+        TWColors_MTW.contentCellForeground
     }
     
     func configureImageView(item: TWContentModel_MTW) {
