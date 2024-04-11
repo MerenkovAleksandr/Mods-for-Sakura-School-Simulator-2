@@ -138,6 +138,19 @@ final class TWAttributtedStrings_MTW {
                  foregroundcolor: foregroundColor)
     }
     
+    class func contentDetailsCellTitleAttrString(with localizedString: String,
+                                          foregroundColor: UIColor)
+    -> NSAttributedString {
+        .compose(localizedString: localizedString,
+                 kern: -0.5,
+                 font: .notoSantFont(.medium,
+                                    size: iPad ? 24.0 : 16.0),
+                 paragraphStyle: .aligned(.left,
+                                          lineBrakeMode: .byTruncatingTail,
+                                          lineHeightMultiple: 1.1),
+                 foregroundcolor: foregroundColor)
+    }
+    
     class func contentDetailTitleAttrString(with localizedString: String,
                                           foregroundColor: UIColor)
     -> NSAttributedString {

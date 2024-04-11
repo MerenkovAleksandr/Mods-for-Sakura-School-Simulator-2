@@ -12,8 +12,6 @@ final class TWContentDetailsScrollableView_MTW: UIView {
     @IBOutlet var view: UIView!
     
     @IBOutlet var vContentDetails: TWContentDetailsView_MTW!
-    @IBOutlet var vDownloadBtnCover: UIView!
-    @IBOutlet var btnDownload: TWBaseButton_MTW!
     @IBOutlet var vRecomendationsCover: UIView!
     @IBOutlet var vRecomendations: TWContentRecomendationsView_MTW!
     
@@ -32,9 +30,6 @@ final class TWContentDetailsScrollableView_MTW: UIView {
         commonInit_MTW()
     }
     
-    @IBAction func downloadAction_MTW(_ sender: Any) {
-        didSaveImage?(self.selectedItem)
-    }
 }
 
 // MARK: - Public API
@@ -43,9 +38,8 @@ extension TWContentDetailsScrollableView_MTW {
     
     func configure_MTW(with item: TWContentModel_MTW) {
         let regularContent = item.contentType != .guide
-        
-        vDownloadBtnCover.visibility(isVisible: regularContent)
-        
+                
+        vContentDetails.delegate = self
         vContentDetails.configure_MTW(with: item)
         vContentDetails.didUpdate = { [weak self] in
             guard let self = self,
@@ -87,6 +81,15 @@ extension TWContentDetailsScrollableView_MTW {
     
 }
 
+// MARK: - TWContentDetailsDelegate_MTW
+
+extension TWContentDetailsScrollableView_MTW: TWContentDetailsDelegate_MTW {
+    func didTapActionButton() {
+        didSaveImage?(self.selectedItem)
+    }
+
+}
+
 // MARK: - Private API
 
 private extension TWContentDetailsScrollableView_MTW {
@@ -94,13 +97,6 @@ private extension TWContentDetailsScrollableView_MTW {
     func commonInit_MTW() {
         backgroundColor = .clear
         loadViewFromNib_MTW()
-        
-        let localizedTitle = NSLocalizedString("Text52ID", comment: "")
-        
-        btnDownload.setAttributedTitle(TWAttributtedStrings_MTW
-            .barAttrString(with: localizedTitle,
-                           foregroundColor: TWColors_MTW.buttonForegroundColor),
-                                       for: .normal)
     }
     
     func loadViewFromNib_MTW() {

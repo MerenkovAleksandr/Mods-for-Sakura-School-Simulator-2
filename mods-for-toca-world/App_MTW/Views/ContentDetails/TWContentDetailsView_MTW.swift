@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol TWContentDetailsDelegate_MTW: AnyObject {
+    func didTapActionButton()
+}
+
 final class TWContentDetailsView_MTW: TWBaseView_MTW {
     
     @IBOutlet var view: UIView!
@@ -16,6 +20,10 @@ final class TWContentDetailsView_MTW: TWBaseView_MTW {
     @IBOutlet private var ivContent: TWImageView_MTW!
     @IBOutlet private var vBubble: TWBubbleView_MTW!
     @IBOutlet private var ivFavourite: UIImageView!
+    @IBOutlet private var btnDownload: TWBaseButton_MTW!
+    @IBOutlet private var btnShare: TWBaseButton_MTW!
+    
+    weak var delegate: TWContentDetailsDelegate_MTW?
     
     var didUpdate: (() -> Void)?
     
@@ -23,6 +31,10 @@ final class TWContentDetailsView_MTW: TWBaseView_MTW {
     private(set) var isFavourite: Bool = false
     
     var image: UIImage? { ivContent.image }
+    
+    @IBAction func btnAction(_ sender: Any) {
+        delegate?.didTapActionButton()
+    }
     
     override var cornerRadius: CGFloat {
         ivContent.bounds.height / 16
@@ -64,6 +76,7 @@ final class TWContentDetailsView_MTW: TWBaseView_MTW {
         
         ivFavourite.isUserInteractionEnabled = true
         ivFavourite.addGestureRecognizer(tapGesture)
+        
     }
     
 }
@@ -74,6 +87,7 @@ extension TWContentDetailsView_MTW {
     
     func configure_MTW(with item: TWContentModel_MTW) {
         configureImageView(item: item)
+        configureButtons()
         
         if item.contentType == .guide {
             vBubble.hide_MTW()
@@ -98,7 +112,7 @@ extension TWContentDetailsView_MTW {
 private extension TWContentDetailsView_MTW {
     
     var foregroundColor: UIColor {
-        TWColors_MTW.contentDetailsViewForeground
+        TWColors_MTW.contentCellForeground
     }
     
     var favouriteToggleImage: UIImage {
@@ -133,13 +147,39 @@ private extension TWContentDetailsView_MTW {
         if let localizedString {
             lblDescription.show_MTW()
             lblDescription.attributedText = TWAttributtedStrings_MTW
-                .contentCellTitleAttrString(with: localizedString,
+                .contentDetailsCellTitleAttrString(with: localizedString,
                                             foregroundColor: foregroundColor)
             lblDescription.adjustsFontSizeToFitWidth = false
             return
         }
         lblDescription.hide_MTW()
         lblDescription.attributedText = nil
+    }
+    
+    func configureButtons() {
+        btnDownload.setAttributedTitle(TWAttributtedStrings_MTW
+            .barAttrString(with: "",
+                           foregroundColor: TWColors_MTW.buttonForegroundColor),
+                                       for: .normal)
+        
+        btnDownload.snp.makeConstraints {
+            $0.trailing.equalToSuperview()
+            $0.width.equalTo(94)
+            $0.height.equalTo(74)
+        }
+        
+        let localizedTitle = NSLocalizedString("Text88ID", comment: "")
+        
+        btnShare.setAttributedTitle(TWAttributtedStrings_MTW
+            .barAttrString(with: localizedTitle,
+                           foregroundColor: TWColors_MTW.buttonForegroundColor),
+                                       for: .normal)
+        
+        btnShare.snp.makeConstraints {
+            $0.leading.equalToSuperview()
+            $0.trailing.equalTo(btnDownload.snp.leading).offset(-10.0)
+            $0.height.equalTo(74)
+        }
     }
     
     func configureFavouriteImageView() {

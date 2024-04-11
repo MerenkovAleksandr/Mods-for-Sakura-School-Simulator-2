@@ -12,6 +12,7 @@
 		BB5238902BC5740200848901 /* TWCharacterEditorCollectionViewCell_MTW.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB52388F2BC5740200848901 /* TWCharacterEditorCollectionViewCell_MTW.swift */; };
 		BB5238942BC5748800848901 /* TWCharacterEditorCollectionViewCell_MTW.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB5238932BC5748800848901 /* TWCharacterEditorCollectionViewCell_MTW.xib */; };
 		BBD05D2A2BC72B8E004A03B3 /* Anton-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBD05D292BC72B8E004A03B3 /* Anton-Regular.ttf */; };
+		BBD05D2C2BC7E186004A03B3 /* NotoSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBD05D2B2BC7E186004A03B3 /* NotoSans.ttf */; };
 		F431ADA42A6E4C9400F1A450 /* TWContentModel_MTW.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431ADA32A6E4C9400F1A450 /* TWContentModel_MTW.swift */; };
 		F431ADA72A6E4EEF00F1A450 /* TWContentCollectionController_MTW.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431ADA62A6E4EEF00F1A450 /* TWContentCollectionController_MTW.swift */; };
 		F431ADA92A6E519700F1A450 /* TWContentCollectionView_MTW.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431ADA82A6E519700F1A450 /* TWContentCollectionView_MTW.swift */; };
@@ -222,6 +223,7 @@
 		BB52388F2BC5740200848901 /* TWCharacterEditorCollectionViewCell_MTW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWCharacterEditorCollectionViewCell_MTW.swift; sourceTree = "<group>"; };
 		BB5238932BC5748800848901 /* TWCharacterEditorCollectionViewCell_MTW.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TWCharacterEditorCollectionViewCell_MTW.xib; sourceTree = "<group>"; };
 		BBD05D292BC72B8E004A03B3 /* Anton-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Anton-Regular.ttf"; sourceTree = "<group>"; };
+		BBD05D2B2BC7E186004A03B3 /* NotoSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NotoSans.ttf; sourceTree = "<group>"; };
 		F431ADA32A6E4C9400F1A450 /* TWContentModel_MTW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWContentModel_MTW.swift; sourceTree = "<group>"; };
 		F431ADA62A6E4EEF00F1A450 /* TWContentCollectionController_MTW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWContentCollectionController_MTW.swift; sourceTree = "<group>"; };
 		F431ADA82A6E519700F1A450 /* TWContentCollectionView_MTW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWContentCollectionView_MTW.swift; sourceTree = "<group>"; };
@@ -736,6 +738,7 @@
 			isa = PBXGroup;
 			children = (
 				BBD05D292BC72B8E004A03B3 /* Anton-Regular.ttf */,
+				BBD05D2B2BC7E186004A03B3 /* NotoSans.ttf */,
 				F48081402A6D0388007845BC /* Baloo2-Bold.ttf */,
 				F480813E2A6D0388007845BC /* Baloo2-ExtraBold.ttf */,
 				F48081422A6D0389007845BC /* Baloo2-Medium.ttf */,
@@ -796,10 +799,10 @@
 		F4BC63002A6FC3A700B0F981 /* ContentDetails */ = {
 			isa = PBXGroup;
 			children = (
-				F4BC63042A6FC73900B0F981 /* TWContentDetailsView_MTW.swift */,
-				F4BC63062A6FC74B00B0F981 /* TWContentDetailsView_MTW.xib */,
 				F4BC63082A6FCDB100B0F981 /* TWContentDetailsScrollableView_MTW.swift */,
 				F4BC630A2A6FCDEF00B0F981 /* TWContentDetailsScrollableView_MTW.xib */,
+				F4BC63042A6FC73900B0F981 /* TWContentDetailsView_MTW.swift */,
+				F4BC63062A6FC74B00B0F981 /* TWContentDetailsView_MTW.xib */,
 			);
 			path = ContentDetails;
 			sourceTree = "<group>";
@@ -1223,6 +1226,7 @@
 				F467405A2A714D9400EDA646 /* TWCharacterEditorController_MTW.xib in Resources */,
 				FEC8BA452A617C48009833DD /* Media.xcassets in Resources */,
 				F431ADAC2A6E51C000F1A450 /* TWContentCollectionView_MTW.xib in Resources */,
+				BBD05D2C2BC7E186004A03B3 /* NotoSans.ttf in Resources */,
 				FEC8BA4D2A617C48009833DD /* Localizable.strings in Resources */,
 				FEC8BA472A617C48009833DD /* pad.mp4 in Resources */,
 				F4BC63072A6FC74B00B0F981 /* TWContentDetailsView_MTW.xib in Resources */,

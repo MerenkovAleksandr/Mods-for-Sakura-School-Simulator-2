@@ -16,4 +16,9 @@ extension TWFont_MTW {
         TWFonts_MTW.defaultFont(for: style, size: size)
     }
     
+    class func notoSantFont(_ style: TWFonts_MTW.FontStyle,
+                           size: CGFloat) -> UIFont {
+        TWFonts_MTW.notoSansFont(for: style, size: size)
+    }
+    
 }

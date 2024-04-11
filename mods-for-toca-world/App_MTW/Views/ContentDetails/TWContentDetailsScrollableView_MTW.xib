@@ -10,9 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TWContentDetailsScrollableView_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
             <connections>
-                <outlet property="btnDownload" destination="dzl-qZ-Q2K" id="MEC-U7-VDp"/>
                 <outlet property="vContentDetails" destination="pDL-ib-iJS" id="90Z-YW-pHW"/>
-                <outlet property="vDownloadBtnCover" destination="pz0-XP-Uqk" id="WeC-jE-SAY"/>
                 <outlet property="vRecomendations" destination="LB4-GV-XLg" id="mAk-Br-Kjl"/>
                 <outlet property="vRecomendationsCover" destination="fnD-qq-nO6" id="zKP-g2-t1n"/>
                 <outlet property="view" destination="iN0-l3-epB" id="tj5-GK-gTC"/>
@@ -30,10 +28,10 @@
                             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             <subviews>
                                 <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5i-Yx-ddd">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="508"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="592"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pDL-ib-iJS" customClass="TWContentDetailsView_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
-                                            <rect key="frame" x="19.666666666666657" y="0.0" width="353.66666666666674" height="508"/>
+                                            <rect key="frame" x="19.666666666666657" y="10" width="353.66666666666674" height="582"/>
                                             <color key="backgroundColor" systemColor="separatorColor"/>
                                         </view>
                                     </subviews>
@@ -42,7 +40,7 @@
                                         <constraint firstItem="pDL-ib-iJS" firstAttribute="centerX" secondItem="s5i-Yx-ddd" secondAttribute="centerX" id="GmA-nA-oFJ"/>
                                         <constraint firstItem="pDL-ib-iJS" firstAttribute="width" secondItem="s5i-Yx-ddd" secondAttribute="width" multiplier="0.65" id="PX6-jL-lR0"/>
                                         <constraint firstAttribute="bottom" secondItem="pDL-ib-iJS" secondAttribute="bottom" id="SJh-AK-VZz"/>
-                                        <constraint firstItem="pDL-ib-iJS" firstAttribute="top" secondItem="s5i-Yx-ddd" secondAttribute="top" id="UXE-kw-DcC"/>
+                                        <constraint firstItem="pDL-ib-iJS" firstAttribute="top" secondItem="s5i-Yx-ddd" secondAttribute="top" constant="10" id="UXE-kw-DcC"/>
                                         <constraint firstItem="pDL-ib-iJS" firstAttribute="width" secondItem="s5i-Yx-ddd" secondAttribute="width" multiplier="0.9" id="hPH-k1-4Nw"/>
                                     </constraints>
                                     <variation key="default">
@@ -54,41 +52,6 @@
                                         <mask key="constraints">
                                             <include reference="PX6-jL-lR0"/>
                                             <exclude reference="hPH-k1-4Nw"/>
-                                        </mask>
-                                    </variation>
-                                </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pz0-XP-Uqk">
-                                    <rect key="frame" x="0.0" y="528" width="393" height="64"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzl-qZ-Q2K" customClass="TWBaseButton_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
-                                            <rect key="frame" x="19.666666666666657" y="0.0" width="353.66666666666674" height="64"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                            <connections>
-                                                <action selector="downloadAction_MTW:" destination="-1" eventType="touchUpInside" id="N5m-sz-fSG"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstItem="dzl-qZ-Q2K" firstAttribute="centerX" secondItem="pz0-XP-Uqk" secondAttribute="centerX" id="4dA-Lw-KUj"/>
-                                        <constraint firstAttribute="height" constant="64" id="L4A-lW-vn0">
-                                            <variation key="heightClass=regular-widthClass=regular" constant="128"/>
-                                        </constraint>
-                                        <constraint firstAttribute="bottom" secondItem="dzl-qZ-Q2K" secondAttribute="bottom" id="OtX-k4-dYy"/>
-                                        <constraint firstItem="dzl-qZ-Q2K" firstAttribute="width" secondItem="pz0-XP-Uqk" secondAttribute="width" multiplier="0.9" id="Q9T-vW-Pwm"/>
-                                        <constraint firstItem="dzl-qZ-Q2K" firstAttribute="top" secondItem="pz0-XP-Uqk" secondAttribute="top" id="TBd-ni-WZN"/>
-                                        <constraint firstItem="dzl-qZ-Q2K" firstAttribute="width" secondItem="pz0-XP-Uqk" secondAttribute="width" multiplier="0.65" id="TK5-zc-3rW"/>
-                                    </constraints>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="TK5-zc-3rW"/>
-                                        </mask>
-                                    </variation>
-                                    <variation key="heightClass=regular-widthClass=regular">
-                                        <mask key="constraints">
-                                            <exclude reference="Q9T-vW-Pwm"/>
-                                            <include reference="TK5-zc-3rW"/>
                                         </mask>
                                     </variation>
                                 </view>

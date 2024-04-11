@@ -21,4 +21,8 @@ final class TWFonts_MTW {
         .init(name: .init(format: "Anton-Regular", style.rawValue), size: size)!
     }
     
+    class func notoSansFont(for style: FontStyle, size: CGFloat) -> UIFont {
+        .init(name: .init(format: "Anton-Regular", style.rawValue), size: size)!
+    }
+    
 }
