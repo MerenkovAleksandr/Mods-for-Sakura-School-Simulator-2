@@ -19,6 +19,7 @@ final class TWContentCollectionView_MTW: UIView {
     typealias DataSource = UICollectionViewDiffableDataSource<Int, TWContentModel_MTW>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Int, TWContentModel_MTW>
     typealias Cell = TWContentCollectionViewCell_MTW
+    typealias WallpapersCell = TWRecomendationCollectionViewCell_MTW
     
     @IBOutlet var view: UIView!
     @IBOutlet private var searchBarPlaceholder: UIView!
@@ -196,6 +197,8 @@ private extension TWContentCollectionView_MTW {
         contentCollectionView.collectionViewLayout = generateLayout()
         contentCollectionView.register(Cell.nib,
                                        forCellWithReuseIdentifier: Cell.reuseIdentifier)
+        contentCollectionView.register(WallpapersCell.self,
+                                       forCellWithReuseIdentifier: WallpapersCell.reuseIdentifier)
         contentCollectionView.delegate = self
     }
     
@@ -216,6 +219,7 @@ private extension TWContentCollectionView_MTW {
     }
     
     func generateSectionLayoutPhone() -> NSCollectionLayoutSection {
+        
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                               heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -267,11 +271,25 @@ private extension TWContentCollectionView_MTW {
     func configureDataSource() {
         dataSource = DataSource(collectionView: contentCollectionView) {
             [weak self] collectionView, indexPath, contentModel in
+            
+            if contentModel.contentType.rawValue == 3 {
+                
+                guard let self,
+                      let cell = collectionView
+                    .dequeueReusableCell(withReuseIdentifier: WallpapersCell.reuseIdentifier,
+                                         for: indexPath) as? WallpapersCell else { return UICollectionViewCell() }
+                
+                cell.imageView.configure(with: contentModel.content.image)
+
+                return cell
+            }
+            
             guard let self,
                   let cell = collectionView
                 .dequeueReusableCell(withReuseIdentifier: Cell.reuseIdentifier,
                                      for: indexPath) as? Cell else { return nil }
             cell.configure_MTW(with: contentModel)
+            
             cell.didUpdate = { [weak self] in
                 guard let self,
                       let id = cell.id,
