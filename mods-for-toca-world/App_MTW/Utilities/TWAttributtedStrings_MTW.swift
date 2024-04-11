@@ -214,4 +214,15 @@ final class TWAttributtedStrings_MTW {
                  foregroundcolor: foregroundColor)
     }
     
+    class func submenuAttrString(with localizedString: String,
+                                    foregroundColor: UIColor)
+    -> NSAttributedString {
+        .compose(localizedString: localizedString,
+                 kern: -1.0,
+                 font: .knicknackFont(.regular, size: 16.0),
+                 paragraphStyle: .aligned(.center, lineHeightMultiple: 0.8),
+                 foregroundcolor: foregroundColor)
+    }
+    
+    
 }

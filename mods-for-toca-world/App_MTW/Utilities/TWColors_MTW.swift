@@ -53,7 +53,7 @@ final class TWColors_MTW {
     static let buttonForegroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     // Editor
     static let thumbColor = #colorLiteral(red: 0.01568627451, green: 0.8784313725, blue: 0.8039215686, alpha: 1)
-    static let deleteButtonForeground = #colorLiteral(red: 1, green: 0.4274509804, blue: 0.3882352941, alpha: 1)
+    static let deleteButtonForeground = #colorLiteral(red: 0.8980392157, green: 0.8549019608, blue: 0.9529411765, alpha: 1)
     // Characters
     static let charactersImageBackground = #colorLiteral(red: 0.8980392157, green: 0.8549019608, blue: 0.9529411765, alpha: 1)
     // Menu Cell
@@ -64,4 +64,7 @@ final class TWColors_MTW {
     // SubMenu
     static let buttonEditBackground = #colorLiteral(red: 1, green: 0.7647058824, blue: 0.3764705882, alpha: 1)
     static let buttonDeleteBackground = #colorLiteral(red: 0.8156862745, green: 0.2, blue: 0.2117647059, alpha: 1)
+    // Alert
+    static let alertTitleForeground = #colorLiteral(red: 1, green: 0.7647058824, blue: 0.3764705882, alpha: 1)
+    static let alertMessageForeground = #colorLiteral(red: 0.8980392157, green: 0.8549019608, blue: 0.9529411765, alpha: 1)
 }

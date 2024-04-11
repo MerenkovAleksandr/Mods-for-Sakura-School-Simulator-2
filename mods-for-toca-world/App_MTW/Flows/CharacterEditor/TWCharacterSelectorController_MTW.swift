@@ -240,6 +240,9 @@ private extension TWCharacterSelectorController_MTW {
      
      func showDeleteConfirmation(onDelete handler: @escaping () -> Void) {
           let title = NSLocalizedString("Text63ID", comment: "")
+//          title.attributedText = TWAttributtedStrings_MTW
+//              .recomendationsTitleAttrString(with: localizedTitle,
+//                                             foregroundColor: TWColors_MTW.contentSelectorCellSelectedForeground)
           let message = NSLocalizedString("Text64ID", comment: "")
           let closeTitle = NSLocalizedString("Text37ID", comment: "")
           let deleteTitle = NSLocalizedString("Text38ID", comment: "")

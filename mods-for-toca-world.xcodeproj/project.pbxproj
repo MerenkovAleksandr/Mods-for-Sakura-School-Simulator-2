@@ -12,6 +12,7 @@
 		BB5238942BC5748800848901 /* TWCharacterEditorCollectionViewCell_MTW.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB5238932BC5748800848901 /* TWCharacterEditorCollectionViewCell_MTW.xib */; };
 		BBD05D2A2BC72B8E004A03B3 /* Anton-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBD05D292BC72B8E004A03B3 /* Anton-Regular.ttf */; };
 		BBD05D2C2BC7E186004A03B3 /* NotoSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBD05D2B2BC7E186004A03B3 /* NotoSans.ttf */; };
+		BBD05D2E2BC8641D004A03B3 /* Knicknack-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBD05D2D2BC8641D004A03B3 /* Knicknack-Regular.ttf */; };
 		F431ADA42A6E4C9400F1A450 /* TWContentModel_MTW.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431ADA32A6E4C9400F1A450 /* TWContentModel_MTW.swift */; };
 		F431ADA72A6E4EEF00F1A450 /* TWContentCollectionController_MTW.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431ADA62A6E4EEF00F1A450 /* TWContentCollectionController_MTW.swift */; };
 		F431ADA92A6E519700F1A450 /* TWContentCollectionView_MTW.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431ADA82A6E519700F1A450 /* TWContentCollectionView_MTW.swift */; };
@@ -222,6 +223,7 @@
 		BB5238932BC5748800848901 /* TWCharacterEditorCollectionViewCell_MTW.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TWCharacterEditorCollectionViewCell_MTW.xib; sourceTree = "<group>"; };
 		BBD05D292BC72B8E004A03B3 /* Anton-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Anton-Regular.ttf"; sourceTree = "<group>"; };
 		BBD05D2B2BC7E186004A03B3 /* NotoSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NotoSans.ttf; sourceTree = "<group>"; };
+		BBD05D2D2BC8641D004A03B3 /* Knicknack-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Knicknack-Regular.ttf"; sourceTree = "<group>"; };
 		F431ADA32A6E4C9400F1A450 /* TWContentModel_MTW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWContentModel_MTW.swift; sourceTree = "<group>"; };
 		F431ADA62A6E4EEF00F1A450 /* TWContentCollectionController_MTW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWContentCollectionController_MTW.swift; sourceTree = "<group>"; };
 		F431ADA82A6E519700F1A450 /* TWContentCollectionView_MTW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWContentCollectionView_MTW.swift; sourceTree = "<group>"; };
@@ -736,6 +738,7 @@
 			children = (
 				BBD05D292BC72B8E004A03B3 /* Anton-Regular.ttf */,
 				BBD05D2B2BC7E186004A03B3 /* NotoSans.ttf */,
+				BBD05D2D2BC8641D004A03B3 /* Knicknack-Regular.ttf */,
 				F48081402A6D0388007845BC /* Baloo2-Bold.ttf */,
 				F480813E2A6D0388007845BC /* Baloo2-ExtraBold.ttf */,
 				F48081422A6D0389007845BC /* Baloo2-Medium.ttf */,
@@ -1239,6 +1242,7 @@
 				FEC8BA482A617C48009833DD /* btn_gif.gif in Resources */,
 				FEC8BA462A617C48009833DD /* phone.mp4 in Resources */,
 				F4422A402A6ED3600010855D /* TWContentCollectionViewCell_MTW.xib in Resources */,
+				BBD05D2E2BC8641D004A03B3 /* Knicknack-Regular.ttf in Resources */,
 				F431ADB32A6E582E00F1A450 /* TWContentSearchBar_MTW.xib in Resources */,
 				F48081522A6D15C3007845BC /* Baloo2-Bold.ttf in Resources */,
 				FEC8BA432A617C48009833DD /* PremiumMainController_MTW.xib in Resources */,

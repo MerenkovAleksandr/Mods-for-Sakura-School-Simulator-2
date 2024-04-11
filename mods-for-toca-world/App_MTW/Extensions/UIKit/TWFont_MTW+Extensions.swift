@@ -21,4 +21,9 @@ extension TWFont_MTW {
         TWFonts_MTW.notoSansFont(for: style, size: size)
     }
     
+    class func knicknackFont(_ style: TWFonts_MTW.FontStyle,
+                           size: CGFloat) -> UIFont {
+        TWFonts_MTW.knicknackFont(for: style, size: size)
+    }
+    
 }

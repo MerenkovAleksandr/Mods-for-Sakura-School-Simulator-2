@@ -25,4 +25,8 @@ final class TWFonts_MTW {
         .init(name: .init(format: "Anton-Regular", style.rawValue), size: size)!
     }
     
+    class func knicknackFont(for style: FontStyle, size: CGFloat) -> UIFont {
+        .init(name: .init(format: "Knicknack-Regular", style.rawValue), size: size)!
+    }
+    
 }

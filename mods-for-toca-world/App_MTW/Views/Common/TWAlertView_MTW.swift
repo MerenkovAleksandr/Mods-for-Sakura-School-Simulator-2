@@ -13,7 +13,7 @@ enum TWAlertButtonStyle_MTW {
     
     var foregroundColor: UIColor {
         self == .plain
-        ? TWColors_MTW.contentSelectorCellForeground
+        ? TWColors_MTW.contentCellForeground
         : TWColors_MTW.deleteButtonForeground
     }
 }
@@ -102,7 +102,7 @@ extension TWAlertView_MTW {
         lblMessage.attributedText = TWAttributtedStrings_MTW
             .alertViewMessageAttrString(with: localizedString,
                                         foregroundColor: TWColors_MTW
-                .contentSelectorCellForeground)
+                .alertMessageForeground)
     }
     
 }
@@ -115,7 +115,7 @@ private extension TWAlertView_MTW {
         lblTitle.attributedText = TWAttributtedStrings_MTW
             .alertViewTitleAttrString(with: localizedString,
                                       foregroundColor: TWColors_MTW
-                .contentSelectorCellForeground)
+                .alertTitleForeground)
     }
     
     func configureSubviews_MTW() {
