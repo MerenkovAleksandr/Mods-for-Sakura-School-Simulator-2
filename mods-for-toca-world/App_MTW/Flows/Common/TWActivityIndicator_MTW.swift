@@ -52,4 +52,8 @@ final class TWActivityIndicator_MTW: UIView {
         }
     }
     
+    func setImage(_ image: UIImage) {
+        imageView.image = image
+    }
+    
 }

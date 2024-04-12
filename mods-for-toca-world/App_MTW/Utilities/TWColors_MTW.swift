@@ -13,7 +13,7 @@ final class TWColors_MTW {
     static let progressBarGradientEnd = #colorLiteral(red: 1, green: 0.5220000148, blue: 0.7139999866, alpha: 1)
     static let progressBarBackground = #colorLiteral(red: 0.9879999757, green: 0.3840000033, blue: 0.6269999743, alpha: 1)
     static let progressBarForeground = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-    static let progressBarText = #colorLiteral(red: 0.9879999757, green: 0.3840000033, blue: 0.6269999743, alpha: 1)
+    static let progressBarText = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     // MARK: - Navigation Bar Colors
     static let navigationBarGradientStart = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
     static let navigationBarGradientEnd = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 0)

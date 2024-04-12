@@ -11,6 +11,7 @@ class TWPreloader_MTW: TWBaseController_MTW, NetworkStatusMonitorDelegate_MTW {
 
     @IBOutlet private var lblTitle: UILabel!
     @IBOutlet private var vProgressBar: TWProgressBarView_MTW!
+    @IBOutlet private var vActivitiIndicator: TWActivityIndicator_MTW!
     
     private var isReadyToProceed: Bool = false
     private var dropBox: TWDBManager_MTW { .shared }
@@ -29,9 +30,17 @@ class TWPreloader_MTW: TWBaseController_MTW, NetworkStatusMonitorDelegate_MTW {
         
         network.delegate = self
         
+        vProgressBar.delegate = self
         vProgressBar.setProgress_MTW(value: 0.5, animated: true)
+        vProgressBar.layer.opacity = 0
         
         connectToDropbox()
+        
+        guard let image = UIImage(named: "load") else { return }
+        
+        vActivitiIndicator.setImage(image)
+        vActivitiIndicator.show_MTW()
+        vActivitiIndicator.rotateView()
     }
     
 }
@@ -55,7 +64,7 @@ extension TWPreloader_MTW {
 private extension TWPreloader_MTW {
     
     var localizedTitle: String {
-        NSLocalizedString("Text32ID", comment: "").uppercased()
+        NSLocalizedString("0%", comment: "").uppercased()
     }
     
     var foregroundColor: UIColor {
@@ -63,7 +72,7 @@ private extension TWPreloader_MTW {
     }
     
     var attributtedString: NSAttributedString {
-        TWAttributtedStrings_MTW.barAttrString(with: localizedTitle,
+        TWAttributtedStrings_MTW.progressbarAttrString(with: localizedTitle,
                                                foregroundColor: foregroundColor)
     }
     
@@ -99,6 +108,15 @@ private extension TWPreloader_MTW {
             .init(rootViewController: TWContentSelectorController_MTW())
         navigationController.isNavigationBarHidden = true
         UIApplication.shared.setRootVC_MTW(navigationController)
+    }
+    
+}
+
+// MARK: - TWProgressBarViewDelegate_MTW
+
+extension TWPreloader_MTW: TWProgressBarViewDelegate_MTW {
+    func updateProgressValue(_ value: Int) {
+        lblTitle.text = String(value) + "%"
     }
     
 }

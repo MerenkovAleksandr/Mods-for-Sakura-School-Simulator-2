@@ -42,6 +42,21 @@ final class TWAttributtedStrings_MTW {
                         foregroundcolor: foregroundColor)
     }
     
+    class func progressbarAttrString(with localizedString: String,
+                             foregroundColor: UIColor) -> NSAttributedString {
+        let size: CGFloat = iPad ? 44.0 : 15.0
+        let lineSpacing: CGFloat = iPad ? .zero : 20.0
+        let kern = iPad ? -2.0 : -0.5
+        
+        return .compose(localizedString: localizedString,
+                        kern: kern,
+                        font: .defaultFont(.semiBold,
+                                           size: size),
+                        paragraphStyle: .aligned(.center,
+                                                 lineSpacing: lineSpacing),
+                        foregroundcolor: foregroundColor)
+    }
+    
     class func barNewAttrString(with localizedString: String,
                              foregroundColor: UIColor) -> NSAttributedString {
         let size: CGFloat = iPad ? 44.0 : 17.0

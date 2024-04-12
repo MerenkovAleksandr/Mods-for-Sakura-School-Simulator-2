@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol TWProgressBarViewDelegate_MTW: AnyObject {
+    func updateProgressValue(_ value: Int)
+}
+
 final class TWProgressBarView_MTW: TWBaseView_MTW {
     
     var didFinishAnimation: ((_ progress: CGFloat) -> Void)?
@@ -16,6 +20,8 @@ final class TWProgressBarView_MTW: TWBaseView_MTW {
     private var progressBarShape = CAShapeLayer()
     
     private(set) var isAnimating: Bool = false
+    
+    weak var delegate: TWProgressBarViewDelegate_MTW?
     
     override func draw(_ rect: CGRect) {
         super.drawBackgroundLayer_MTW()
@@ -112,6 +118,8 @@ private extension TWProgressBarView_MTW {
     func updateProgressBarShape() {
         progressBarShape.path = adjustedProgressBarPath.cgPath
         progressBarShape.fillColor = TWColors_MTW.progressBarForeground.cgColor
+        let value = progressValue * 100
+        delegate?.updateProgressValue(Int(value))
     }
     
     func animateProgressBarShape() {
