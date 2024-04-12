@@ -12,7 +12,6 @@ final class TWContentCategorySelectorView_MTW: UIView {
     typealias DataSource = UICollectionViewDiffableDataSource<Int, TWContentItemCategory_MTW>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Int, TWContentItemCategory_MTW>
     typealias Cell = TWContentCategoryCollectionViewCell_MTW
-    typealias BubbleCell = TWContentCategoryBubbleCollectionViewCell_MTW
     
     var didSelect: ((_ category: TWContentItemCategory_MTW) -> Void)?
     
@@ -109,8 +108,6 @@ private extension TWContentCategorySelectorView_MTW {
         collectionView.allowsMultipleSelection = false
         collectionView.register(Cell.classForCoder(),
                                 forCellWithReuseIdentifier: Cell.reuseIdentifier)
-        collectionView.register(BubbleCell.classForCoder(),
-                                forCellWithReuseIdentifier: BubbleCell.reuseIdentifier)
         
         addSubview(collectionView)
     }
@@ -123,18 +120,6 @@ private extension TWContentCategorySelectorView_MTW {
         dataSource = DataSource(collectionView: collectionView) {
             collectionView, indexPath, category in
             let isSelected = category == self.selectedCategory
-            
-            if category == .all {
-                if let cell = collectionView.dequeueReusableCell(
-                        withReuseIdentifier: BubbleCell.reuseIdentifier,
-                        for: indexPath) as? BubbleCell {
-                    cell.configure(category, isSelected: isSelected)
-                    
-                    return cell
-                }
-                
-                return nil
-            }
             
             if let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: Cell.reuseIdentifier,
