@@ -18,7 +18,7 @@ final class TWAttributtedStrings_MTW {
         .font: UIFont.defaultFont(.regular, size: 24.0),
         .kern: -1.0,
         .paragraphStyle: NSParagraphStyle.aligned(.left),
-        .foregroundColor: TWColors_MTW.navigationBarForeground
+        .foregroundColor: TWColors_MTW.searchBarForeground
     ]}
     
     class var searchBarTextFieldParagraphStyle: NSParagraphStyle {

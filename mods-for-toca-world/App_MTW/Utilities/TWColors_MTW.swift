@@ -66,4 +66,7 @@ final class TWColors_MTW {
     // Alert
     static let alertTitleForeground = #colorLiteral(red: 1, green: 0.7647058824, blue: 0.3764705882, alpha: 1)
     static let alertMessageForeground = #colorLiteral(red: 0.8980392157, green: 0.8549019608, blue: 0.9529411765, alpha: 1)
+    //  Search Bar
+    static let searchBarSelectedBackground = #colorLiteral(red: 0.01568627451, green: 0.3725490196, blue: 0.662745098, alpha: 1)
+    static let searchBarForeground = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 }

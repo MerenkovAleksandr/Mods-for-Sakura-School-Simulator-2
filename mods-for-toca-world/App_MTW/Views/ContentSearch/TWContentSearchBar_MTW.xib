@@ -41,13 +41,14 @@
                                     </constraints>
                                 </imageView>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iXt-aV-Smu" customClass="TWContentSearchBarTextField_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
-                                    <rect key="frame" x="73" y="9.6666666666666643" width="363" height="78"/>
+                                    <rect key="frame" x="72.999999999999972" y="9.6666666666666643" width="388.33333333333326" height="78"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkS-35-Ihw">
-                                    <rect key="frame" x="501.66666666666669" y="0.0" width="77.333333333333314" height="97.666666666666671"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="CLOSE"/>
+                                    <rect key="frame" x="527" y="0.0" width="52" height="97.666666666666671"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="close"/>
                                     <connections>
                                         <action selector="closeButtonAction_MTW:" destination="-1" eventType="touchUpInside" id="pbL-lk-MEW"/>
                                     </connections>
@@ -100,6 +101,7 @@
         </view>
     </objects>
     <resources>
+        <image name="close" width="28" height="28"/>
         <image name="icon_search" width="28" height="28"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

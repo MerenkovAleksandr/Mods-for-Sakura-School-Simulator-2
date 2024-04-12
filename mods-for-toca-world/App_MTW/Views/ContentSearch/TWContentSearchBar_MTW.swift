@@ -167,13 +167,11 @@ private extension TWContentSearchBar_MTW {
     }
     
     var searchBarTintColor: UIColor {
-        TWColors_MTW.navigationSearchForeground
+        TWColors_MTW.searchBarForeground
     }
     
     func configureSubviews_MTW() {
         configureTextField()
-        configurePlaceholder()
-        configureCloseButton()
         configureTableView_MTW()
     }
     
@@ -188,28 +186,10 @@ private extension TWContentSearchBar_MTW {
         searchBarTextField.adjustsFontSizeToFitWidth = false
     }
     
-    func configureCloseButton() {
-        let localizedString = NSLocalizedString("Text37ID", comment: "").uppercased()
-        let attributtedString = TWAttributtedStrings_MTW
-            .searchBarAttrString(with: localizedString,
-                                 foregroundColor: searchBarTintColor)
-        btnClose.setAttributedTitle(attributtedString, for: .normal)
-    }
-    
-    func configurePlaceholder() {
-        let localizedString = NSLocalizedString("Text37ID", comment: "")
-        let attributes =  TWAttributtedStrings_MTW
-            .searchBarTextFieldTextAttridbutes
-        
-        let attributtedString = TWAttributedString_MTW
-            .init(string: localizedString,
-                  attributes: attributes)
-    }
-    
     func configureTableView_MTW() {
         tvSearchResults.register(Cell.classForCoder(),
                            forCellReuseIdentifier: Cell.reuseIdentifier)
-        tvSearchResults.tintColor = TWColors_MTW.navigationBarForeground
+        tvSearchResults.tintColor = TWColors_MTW.searchBarForeground
         tvSearchResults.showsVerticalScrollIndicator = false
         tvSearchResults.delegate = self
         tvSearchResults.dataSource = self
@@ -249,7 +229,7 @@ final class TWContentSearchResultTableViewCell_MTW: UITableViewCell {
         
         let hightlight: UIView = {
             let view = UIView()
-            view.backgroundColor = foregroundColor.withAlphaComponent(0.4)
+            view.backgroundColor = TWColors_MTW.searchBarSelectedBackground
             
             return view
         }()
@@ -292,7 +272,7 @@ private extension TWContentSearchResultTableViewCell_MTW {
     var offset: CGFloat { iPad ? 48.0 : 36.0 }
     
     var foregroundColor: UIColor {
-        TWColors_MTW.navigationBarForeground
+        TWColors_MTW.searchBarForeground
     }
     
     func makeLayout() {
