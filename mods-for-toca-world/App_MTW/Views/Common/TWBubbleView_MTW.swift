@@ -45,8 +45,12 @@ extension TWBubbleView_MTW {
         configureActionButton()
     }
     
-    func updateImageViewForEdit() {
-        ivContent.image = #imageLiteral(resourceName: "elipsis")
+    func updateImageViewForEdit(_ image: UIImage? = nil) {
+        if let image = image {
+            ivContent.image = image
+        } else {
+            ivContent.image = #imageLiteral(resourceName: "elipsis")
+        }
     }
     
 }

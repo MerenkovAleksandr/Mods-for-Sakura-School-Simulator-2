@@ -40,7 +40,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIi-6K-FIJ" customClass="TWBubbleView_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
-                    <rect key="frame" x="23.999999999999993" y="12" width="85.333333333333314" height="48"/>
+                    <rect key="frame" x="283.66666666666669" y="550" width="85.333333333333314" height="48"/>
                     <color key="backgroundColor" systemColor="separatorColor"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="ZIi-6K-FIJ" secondAttribute="height" multiplier="32:18" id="Rqs-iz-TeD"/>
@@ -48,7 +48,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdN-yw-KLq" customClass="TWSubMenu_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
-                    <rect key="frame" x="66.666666666666671" y="60" width="120.00000000000001" height="100"/>
+                    <rect key="frame" x="326.33333333333331" y="598" width="120" height="100"/>
                     <color key="backgroundColor" systemColor="separatorColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="100" id="7wL-2a-vrU">
@@ -77,12 +77,13 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="P3g-mp-hS0" secondAttribute="trailing" constant="24" id="6Ry-ZC-FOg"/>
                 <constraint firstItem="B8a-5y-lPb" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" constant="-48" id="Bb8-g2-HtD"/>
-                <constraint firstItem="ZIi-6K-FIJ" firstAttribute="leading" secondItem="P3g-mp-hS0" secondAttribute="leading" id="GMX-r0-HTu"/>
+                <constraint firstItem="ZIi-6K-FIJ" firstAttribute="trailing" secondItem="P3g-mp-hS0" secondAttribute="trailing" id="GMX-r0-HTu"/>
                 <constraint firstItem="B8a-5y-lPb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="36" id="Io6-zE-NW8"/>
                 <constraint firstItem="B8a-5y-lPb" firstAttribute="top" secondItem="P3g-mp-hS0" secondAttribute="bottom" constant="24" id="d6v-Ox-A8L"/>
                 <constraint firstItem="P3g-mp-hS0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="dV9-ez-jJq"/>
                 <constraint firstItem="fdN-yw-KLq" firstAttribute="top" secondItem="ZIi-6K-FIJ" secondAttribute="bottom" id="gUg-1A-r6n"/>
-                <constraint firstItem="ZIi-6K-FIJ" firstAttribute="top" secondItem="P3g-mp-hS0" secondAttribute="top" id="sVB-JE-tPg"/>
+                <constraint firstItem="fdN-yw-KLq" firstAttribute="top" secondItem="ZIi-6K-FIJ" secondAttribute="bottom" id="kKK-Ue-mpQ"/>
+                <constraint firstItem="ZIi-6K-FIJ" firstAttribute="bottom" secondItem="BxA-Ff-xU0" secondAttribute="bottom" id="wDR-vo-e5x"/>
                 <constraint firstAttribute="trailing" secondItem="B8a-5y-lPb" secondAttribute="trailing" constant="36" id="whF-Pn-ELL"/>
                 <constraint firstItem="fdN-yw-KLq" firstAttribute="leading" secondItem="ZIi-6K-FIJ" secondAttribute="centerX" id="x71-1m-RuF"/>
                 <constraint firstItem="P3g-mp-hS0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="z2c-il-Iuu"/>

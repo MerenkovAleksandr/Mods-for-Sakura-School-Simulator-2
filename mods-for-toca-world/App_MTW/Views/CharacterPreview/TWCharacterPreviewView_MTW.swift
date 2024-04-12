@@ -32,7 +32,6 @@ final class TWCharacterPreviewView_MTW: TWBaseView_MTW {
     @IBAction func downloadBtnAction(_ sender: Any) {
         didSave?()
     }
-    
 }
 
 // MARK: - Public API
@@ -58,8 +57,9 @@ private extension TWCharacterPreviewView_MTW {
     
     func configureBubbleView() {
         vBubble.makeInteractive { [weak self] in
-            self?.toggleSubMenu()
+            self?.didPerform?(TWSubMenu_MTW.TWAction_MTW.edit)
         }
+        vBubble.updateImageViewForEdit(UIImage(named: "edit"))
     }
     
     func configureDownloadButton() {
@@ -73,7 +73,7 @@ private extension TWCharacterPreviewView_MTW {
     func configureSubMenuView() {
         vSubMenu.alpha = .zero
         vSubMenu.didPerform = { [weak self] action in
-            self?.didPerform?(action)
+            self?.didPerform?(TWSubMenu_MTW.TWAction_MTW.edit)
         }
         
         addGestureRecognizer(UITapGestureRecognizer
