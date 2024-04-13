@@ -167,23 +167,33 @@ private extension TWSubMenu_MTW {
     }
     
     func backgroundLayerPathForDelete() -> UIBezierPath {
-        let radius = bounds.height / 2.0
         let centerX = bounds.width / 2.0
         let centerY = bounds.height / 2.0
+        let radius = 25.0
+        
         let path = UIBezierPath()
-        path.move(to: CGPoint(x: centerX + radius, y: centerY))
-        path.addArc(withCenter: CGPoint(x: centerX, y: centerY), radius: radius, startAngle: 0, endAngle: .pi, clockwise: true)
+        path.move(to: CGPoint(x: 0, y: centerY))
+        path.addLine(to: CGPoint(x: 0, y: bounds.height - radius))
+        path.addArc(withCenter: CGPoint(x: radius, y: bounds.height - radius), radius: radius, startAngle: .pi, endAngle: .pi / 2, clockwise: false)
+        path.addLine(to: CGPoint(x: bounds.width - radius, y: bounds.height))
+        path.addArc(withCenter: CGPoint(x: bounds.width - radius, y: bounds.height - radius), radius: radius, startAngle: .pi / 2, endAngle: 0, clockwise: false)
+        path.addLine(to: CGPoint(x: bounds.width, y: centerY))
         path.close()
         return path
     }
     
     func backgroundLayerPathForEdit() -> UIBezierPath {
-        let radius = bounds.height / 2.0
         let centerX = bounds.width / 2.0
         let centerY = bounds.height / 2.0
+        let radius = 25.0
+        
         let path = UIBezierPath()
-        path.move(to: CGPoint(x: centerX + radius, y: centerY))
-        path.addArc(withCenter: CGPoint(x: centerX, y: centerY), radius: radius, startAngle: .pi, endAngle: 0, clockwise: true)
+        path.move(to: CGPoint(x: 0, y: centerY))
+        path.addLine(to: CGPoint(x: 0, y: radius))
+        path.addArc(withCenter: CGPoint(x: radius, y: radius), radius: radius, startAngle: .pi, endAngle: .pi * 3 / 2, clockwise: true)
+        path.addLine(to: CGPoint(x: bounds.width - radius, y: 0))
+        path.addArc(withCenter: CGPoint(x: bounds.width - radius, y: radius), radius: radius, startAngle: .pi * 3 / 2, endAngle: 0, clockwise: true)
+        path.addLine(to: CGPoint(x: bounds.width, y: centerY))
         path.close()
         return path
     }
