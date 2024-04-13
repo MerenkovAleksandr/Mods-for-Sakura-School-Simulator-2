@@ -40,7 +40,9 @@ extension TWCharacterPreviewView_MTW {
     
     func configure(_ preview: TWCharacterPreview_MTW) {
         ivContent.image = preview.image
+        ivContent.contentMode = .scaleAspectFit
         ivContent.backgroundColor = TWColors_MTW.charactersImageBackground
+        ivContent.layer.cornerRadius = 15
     }
     
 }

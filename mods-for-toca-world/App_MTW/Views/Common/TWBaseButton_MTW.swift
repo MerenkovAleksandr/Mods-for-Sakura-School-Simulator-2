@@ -35,7 +35,7 @@ class TWBaseButton_MTW: UIButton {
     }
     
     var backgroundFillColor: UIColor {
-        TWColors_MTW.bubbleViewForegroundColor.withAlphaComponent(opacity)
+        TWColors_MTW.buttonEditBackground.withAlphaComponent(opacity)
     }
     
     var borderWidth: CGFloat {
