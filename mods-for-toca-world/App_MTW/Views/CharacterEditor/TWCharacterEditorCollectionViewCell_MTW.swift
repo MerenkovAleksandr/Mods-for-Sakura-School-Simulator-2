@@ -51,6 +51,7 @@ class TWCharacterEditorCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
     override func layoutSubviews() {
         super.layoutSubviews()
         
+        applyMask()
         ivContent.setCornerRadius_MTW(8.0)
     }
     
@@ -72,7 +73,7 @@ extension TWCharacterEditorCollectionViewCell_MTW {
     
     func configure(with character: TWCharacterPreview_MTW? = nil) {
         lblTitle.hide_MTW()
-        
+                
         if let character {
             ivContent.image = character.image
             ivContent.backgroundColor = TWColors_MTW.imageViewEmptyBackground
@@ -81,7 +82,7 @@ extension TWCharacterEditorCollectionViewCell_MTW {
                 self.didCallSubMenu?(self.vBubble, character) }
         } else {
             ivContent.backgroundColor = TWColors_MTW.imageViewEmptyBackground
-            vBubble.hide_MTW()
+            vBubble.isUserInteractionEnabled = false
             ivContent.createNewCharacter()
         }
         vBubble.updateImageViewForEdit()
@@ -89,5 +90,26 @@ extension TWCharacterEditorCollectionViewCell_MTW {
     
 }
 
+// MARK: - Private API
 
+private extension TWCharacterEditorCollectionViewCell_MTW {
+    
+    func applyMask() {
+        let maskLayer = CAShapeLayer()
+        let path = UIBezierPath()
+        let cornerRadius: CGFloat = 15
+        
+        path.move(to: CGPoint(x: 0, y: 0))
+        path.addLine(to: CGPoint(x: bounds.width - 90, y: 0))
+        path.addArc(withCenter: CGPoint(x: bounds.width - 70, y: cornerRadius), radius: cornerRadius, startAngle: .pi * 3 / 2, endAngle: 0, clockwise: true)
+        path.addArc(withCenter: CGPoint(x: bounds.width - 40, y: cornerRadius), radius: cornerRadius, startAngle: .pi, endAngle: .pi / 2, clockwise: false)
+        path.addArc(withCenter: CGPoint(x: bounds.width - 40, y: cornerRadius * 3), radius: cornerRadius, startAngle: .pi * 3 / 2, endAngle: 0, clockwise: true)
+        path.addLine(to: CGPoint(x: bounds.width, y: bounds.height))
+        path.addLine(to: CGPoint(x: 0, y: bounds.height))
+        path.close()
+
+        maskLayer.path = path.cgPath
+        ivContent.layer.mask = maskLayer
+    }
+}
 

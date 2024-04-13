@@ -35,11 +35,11 @@
                         </subviews>
                     </stackView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q9z-Sx-Stg" customClass="TWBubbleView_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
-                        <rect key="frame" x="194" y="4" width="64" height="45.666666666666664"/>
+                        <rect key="frame" x="208" y="20" width="15" height="18"/>
                         <color key="backgroundColor" systemColor="separatorColor"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Q9z-Sx-Stg" secondAttribute="height" multiplier="32:18" constant="-17" id="jHr-qL-0en"/>
-                            <constraint firstAttribute="width" constant="64" id="pg4-1m-uct">
+                            <constraint firstAttribute="width" constant="15" id="pg4-1m-uct">
                                 <variation key="heightClass=regular-widthClass=regular" constant="96"/>
                             </constraint>
                         </constraints>
@@ -48,10 +48,10 @@
             </view>
             <constraints>
                 <constraint firstItem="nbG-k5-wcE" firstAttribute="leading" secondItem="pga-Bp-eJS" secondAttribute="leading" constant="12" id="5Tb-ru-rtb"/>
-                <constraint firstItem="Q9z-Sx-Stg" firstAttribute="top" secondItem="pga-Bp-eJS" secondAttribute="top" constant="4" id="6e9-G6-D5f"/>
+                <constraint firstItem="Q9z-Sx-Stg" firstAttribute="top" secondItem="pga-Bp-eJS" secondAttribute="top" constant="20" id="6e9-G6-D5f"/>
                 <constraint firstItem="nbG-k5-wcE" firstAttribute="top" secondItem="pga-Bp-eJS" secondAttribute="top" constant="12" id="9Fu-Ix-HI6"/>
                 <constraint firstAttribute="bottom" secondItem="nbG-k5-wcE" secondAttribute="bottom" constant="12" id="C2N-zZ-WNN"/>
-                <constraint firstAttribute="trailing" secondItem="Q9z-Sx-Stg" secondAttribute="trailing" constant="-20" id="MTV-1g-Rbi"/>
+                <constraint firstAttribute="trailing" secondItem="Q9z-Sx-Stg" secondAttribute="trailing" constant="15" id="MTV-1g-Rbi"/>
                 <constraint firstAttribute="trailing" secondItem="nbG-k5-wcE" secondAttribute="trailing" constant="12" id="Yqg-av-gEZ"/>
             </constraints>
             <size key="customSize" width="238" height="285"/>
@@ -65,7 +65,7 @@
     </objects>
     <resources>
         <systemColor name="separatorColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
