@@ -25,6 +25,7 @@ final class TWColors_MTW {
     static let contentSelectorCellGradientStart = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
     static let contentSelectorCellGradientEnd = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
     static let contentSelectorCellBackground = #colorLiteral(red: 0.03137254902, green: 0.4784313725, blue: 0.8431372549, alpha: 1)
+    static let contentSelectorCellShadow = #colorLiteral(red: 0.01568627451, green: 0.3725490196, blue: 0.662745098, alpha: 1)
     static let contentSelectorCellForeground = #colorLiteral(red: 0.9176470588, green: 0.4274509804, blue: 0.662745098, alpha: 1)
     static let contentCellForeground = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     // Sound Cell
@@ -47,6 +48,7 @@ final class TWColors_MTW {
     static let bubbleViewGradientStart = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
     static let bubbleViewGradientEnd = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
     static let bubbleViewForegroundColor = #colorLiteral(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
+    static let bubbleViewForegroundShadow = #colorLiteral(red: 0.6745098039, green: 0.6745098039, blue: 0.6745098039, alpha: 1)
     static let bubbleViewTextColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     // Button
     static let buttonForegroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)

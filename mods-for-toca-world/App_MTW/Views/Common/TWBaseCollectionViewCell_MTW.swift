@@ -79,10 +79,7 @@ class TWBaseCollectionViewCell_MTW: UICollectionViewCell {
     }
     
     func drawBackgroundLayer_MTW() {
-        let path = UIBezierPath(roundedRect: CGRect(x: 5.0,
-                                                    y: 5.0,
-                                                    width: bounds.width - 5,
-                                                    height: bounds.height - 5),
+        let path = UIBezierPath(roundedRect: adjustedRect,
                                 cornerRadius: cornerRadius)
         let mask = CAShapeLayer()
         mask.path = path.cgPath

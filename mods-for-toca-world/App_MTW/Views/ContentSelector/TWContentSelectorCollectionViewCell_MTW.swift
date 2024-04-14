@@ -17,6 +17,13 @@ final class TWContentSelectorCollectionViewCell_MTW: TWBaseCollectionViewCell_MT
     private var backgrountColorToSet: UIColor = .clear
     private var shadowColor: UIColor = .clear
     
+    var adjustedShadowRect: CGRect {
+        .init(x: adjustment,
+              y: adjustment,
+              width: bounds.width - sizeAdjustment,
+              height: bounds.height - sizeAdjustment)
+    }
+    
     override var isHighlighted: Bool {
         didSet {
             updateApperance()
@@ -49,6 +56,13 @@ final class TWContentSelectorCollectionViewCell_MTW: TWBaseCollectionViewCell_MT
     
     override var backgroundFillColor: UIColor {
         shadowColor
+    }
+    
+    override var adjustedRect: CGRect {
+        .init(x: 5.0,
+              y: 5.0,
+              width: bounds.width - 5,
+              height: bounds.height - 5)
     }
     
     override func draw(_ rect: CGRect) {
@@ -143,7 +157,7 @@ private extension TWContentSelectorCollectionViewCell_MTW {
     
     func drawShadowLayer_MTW() {
         let shadowLayer = CALayer()
-        shadowLayer.frame = adjustedRect
+        shadowLayer.frame = adjustedShadowRect
         shadowLayer.cornerRadius = cornerRadius
         shadowLayer.backgroundColor = backgrountColorToSet.cgColor
         shadowLayer.shadowColor = UIColor.black.cgColor

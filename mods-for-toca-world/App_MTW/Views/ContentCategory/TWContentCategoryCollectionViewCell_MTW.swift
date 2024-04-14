@@ -16,6 +16,19 @@ class TWContentCategoryCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
         TWColors_MTW.contentCategoryCellForeground
     }
     
+    var shadowColor: UIColor {
+       drawSelected
+       ? TWColors_MTW.contentSelectorCellShadow
+       : TWColors_MTW.bubbleViewForegroundShadow
+    }
+    
+    var adjustedShadowRect: CGRect {
+        .init(x: adjustment,
+              y: adjustment,
+              width: bounds.width - sizeAdjustment,
+              height: bounds.height - sizeAdjustment)
+    }
+    
     override var adjustment: CGFloat { 4.0 }
     
     override var adjustedAccentRect: CGRect {
@@ -31,6 +44,13 @@ class TWContentCategoryCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
         adjustedRect.height / 2
     }
     
+    override var adjustedRect: CGRect {
+        .init(x: 5.0,
+              y: 7.0,
+              width: bounds.width - 12,
+              height: bounds.height - 14)
+    }
+    
     override var gradientColors: [CGColor] {
         drawSelected
         ? [TWColors_MTW.bubbleViewGradientStart.cgColor,
@@ -43,6 +63,11 @@ class TWContentCategoryCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
         drawSelected
         ? TWColors_MTW.contentSelectorCellBackground
         : TWColors_MTW.bubbleViewForegroundColor
+    }
+    
+    override func draw(_ rect: CGRect) {
+        drawShadowLayer_MTW()
+        drawBackgroundLayer_MTW()
     }
     
     override init(frame: CGRect) {
@@ -96,6 +121,32 @@ private extension TWContentCategoryCollectionViewCell_MTW {
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()
         }
+    }
+    
+    func drawShadowLayer_MTW() {
+        let shadowLayer = CALayer()
+        shadowLayer.frame = adjustedShadowRect
+        shadowLayer.cornerRadius = cornerRadius
+        shadowLayer.backgroundColor = backgroundFillColor.cgColor
+        shadowLayer.shadowColor = UIColor.black.cgColor
+        shadowLayer.shadowOpacity = 0.5
+        shadowLayer.shadowRadius = 3.0
+        shadowLayer.shadowOffset = CGSize(width: 0, height: 2)
+        
+        gradientShadowLayer.removeFromSuperlayer()
+        gradientShadowLayer = {
+            let layer = CAGradientLayer()
+            layer.frame = bounds
+            layer.colors = gradientColors
+            layer.startPoint = gradientStartPoint
+            layer.endPoint = gradientEndPoint
+            
+            layer.addSublayer(shadowLayer)
+            
+            return layer
+        }()
+        
+        layer.insertSublayer(gradientShadowLayer, at: 0)
     }
     
 }
