@@ -24,10 +24,21 @@ class TWCharacterEditorCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
         bounds.height / 8
     }
     
+    override var adjustedRect: CGRect {
+        .init(x: 5.0,
+              y: 7.0,
+              width: bounds.width - 6,
+              height: bounds.height - 6)
+    }
+    
     override var gradientColors: [CGColor] {[
         TWColors_MTW.contentSelectorCellGradientStart.cgColor,
         TWColors_MTW.contentSelectorCellGradientEnd.cgColor
     ]}
+    
+    override var shadowBackgroundColor: UIColor {
+        TWColors_MTW.contentSelectorCellBackground
+    }
     
     override var gradientStartPoint: CGPoint {
         .zero
@@ -38,9 +49,8 @@ class TWCharacterEditorCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
     }
     
     override var backgroundFillColor: UIColor {
-        TWColors_MTW.contentSelectorCellBackground
+        TWColors_MTW.contentSelectorCellShadow
     }
-
     
     override func commonInit_MTW() {
         super.commonInit_MTW()
@@ -53,10 +63,6 @@ class TWCharacterEditorCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
         
         applyMask()
         ivContent.setCornerRadius_MTW(8.0)
-    }
-    
-    override func draw(_ rect: CGRect) {
-        drawBackgroundLayer_MTW()
     }
     
     override func prepareForReuse() {

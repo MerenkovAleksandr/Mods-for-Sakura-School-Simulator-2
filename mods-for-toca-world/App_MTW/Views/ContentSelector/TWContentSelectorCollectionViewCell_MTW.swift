@@ -17,11 +17,8 @@ final class TWContentSelectorCollectionViewCell_MTW: TWBaseCollectionViewCell_MT
     private var backgrountColorToSet: UIColor = .clear
     private var shadowColor: UIColor = .clear
     
-    var adjustedShadowRect: CGRect {
-        .init(x: adjustment,
-              y: adjustment,
-              width: bounds.width - sizeAdjustment,
-              height: bounds.height - sizeAdjustment)
+    override var shadowBackgroundColor: UIColor {
+        backgrountColorToSet
     }
     
     override var isHighlighted: Bool {
@@ -153,32 +150,6 @@ private extension TWContentSelectorCollectionViewCell_MTW {
     func updateTitleLabelAppearance() {
         let title = lblContentTitle.attributedText?.string ?? ""
         configureTitleLabel(with: title)
-    }
-    
-    func drawShadowLayer_MTW() {
-        let shadowLayer = CALayer()
-        shadowLayer.frame = adjustedShadowRect
-        shadowLayer.cornerRadius = cornerRadius
-        shadowLayer.backgroundColor = backgrountColorToSet.cgColor
-        shadowLayer.shadowColor = UIColor.black.cgColor
-        shadowLayer.shadowOpacity = 0.5
-        shadowLayer.shadowRadius = 3.0
-        shadowLayer.shadowOffset = CGSize(width: 0, height: 2)
-        
-        gradientShadowLayer.removeFromSuperlayer()
-        gradientShadowLayer = {
-            let layer = CAGradientLayer()
-            layer.frame = bounds
-            layer.colors = gradientColors
-            layer.startPoint = gradientStartPoint
-            layer.endPoint = gradientEndPoint
-            
-            layer.addSublayer(shadowLayer)
-            
-            return layer
-        }()
-        
-        layer.insertSublayer(gradientShadowLayer, at: 0)
     }
     
 }

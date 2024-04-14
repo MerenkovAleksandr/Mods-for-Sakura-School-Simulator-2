@@ -16,10 +16,14 @@ class TWContentPlainCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
         bounds.height / 4
     }
     
+    override var adjustedRect: CGRect {
+        .init(x: 5.0,
+              y: 7.0,
+              width: bounds.width - 6,
+              height: bounds.height - 6)
+    }
+    
     var foregroundColor: UIColor {
-//        isHighlighted
-//        ? TWColors_MTW.contentSelectorCellSelectedForeground
-//        : TWColors_MTW.contentSelectorCellForeground
         TWColors_MTW.contentCellForeground
     }
     
@@ -40,9 +44,11 @@ class TWContentPlainCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
     ]}
     
     override var backgroundFillColor: UIColor {
-        isHighlighted
-        ? TWColors_MTW.contentSelectorCellSelectedBackground
-        : TWColors_MTW.contentSelectorCellBackground
+        TWColors_MTW.contentSelectorCellShadow
+    }
+    
+    override var shadowBackgroundColor: UIColor {
+        TWColors_MTW.contentSelectorCellBackground
     }
     
     override var gradientStartPoint: CGPoint {

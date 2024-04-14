@@ -36,6 +36,13 @@ class TWBaseCollectionViewCell_MTW: UICollectionViewCell {
               height: bounds.height - sizeAdjustment)
     }
     
+    var adjustedShadowRect: CGRect {
+        .init(x: adjustment,
+              y: adjustment,
+              width: bounds.width - sizeAdjustment,
+              height: bounds.height - sizeAdjustment)
+    }
+    
     var gradientColors: [CGColor] { [] }
     
     var gradientStartPoint: CGPoint {
@@ -47,6 +54,10 @@ class TWBaseCollectionViewCell_MTW: UICollectionViewCell {
     }
     
     var backgroundFillColor: UIColor {
+        .clear
+    }
+    
+    var shadowBackgroundColor: UIColor {
         .clear
     }
     
@@ -71,6 +82,7 @@ class TWBaseCollectionViewCell_MTW: UICollectionViewCell {
     }
     
     override func draw(_ rect: CGRect) {
+        drawShadowLayer_MTW()
         drawBackgroundLayer_MTW()
     }
     
@@ -104,6 +116,32 @@ class TWBaseCollectionViewCell_MTW: UICollectionViewCell {
         backgroundFillColor.setFill()
         
         path.fill()
+    }
+    
+    func drawShadowLayer_MTW() {
+        let shadowLayer = CALayer()
+        shadowLayer.frame = adjustedShadowRect
+        shadowLayer.cornerRadius = cornerRadius
+        shadowLayer.backgroundColor = shadowBackgroundColor.cgColor
+        shadowLayer.shadowColor = UIColor.black.cgColor
+        shadowLayer.shadowOpacity = 0.5
+        shadowLayer.shadowRadius = 3.0
+        shadowLayer.shadowOffset = CGSize(width: 0, height: 2)
+        
+        gradientShadowLayer.removeFromSuperlayer()
+        gradientShadowLayer = {
+            let layer = CAGradientLayer()
+            layer.frame = bounds
+            layer.colors = gradientColors
+            layer.startPoint = gradientStartPoint
+            layer.endPoint = gradientEndPoint
+            
+            layer.addSublayer(shadowLayer)
+            
+            return layer
+        }()
+        
+        layer.insertSublayer(gradientShadowLayer, at: 0)
     }
     
 }

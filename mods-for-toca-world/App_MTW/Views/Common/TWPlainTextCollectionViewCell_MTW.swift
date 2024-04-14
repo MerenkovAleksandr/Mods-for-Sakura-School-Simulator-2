@@ -78,6 +78,10 @@ class TWPlainTextCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
         : TWColors_MTW.contentSelectorCellBackground.withAlphaComponent(opacity)
     }
     
+    override var shadowBackgroundColor: UIColor {
+        UIColor.orange
+    }
+    
     override func draw(_ rect: CGRect) {
         drawBackgroundLayer_MTW()
         

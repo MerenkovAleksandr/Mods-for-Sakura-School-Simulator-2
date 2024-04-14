@@ -21,14 +21,14 @@ class TWContentCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
     private(set) var id: UUID?
     private(set) var isFavourite: Bool = false
     
-    var adjustedShadowRect: CGRect {
+    override var adjustedShadowRect: CGRect {
         .init(x: adjustment,
               y: adjustment,
               width: bounds.width - sizeAdjustment,
               height: bounds.height - sizeAdjustment)
     }
     
-    var shadowBackground: UIColor {
+    override var shadowBackgroundColor: UIColor {
         TWColors_MTW.contentSelectorCellBackground
     }
     
@@ -70,11 +70,6 @@ class TWContentCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
         super.layoutSubviews()
         
         ivContent.setCornerRadius_MTW(8.0)
-    }
-    
-    override func draw(_ rect: CGRect) {
-        drawShadowLayer_MTW()
-        drawBackgroundLayer_MTW()
     }
     
     override func prepareForReuse() {
@@ -195,31 +190,5 @@ private extension TWContentCollectionViewCell_MTW {
             print(error.localizedDescription)
         }
     }
-    
-    func drawShadowLayer_MTW() {
-        let shadowLayer = CALayer()
-        shadowLayer.frame = adjustedShadowRect
-        shadowLayer.cornerRadius = cornerRadius
-        shadowLayer.backgroundColor = shadowBackground.cgColor
-        shadowLayer.shadowColor = UIColor.black.cgColor
-        shadowLayer.shadowOpacity = 0.5
-        shadowLayer.shadowRadius = 3.0
-        shadowLayer.shadowOffset = CGSize(width: 0, height: 2)
-        
-        gradientShadowLayer.removeFromSuperlayer()
-        gradientShadowLayer = {
-            let layer = CAGradientLayer()
-            layer.frame = bounds
-            layer.colors = gradientColors
-            layer.startPoint = gradientStartPoint
-            layer.endPoint = gradientEndPoint
-            
-            layer.addSublayer(shadowLayer)
-            
-            return layer
-        }()
-        
-        layer.insertSublayer(gradientShadowLayer, at: 0)
-    }
-    
+
 }
