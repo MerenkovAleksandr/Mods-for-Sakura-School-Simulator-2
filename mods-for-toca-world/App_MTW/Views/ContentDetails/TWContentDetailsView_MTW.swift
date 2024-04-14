@@ -65,6 +65,7 @@ final class TWContentDetailsView_MTW: TWBaseView_MTW {
     
     override func draw(_ rect: CGRect) {
         drawBackgroundLayer_MTW()
+        applyMask()
     }
     
     override func commonInit_MTW() {
@@ -194,6 +195,24 @@ private extension TWContentDetailsView_MTW {
         isFavourite.toggle()
         didUpdate?()
         configureFavouriteImageView()
+    }
+    
+    func applyMask() {
+        let maskLayer = CAShapeLayer()
+        let path = UIBezierPath()
+        let cornerRadius: CGFloat = 15
+        
+        path.move(to: CGPoint(x: 0, y: 0))
+        path.addLine(to: CGPoint(x: bounds.width - 90, y: 0))
+        path.addArc(withCenter: CGPoint(x: bounds.width - 70, y: cornerRadius), radius: cornerRadius, startAngle: .pi * 3 / 2, endAngle: 0, clockwise: true)
+        path.addArc(withCenter: CGPoint(x: bounds.width - 40, y: cornerRadius), radius: cornerRadius, startAngle: .pi, endAngle: .pi / 2, clockwise: false)
+        path.addArc(withCenter: CGPoint(x: bounds.width - 40, y: cornerRadius * 3), radius: cornerRadius, startAngle: .pi * 3 / 2, endAngle: 0, clockwise: true)
+        path.addLine(to: CGPoint(x: bounds.width, y: bounds.height))
+        path.addLine(to: CGPoint(x: 0, y: bounds.height))
+        path.close()
+
+        maskLayer.path = path.cgPath
+        ivContent.layer.mask = maskLayer
     }
     
 }

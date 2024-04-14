@@ -82,11 +82,6 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <constraints>
-                        <constraint firstItem="0H5-aE-sG7" firstAttribute="leading" secondItem="MJ1-Jq-yiM" secondAttribute="leading" constant="10" id="Seh-jL-tM0"/>
-                        <constraint firstItem="0H5-aE-sG7" firstAttribute="top" secondItem="oIy-zP-Eof" secondAttribute="bottom" constant="20" id="iMQ-2o-J5k"/>
-                        <constraint firstAttribute="trailing" secondItem="0H5-aE-sG7" secondAttribute="trailing" constant="10" id="rli-aM-olL"/>
-                    </constraints>
                 </stackView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HR5-mz-5ml">
                     <rect key="frame" x="211" y="10" width="28" height="28"/>
@@ -124,7 +119,7 @@
     <resources>
         <image name="icon_download" width="20" height="24"/>
         <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
