@@ -10,6 +10,7 @@ import UIKit
 final class TWRecomendationCollectionViewCell_MTW: UICollectionViewCell {
     
     var imageView = TWImageView_MTW(frame: .zero)
+    var vBubble = TWBubbleView_MTW()
     
     var favouriteView: UIView = {
         let view = UIView()
@@ -63,6 +64,14 @@ private extension TWRecomendationCollectionViewCell_MTW {
         favouriteView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8).isActive = true
         favouriteView.widthAnchor.constraint(equalToConstant: 30).isActive = true
         favouriteView.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        
+        addSubview(vBubble)
+        vBubble.translatesAutoresizingMaskIntoConstraints = false
+        vBubble.leadingAnchor.constraint(equalTo: leadingAnchor, constant: -5).isActive = true
+        vBubble.topAnchor.constraint(equalTo: topAnchor, constant: -5).isActive = true
+        vBubble.heightAnchor.constraint(equalToConstant: 44).isActive = true
+        vBubble.widthAnchor.constraint(equalToConstant: 54).isActive = true
+        vBubble.isHidden = true
         
         makeLayout()
     }

@@ -44,7 +44,6 @@ final class TWContentCollectionView_MTW: UIView {
     private var dropbox: TWDBManager_MTW { .shared }
     private var contentManager: TWContentManager_MTW { dropbox.contentManager }
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -130,6 +129,9 @@ extension TWContentCollectionView_MTW: TWContentSearchBarDelegate_MTW {
 extension TWContentCollectionView_MTW {
     
     func loadContent() {
+        if delegate?.contentType == .wallpaper {
+            configureContentCollectionView()
+        }
         guard let contentType = delegate?.contentType else { return }
         
         let content = contentManager.fetchContent(contentType: contentType,
@@ -139,7 +141,7 @@ extension TWContentCollectionView_MTW {
         
         state.update(content: content)
         categoryCollectionView.add_MTW(customCategories: categories)
-        
+
         applySnapshot()
     }
     
@@ -220,17 +222,34 @@ private extension TWContentCollectionView_MTW {
     
     func generateSectionLayoutPhone() -> NSCollectionLayoutSection {
         
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+        if delegate?.contentType == nil || delegate?.contentType != .wallpaper {
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                                  heightDimension: .fractionalHeight(1.0))
+            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+            
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                                   heightDimension: .fractionalWidth(0.3))
+            
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
+                                                           subitems: [item])
+
+            group.contentInsets = .init(top: 5.0, leading: 21.0, bottom: .zero, trailing: 21.0)
+            
+            return .init(group: group)
+        }
+
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.49),
                                               heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .fractionalWidth(0.3))
+                                               heightDimension: .fractionalWidth(0.5))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                        subitems: [item])
 
-        group.contentInsets = .init(top: 5.0, leading: 21.0, bottom: .zero, trailing: 21.0)
+        group.contentInsets = .init(top: 15.0, leading: 21.0, bottom: .zero, trailing: 21.0)
+        group.interItemSpacing = .fixed(15)
         
         return .init(group: group)
     }
@@ -280,6 +299,8 @@ private extension TWContentCollectionView_MTW {
                                          for: indexPath) as? WallpapersCell else { return UICollectionViewCell() }
                 
                 cell.imageView.configure(with: contentModel.content.image)
+                let isNew = contentModel.attributes?.new ?? false
+                cell.vBubble.isHidden = isNew ? false : true
 
                 return cell
             }

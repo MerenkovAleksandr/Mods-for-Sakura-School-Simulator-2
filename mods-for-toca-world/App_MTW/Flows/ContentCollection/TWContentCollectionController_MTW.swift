@@ -14,7 +14,7 @@ final class TWContentCollectionController_MTW: TWNavigationController_MTW {
         let viewController = TWContentCollectionController_MTW()
         
         viewController.contentType = contentType
-        
+
         return viewController
     }
     
@@ -43,7 +43,7 @@ final class TWContentCollectionController_MTW: TWNavigationController_MTW {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         configureCollectionView_MTW()
         layoutCollectionView()
         showSearchView()
@@ -51,7 +51,7 @@ final class TWContentCollectionController_MTW: TWNavigationController_MTW {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         guard TWInternetManager_MTW.shared.checkInternetConnectivity_MTW() else {
             present(UIAlertController.connectionIssue { [weak self] in
                 self?.showContentPreloader()
