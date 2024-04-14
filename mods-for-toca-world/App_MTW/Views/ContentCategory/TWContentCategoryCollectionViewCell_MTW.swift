@@ -35,7 +35,7 @@ class TWContentCategoryCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
         let size = cornerRadius / 2
         
         return .init(x: cornerRadius - adjustment,
-                     y: size / 2 + adjustment / 2,
+                     y: size / 2 + adjustment,
                      width: size,
                      height: size)
     }

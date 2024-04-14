@@ -21,6 +21,17 @@ class TWContentCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
     private(set) var id: UUID?
     private(set) var isFavourite: Bool = false
     
+    var adjustedShadowRect: CGRect {
+        .init(x: adjustment,
+              y: adjustment,
+              width: bounds.width - sizeAdjustment,
+              height: bounds.height - sizeAdjustment)
+    }
+    
+    var shadowBackground: UIColor {
+        TWColors_MTW.contentSelectorCellBackground
+    }
+    
     override var cornerRadius: CGFloat {
         bounds.height / 8
     }
@@ -39,9 +50,15 @@ class TWContentCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
     }
     
     override var backgroundFillColor: UIColor {
-        TWColors_MTW.contentSelectorCellBackground
+        TWColors_MTW.contentSelectorCellShadow
     }
 
+    override var adjustedRect: CGRect {
+        .init(x: 5.0,
+              y: 7.0,
+              width: bounds.width - 6,
+              height: bounds.height - 6)
+    }
     
     override func commonInit_MTW() {
         super.commonInit_MTW()
@@ -56,6 +73,7 @@ class TWContentCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
     }
     
     override func draw(_ rect: CGRect) {
+        drawShadowLayer_MTW()
         drawBackgroundLayer_MTW()
     }
     
@@ -176,6 +194,32 @@ private extension TWContentCollectionViewCell_MTW {
         } catch let error as NSError {
             print(error.localizedDescription)
         }
+    }
+    
+    func drawShadowLayer_MTW() {
+        let shadowLayer = CALayer()
+        shadowLayer.frame = adjustedShadowRect
+        shadowLayer.cornerRadius = cornerRadius
+        shadowLayer.backgroundColor = shadowBackground.cgColor
+        shadowLayer.shadowColor = UIColor.black.cgColor
+        shadowLayer.shadowOpacity = 0.5
+        shadowLayer.shadowRadius = 3.0
+        shadowLayer.shadowOffset = CGSize(width: 0, height: 2)
+        
+        gradientShadowLayer.removeFromSuperlayer()
+        gradientShadowLayer = {
+            let layer = CAGradientLayer()
+            layer.frame = bounds
+            layer.colors = gradientColors
+            layer.startPoint = gradientStartPoint
+            layer.endPoint = gradientEndPoint
+            
+            layer.addSublayer(shadowLayer)
+            
+            return layer
+        }()
+        
+        layer.insertSublayer(gradientShadowLayer, at: 0)
     }
     
 }
