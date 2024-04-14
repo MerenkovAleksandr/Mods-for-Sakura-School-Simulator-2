@@ -69,4 +69,7 @@ final class TWColors_MTW {
     //  Search Bar
     static let searchBarSelectedBackground = #colorLiteral(red: 0.01568627451, green: 0.3725490196, blue: 0.662745098, alpha: 1)
     static let searchBarForeground = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    // Editor Element Cell
+    static let orangeCellBackground = #colorLiteral(red: 1, green: 0.7647058824, blue: 0.3764705882, alpha: 1)
+    static let purpleCellBackground = #colorLiteral(red: 0.6470588235, green: 0.3803921569, blue: 0.768627451, alpha: 1)
 }

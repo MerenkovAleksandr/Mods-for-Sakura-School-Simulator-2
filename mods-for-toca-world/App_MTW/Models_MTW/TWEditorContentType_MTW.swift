@@ -160,4 +160,37 @@ extension TWEditorContentType_MTW {
         }
     }
     
+    var previewPurple: UIImage {
+        switch self {
+        case .markup:
+            return #imageLiteral(resourceName: "icon_editor_figure_purple")
+        case .hair:
+            return #imageLiteral(resourceName: "icon_editor_hair_purple")
+        case .hats:
+            return #imageLiteral(resourceName: "icon_editor_hats_purple")
+        case .eyebrows:
+            return #imageLiteral(resourceName: "icon_editor_eyebrow_purple")
+        case .bags:
+            return #imageLiteral(resourceName: "icon_editor_bag_purple")
+        case .trousers:
+            return #imageLiteral(resourceName: "icon_editor_trousers_purple")
+        case .shorts:
+            return #imageLiteral(resourceName: "icon_editor_shorts_purple")
+        case .eyes:
+            return #imageLiteral(resourceName: "icon_editor_eyes_purple")
+        case .nose:
+            return #imageLiteral(resourceName: "icon_editor_nose_purple")
+        case .shirt:
+            return #imageLiteral(resourceName: "icon_editor_shirt_purple")
+        case .shoes:
+            return #imageLiteral(resourceName: "icon_editor_shoes_purple")
+        case .skirts:
+            return #imageLiteral(resourceName: "icon_editor_skirt_purple")
+        case .dresses:
+            return #imageLiteral(resourceName: "icon_editor_dress_purple")
+        case .mouth:
+            return #imageLiteral(resourceName: "icon_editor_mouth_purple")
+        }
+    }
+    
 }

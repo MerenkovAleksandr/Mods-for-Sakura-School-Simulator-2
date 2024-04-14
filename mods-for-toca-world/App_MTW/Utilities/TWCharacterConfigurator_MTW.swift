@@ -25,6 +25,15 @@ final class TWCharacterConfigurator_MTW: NSObject {
             }
         }
         
+        var previewPurple: UIImage {
+            switch self {
+            case .color:
+                return #imageLiteral(resourceName: "icon_editor_color_purple")
+            case .content(let contentType):
+                return contentType.previewPurple
+            }
+        }
+        
         var localizedTitle: String {
             switch self {
             case .color:

@@ -244,7 +244,7 @@ private extension TWCharacterEditorController_MTW {
             let localizedTitle = configurator.selectedItem.localizedTitle
             lblCategory.attributedText = TWAttributtedStrings_MTW
                 .colorPickerTitleAttrString(with: localizedTitle,
-                                            foregroundColor: TWColors_MTW.navigationBarForeground)
+                                            foregroundColor: TWColors_MTW.navigationBarBackground)
             cvElement.alpha = .zero
             cvElement.hide_MTW()
             configureColorPicker(configurator.character.color,
@@ -253,11 +253,11 @@ private extension TWCharacterEditorController_MTW {
             let localizedTitle = configurator.selectedItem.localizedTitle
             lblCategory.attributedText = TWAttributtedStrings_MTW
                 .colorPickerTitleAttrString(with: localizedTitle,
-                                            foregroundColor: TWColors_MTW.navigationBarForeground)
+                                            foregroundColor: TWColors_MTW.navigationBarBackground)
             cvElement.alpha = 1.0
             cvElement.show_MTW()
             configureColorPicker(configurator.character.color,
-                                 visibility: true)
+                                 visibility: false)
         }
     }
     
@@ -474,17 +474,14 @@ final class TWEditorCategoryCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW
     
     func configure(with category: EditorCategory,
                    isSelected: Bool = false) {
-        setImage(category.preview, isSelected: isSelected)
+        let category = isSelected ? category.preview : category.previewPurple
+        setImage(category, isSelected: isSelected)
     }
     
     func setImage(_ image: UIImage?, isSelected: Bool) {
         ivContent.image = image
         ivContent.contentMode = .scaleAspectFit
-        ivContent.backgroundColor = .white
-        ivContent.layer.borderWidth = 3.0
-        ivContent.layer.borderColor = isSelected
-        ? TWColors_MTW.navigationBarForeground.cgColor
-        : UIColor.clear.cgColor
+        ivContent.backgroundColor = TWColors_MTW.contentSelectorCellBackground
     }
     
 }
@@ -492,6 +489,15 @@ final class TWEditorCategoryCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW
 final class TWEditorElementCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
     
     private var ivContent = UIImageView()
+    
+    override func prepareForReuse() {
+        backgroundColor = .clear
+        drawBackgroundLayer_MTW()
+    }
+    
+    override var backgroundFillColor: UIColor {
+        contentView.backgroundColor ?? UIColor.white
+    }
     
     override func commonInit_MTW() {
         super.commonInit_MTW()
@@ -506,6 +512,49 @@ final class TWEditorElementCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW 
         super.layoutSubviews()
         
         contentView.layer.cornerRadius = bounds.height / 2
+    }
+    
+    override func drawBackgroundLayer_MTW() {
+        let radius = 24.0
+        
+        let path = UIBezierPath()
+        
+        path.move(to: CGPoint(x: radius, y: 0))
+        path.addLine(to: CGPoint(x: bounds.width - radius, y: 0))
+        path.addArc(withCenter: CGPoint(x: bounds.width - radius, y: radius), radius: radius, startAngle: .pi * 3 / 2, endAngle: 0, clockwise: true)
+        path.addLine(to: CGPoint(x: bounds.width, y: bounds.height - radius))
+        path.addArc(withCenter: CGPoint(x: bounds.width - radius, y: bounds.height - radius), radius: radius, startAngle: 0, endAngle: .pi / 2, clockwise: true)
+        path.addLine(to: CGPoint(x: radius, y: bounds.height))
+        path.addArc(withCenter: CGPoint(x: radius, y: bounds.height - radius), radius: radius, startAngle: .pi / 2, endAngle: .pi, clockwise: true)
+        path.addLine(to: CGPoint(x: 0, y: radius))
+        path.addArc(withCenter: CGPoint(x: radius, y: radius), radius: radius, startAngle: .pi, endAngle: .pi * 3 / 2, clockwise: true)
+
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        mask.lineWidth = borderWidth
+        mask.strokeColor = UIColor.black.cgColor
+        mask.fillColor = nil
+        
+        gradientLayer.removeFromSuperlayer()
+        gradientLayer = {
+            let layer = CAGradientLayer()
+            
+            layer.frame = bounds
+            layer.colors = gradientColors
+            layer.startPoint = gradientStartPoint
+            layer.endPoint = gradientEndPoint
+            layer.mask = mask
+            
+            return layer
+        }()
+        
+        layer.insertSublayer(gradientLayer, at: 0)
+        
+        backgroundFillColor.setFill()
+        
+        path.fill()
+        
+        
     }
     
     func configure(with content: EditorContent,
@@ -532,7 +581,7 @@ final class TWEditorElementCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW 
     private func emptyCell(isSelected: Bool) {
         ivContent.image = nil
         
-        contentView.backgroundColor = nil
+        contentView.backgroundColor = .clear
         
         set(isSelected: isSelected,
             selectedColor: TWColors_MTW.navigationBarForeground,
@@ -543,8 +592,8 @@ final class TWEditorElementCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW 
         ivContent.image = image
         ivContent.contentMode = .scaleAspectFit
         
-        contentView.backgroundColor = .white
-        
+        contentView.backgroundColor = isSelected ? TWColors_MTW.orangeCellBackground : TWColors_MTW.purpleCellBackground
+
         set(isSelected: isSelected,
             selectedColor: TWColors_MTW.navigationBarForeground,
             defaultColor: .clear)
@@ -553,10 +602,11 @@ final class TWEditorElementCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW 
     private func set(isSelected: Bool,
                      selectedColor: UIColor,
                      defaultColor: UIColor) {
-        contentView.layer.borderWidth = 3.0
-        contentView.layer.borderColor = isSelected
-        ? selectedColor.cgColor
-        : defaultColor.cgColor
+//        contentView.layer.borderWidth = 3.0
+//        contentView.layer.borderColor = isSelected
+//        ? selectedColor.cgColor
+//        : defaultColor.cgColor
+//        contentView.backgroundColor = isSelected ? UIColor.orange : UIColor.blue
     }
     
 }
