@@ -78,7 +78,7 @@ extension TWContentSelectorCollectionViewCell_MTW {
                    isContentLocked: Bool = false) {
 
         configureContentImage(item.image)
-        configureTitleLabel(with: item.localizedTitle)
+        configureTitleLabel(with: item.localizedTitle.uppercased())
 
         backgrountColorToSet = item.backgroundColor
         
