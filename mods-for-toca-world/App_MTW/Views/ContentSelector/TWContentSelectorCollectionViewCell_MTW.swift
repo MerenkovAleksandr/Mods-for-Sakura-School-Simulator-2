@@ -15,6 +15,7 @@ final class TWContentSelectorCollectionViewCell_MTW: TWBaseCollectionViewCell_MT
     @IBOutlet private var vContentLock: UIView!
     
     private var backgrountColorToSet: UIColor = .clear
+    private var shadowColor: UIColor = .clear
     
     override var isHighlighted: Bool {
         didSet {
@@ -30,7 +31,7 @@ final class TWContentSelectorCollectionViewCell_MTW: TWBaseCollectionViewCell_MT
     
     override var gradientColors: [CGColor] {
         drawSelected
-        ? selectedGradientColors
+        ? defaultGradientColors
         : defaultGradientColors
     }
     
@@ -47,11 +48,12 @@ final class TWContentSelectorCollectionViewCell_MTW: TWBaseCollectionViewCell_MT
     }
     
     override var backgroundFillColor: UIColor {
-        backgrountColorToSet
+        shadowColor
     }
     
     override func draw(_ rect: CGRect) {
         drawBackgroundLayer_MTW()
+        drawShadowLayer_MTW()
         
         if drawSelected {
             accentLayer.removeFromSuperlayer()
@@ -81,6 +83,7 @@ extension TWContentSelectorCollectionViewCell_MTW {
         configureTitleLabel(with: item.localizedTitle.uppercased())
 
         backgrountColorToSet = item.backgroundColor
+        shadowColor = item.shadowColor
         
         ivContentLock.visibility(isVisible: isContentLocked)
         vContentLock.visibility(isVisible: isContentLocked)
@@ -136,6 +139,32 @@ private extension TWContentSelectorCollectionViewCell_MTW {
     func updateTitleLabelAppearance() {
         let title = lblContentTitle.attributedText?.string ?? ""
         configureTitleLabel(with: title)
+    }
+    
+    func drawShadowLayer_MTW() {
+        let shadowLayer = CALayer()
+        shadowLayer.frame = adjustedRect
+        shadowLayer.cornerRadius = cornerRadius
+        shadowLayer.backgroundColor = backgrountColorToSet.cgColor
+        shadowLayer.shadowColor = UIColor.black.cgColor
+        shadowLayer.shadowOpacity = 0.5
+        shadowLayer.shadowRadius = 3.0
+        shadowLayer.shadowOffset = CGSize(width: 0, height: 2)
+        
+        gradientShadowLayer.removeFromSuperlayer()
+        gradientShadowLayer = {
+            let layer = CAGradientLayer()
+            layer.frame = bounds
+            layer.colors = gradientColors
+            layer.startPoint = gradientStartPoint
+            layer.endPoint = gradientEndPoint
+            
+            layer.addSublayer(shadowLayer)
+            
+            return layer
+        }()
+        
+        layer.insertSublayer(gradientShadowLayer, at: 0)
     }
     
 }

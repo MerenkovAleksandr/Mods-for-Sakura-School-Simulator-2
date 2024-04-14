@@ -10,6 +10,7 @@ import UIKit
 class TWBaseCollectionViewCell_MTW: UICollectionViewCell {
     
     var gradientLayer = CAGradientLayer()
+    var gradientShadowLayer = CAGradientLayer()
     var accentLayer = CALayer()
     
     var borderWidth: CGFloat {
@@ -21,7 +22,7 @@ class TWBaseCollectionViewCell_MTW: UICollectionViewCell {
     }
     
     var sizeAdjustment: CGFloat {
-        adjustment * 2
+        adjustment * 4
     }
     
     var cornerRadius: CGFloat {
@@ -78,11 +79,13 @@ class TWBaseCollectionViewCell_MTW: UICollectionViewCell {
     }
     
     func drawBackgroundLayer_MTW() {
-        let path = UIBezierPath(roundedRect: adjustedRect,
+        let path = UIBezierPath(roundedRect: CGRect(x: 5.0,
+                                                    y: 5.0,
+                                                    width: bounds.width - 5,
+                                                    height: bounds.height - 5),
                                 cornerRadius: cornerRadius)
         let mask = CAShapeLayer()
         mask.path = path.cgPath
-        mask.lineWidth = borderWidth
         mask.strokeColor = UIColor.black.cgColor
         mask.fillColor = nil
         
@@ -99,12 +102,11 @@ class TWBaseCollectionViewCell_MTW: UICollectionViewCell {
             return layer
         }()
         
-        layer.insertSublayer(gradientLayer, at: 0)
+        layer.insertSublayer(gradientLayer, at: 1)
         
         backgroundFillColor.setFill()
         
         path.fill()
     }
-    
     
 }

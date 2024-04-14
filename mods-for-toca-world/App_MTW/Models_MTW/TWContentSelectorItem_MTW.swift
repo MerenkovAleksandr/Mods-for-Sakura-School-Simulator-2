@@ -49,6 +49,19 @@ enum TWContentSelectorItem_MTW: String, CaseIterable {
         }
     }
     
+    var shadowColor: UIColor {
+        switch self {
+        case .maps, .guides:
+            return TWColors_MTW.menuOrangeCellShadow
+        case .mods, .characters, .sounds:
+            return TWColors_MTW.menuBlueCellShadow
+        case .sets, .characterRandomizer:
+            return TWColors_MTW.menuCrimsonCellShadow
+        case .wallpapers:
+            return TWColors_MTW.menuPurpleCellShadow
+        }
+    }
+    
 }
 
 // MARK: - Content

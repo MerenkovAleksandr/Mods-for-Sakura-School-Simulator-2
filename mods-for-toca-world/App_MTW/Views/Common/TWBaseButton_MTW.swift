@@ -82,7 +82,6 @@ class TWBaseButton_MTW: UIButton {
     
     override func draw(_ rect: CGRect) {
         drawBackgroundLayer_MTW()
-//        drawAccent()
     }
     
     func commonInit_MTW() {
@@ -118,17 +117,6 @@ class TWBaseButton_MTW: UIButton {
         path.fill()
     }
     
-//    func drawAccent() {
-//        let accent = CALayer()
-//        accent.frame = adjustedAccentRect
-//        accent.contents = #imageLiteral(resourceName: "accent").cgImage
-//        
-//        accentLayer.removeFromSuperlayer()
-//        accentLayer = accent
-//        
-//        layer.insertSublayer(gradientLayer, at: 2)
-//    }
-//    
     func configure_MTW(with localizedTitle: String) {
         let foregroundColor = TWColors_MTW.buttonForegroundColor
             .withAlphaComponent(opacity)
