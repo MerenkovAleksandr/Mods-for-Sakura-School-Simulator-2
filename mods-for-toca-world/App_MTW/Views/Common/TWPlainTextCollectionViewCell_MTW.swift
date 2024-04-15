@@ -35,6 +35,20 @@ class TWPlainTextCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
         }
     }
     
+    override  var adjustedRect: CGRect {
+        .init(x: 0,
+              y: 0,
+              width: bounds.width,
+              height: bounds.height)
+    }
+    
+    override var adjustedShadowRect: CGRect {
+        .init(x: 0,
+              y: 0,
+              width: bounds.width - 4,
+              height: bounds.height - 4)
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -54,12 +68,6 @@ class TWPlainTextCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override var gradientColors: [CGColor] {
-        drawSelected
-        ? selectedGradientColors
-        : defaultGradientColors
-    }
-    
     override var gradientStartPoint: CGPoint {
         .zero
     }
@@ -73,18 +81,18 @@ class TWPlainTextCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
     }
     
     override var backgroundFillColor: UIColor {
-        drawSelected
-        ? TWColors_MTW.contentSelectorCellSelectedBackground.withAlphaComponent(opacity)
-        : TWColors_MTW.contentSelectorCellBackground.withAlphaComponent(opacity)
+        TWColors_MTW.contentSelectorCellShadow
     }
     
     override var shadowBackgroundColor: UIColor {
-        UIColor.orange
+        TWColors_MTW.contentSelectorCellBackground.withAlphaComponent(opacity)
     }
     
     override func draw(_ rect: CGRect) {
+        drawShadowLayer_MTW()
         drawBackgroundLayer_MTW()
-        
+        configureImageView()
+
         if drawSelected {
             accentLayer.removeFromSuperlayer()
             return
@@ -134,23 +142,13 @@ private extension TWPlainTextCollectionViewCell_MTW {
         TWColors_MTW.soundCellForeground
     }
     
-    var defaultGradientColors: [CGColor] {[
-        TWColors_MTW.contentSelectorCellGradientStart.withAlphaComponent(opacity).cgColor,
-        TWColors_MTW.contentSelectorCellGradientEnd.withAlphaComponent(opacity).cgColor
-    ]}
-    
-    var selectedGradientColors: [CGColor] {[
-        TWColors_MTW.contentSelectorCellSelectedGradientStart.withAlphaComponent(opacity).cgColor,
-        TWColors_MTW.contentSelectorCellSelectedGradientEnd.withAlphaComponent(opacity).cgColor
-    ]}
-    
     func updateApperance() {
         updateTitleLabelAppearance()
         setNeedsDisplay()
     }
     
     func configureImageView() {
-        ivPlayStatus.image = #imageLiteral(resourceName: "icon_play")
+        ivPlayStatus.image = isSelected ? #imageLiteral(resourceName: "icon_pause") : #imageLiteral(resourceName: "icon_play")
     }
     
     func configureTitleLabel(with title: String) {
