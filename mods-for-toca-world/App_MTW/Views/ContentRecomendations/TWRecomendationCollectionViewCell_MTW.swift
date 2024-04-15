@@ -7,10 +7,12 @@
 
 import UIKit
 
-final class TWRecomendationCollectionViewCell_MTW: UICollectionViewCell {
+final class TWRecomendationCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
     
     var imageView = TWImageView_MTW(frame: .zero)
     var vBubble = TWBubbleView_MTW()
+    
+    var radius: CGFloat = 18.0
     
     var favouriteView: UIView = {
         let view = UIView()
@@ -28,23 +30,34 @@ final class TWRecomendationCollectionViewCell_MTW: UICollectionViewCell {
         return view
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        commonInit_MTW()
+    override var cornerRadius: CGFloat {
+        radius
     }
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        commonInit_MTW()
+    override var adjustedRect: CGRect {
+        .init(x: 3,
+              y: 3,
+              width: bounds.width - 3,
+              height: bounds.height - 3)
     }
     
-}
-
-// MARK: - Private API
-
-private extension TWRecomendationCollectionViewCell_MTW {
+    override var adjustedShadowRect: CGRect {
+        .init(x: 0,
+              y: 0,
+              width: bounds.width - 5,
+              height: bounds.height - 5)
+    }
     
-    func commonInit_MTW() {
+    override var backgroundFillColor: UIColor {
+        TWColors_MTW.contentSelectorCellShadow
+    }
+    
+    override var shadowBackgroundColor: UIColor {
+        TWColors_MTW.contentSelectorCellBackground
+    }
+    
+    
+    override func commonInit_MTW() {
         backgroundColor = .clear
         
         addSubview(imageView)
@@ -53,9 +66,7 @@ private extension TWRecomendationCollectionViewCell_MTW {
         clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 18.0
-        imageView.layer.borderWidth = 10.0
-        imageView.layer.borderColor = TWColors_MTW.contentSelectorCellBackground.cgColor
+        imageView.layer.cornerRadius = radius
         
         addSubview(favouriteView)
         
@@ -73,23 +84,36 @@ private extension TWRecomendationCollectionViewCell_MTW {
         vBubble.widthAnchor.constraint(equalToConstant: 54).isActive = true
         vBubble.isHidden = true
         
-        addShadow()
+        applyMask()
         makeLayout()
     }
-    
-    func addShadow() {
-            layer.masksToBounds = false
-            layer.shadowColor = TWColors_MTW.contentSelectorCellShadow.cgColor
-            layer.shadowOpacity = 0.8
-            layer.shadowOffset = CGSize(width: 2, height: 2)
-            layer.shadowRadius = 3.0
-            layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: layer.cornerRadius).cgPath
-        }
+}
+
+// MARK: - Private API
+
+private extension TWRecomendationCollectionViewCell_MTW {
     
     func makeLayout() {
         imageView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.edges.equalToSuperview().inset(12.0)
         }
     }
     
+    func applyMask() {
+        let maskLayer = CAShapeLayer()
+        let path = UIBezierPath()
+        let cornerRadius: CGFloat = 15
+        
+        path.move(to: CGPoint(x: 0, y: 0))
+        path.addLine(to: CGPoint(x: bounds.width - 90, y: 0))
+        path.addArc(withCenter: CGPoint(x: bounds.width - 70, y: cornerRadius), radius: cornerRadius, startAngle: .pi * 3 / 2, endAngle: 0, clockwise: true)
+        path.addArc(withCenter: CGPoint(x: bounds.width - 40, y: cornerRadius), radius: cornerRadius, startAngle: .pi, endAngle: .pi / 2, clockwise: false)
+        path.addArc(withCenter: CGPoint(x: bounds.width - 40, y: cornerRadius * 3), radius: cornerRadius, startAngle: .pi * 3 / 2, endAngle: 0, clockwise: true)
+        path.addLine(to: CGPoint(x: bounds.width, y: bounds.height))
+        path.addLine(to: CGPoint(x: 0, y: bounds.height))
+        path.close()
+
+        maskLayer.path = path.cgPath
+        imageView.layer.mask = maskLayer
+    }
 }
