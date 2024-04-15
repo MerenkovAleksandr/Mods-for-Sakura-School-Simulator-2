@@ -40,6 +40,13 @@ final class TWContentDetailsView_MTW: TWBaseView_MTW {
         ivContent.bounds.height / 16
     }
     
+    override var adjustedShadowRect: CGRect {
+        .init(x: 0,
+              y: 0,
+              width: bounds.width - 7,
+              height: bounds.height - 7)
+    }
+    
     override var gradientColors: [CGColor] {[
         TWColors_MTW.contentSelectorCellGradientStart.cgColor,
         TWColors_MTW.contentSelectorCellGradientEnd.cgColor
@@ -54,6 +61,10 @@ final class TWContentDetailsView_MTW: TWBaseView_MTW {
     }
     
     override var backgroundFillColor: UIColor {
+        TWColors_MTW.contentSelectorCellShadow
+    }
+    
+    override var shadowBackgroundColor: UIColor {
         TWColors_MTW.contentSelectorCellBackground
     }
     
@@ -64,6 +75,7 @@ final class TWContentDetailsView_MTW: TWBaseView_MTW {
     }
     
     override func draw(_ rect: CGRect) {
+        drawShadowLayer_MTW()
         drawBackgroundLayer_MTW()
         applyMask()
     }

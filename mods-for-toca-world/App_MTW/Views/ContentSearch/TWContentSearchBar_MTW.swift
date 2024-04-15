@@ -45,6 +45,20 @@ final class TWContentSearchBar_MTW: TWBaseView_MTW {
         TWColors_MTW.navigationBarGradientEnd.cgColor
     ]}
     
+    override var adjustedRect: CGRect {
+        .init(x: 0,
+              y: 0,
+              width: bounds.width,
+              height: bounds.height)
+    }
+    
+    override var adjustedShadowRect: CGRect {
+        .init(x: 0,
+              y: 0,
+              width: bounds.width - 5,
+              height: bounds.height - 5)
+    }
+    
     override func commonInit_MTW() {
         super.commonInit_MTW()
         
@@ -58,11 +72,19 @@ final class TWContentSearchBar_MTW: TWBaseView_MTW {
     }
     
     override var cornerRadius: CGFloat {
-        searchBarTextField.bounds.height / 3
+        searchBarTextField.bounds.height / 2
     }
     
     override var backgroundLayerPath: UIBezierPath {
         .init(roundedRect: adjustedRect, cornerRadius: cornerRadius)
+    }
+    
+    override var backgroundFillColor: UIColor {
+        TWColors_MTW.contentSelectorCellShadow
+    }
+    
+    override var shadowBackgroundColor: UIColor {
+        TWColors_MTW.contentSelectorCellBackground
     }
     
     @IBAction func closeButtonAction_MTW(_ sender: Any) {
