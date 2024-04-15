@@ -9,6 +9,9 @@ import UIKit
 
 final class TWRecomendationCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
     
+    private(set) var id: UUID?
+    private(set) var isFavourite: Bool = false
+    
     var imageView = TWImageView_MTW(frame: .zero)
     var vBubble = TWBubbleView_MTW()
     
@@ -16,18 +19,12 @@ final class TWRecomendationCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW 
     
     var favouriteView: UIView = {
         let view = UIView()
-        let iv = UIImageView()
-        iv.image = #imageLiteral(resourceName: "favourite")
-        view.addSubview(iv)
-        iv.translatesAutoresizingMaskIntoConstraints = false
-        iv.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        iv.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        iv.widthAnchor.constraint(equalToConstant: 14).isActive = true
-        iv.heightAnchor.constraint(equalToConstant: 18).isActive = true
-        view.layer.cornerRadius = 8.0
-        view.clipsToBounds = true
-        view.backgroundColor = TWColors_MTW.contentSelectorCellBackground
         return view
+    }()
+    
+    var ivFavourite: UIImageView = {
+        let iv = UIImageView()
+        return iv
     }()
     
     override var cornerRadius: CGFloat {
@@ -89,6 +86,14 @@ final class TWRecomendationCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW 
     }
 }
 
+extension TWRecomendationCollectionViewCell_MTW {
+    func configure_MTW(with item: TWContentModel_MTW) {
+        id = item.id
+        isFavourite = item.attributes?.favourite ?? false
+        configureIV()
+    }
+}
+
 // MARK: - Private API
 
 private extension TWRecomendationCollectionViewCell_MTW {
@@ -115,5 +120,54 @@ private extension TWRecomendationCollectionViewCell_MTW {
 
         maskLayer.path = path.cgPath
         imageView.layer.mask = maskLayer
+    }
+    
+    func configureIV() {
+        addSubview(favouriteView)
+
+        favouriteView.translatesAutoresizingMaskIntoConstraints = false
+        favouriteView.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
+        favouriteView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0).isActive = true
+        favouriteView.widthAnchor.constraint(equalToConstant: 42).isActive = true
+        favouriteView.heightAnchor.constraint(equalToConstant: 48).isActive = true
+        
+        favouriteView.addSubview(ivFavourite)
+        ivFavourite.translatesAutoresizingMaskIntoConstraints = false
+        ivFavourite.centerXAnchor.constraint(equalTo: favouriteView.centerXAnchor).isActive = true
+        ivFavourite.centerYAnchor.constraint(equalTo: favouriteView.centerYAnchor).isActive = true
+        ivFavourite.widthAnchor.constraint(equalToConstant: 14).isActive = true
+        ivFavourite.heightAnchor.constraint(equalToConstant: 18).isActive = true
+        ivFavourite.image = isFavourite ? #imageLiteral(resourceName: "favourite_selected") : #imageLiteral(resourceName: "favourite")
+
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didToggleIsFavourite))
+        
+        favouriteView.isUserInteractionEnabled = true
+        favouriteView.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func didToggleIsFavourite() {
+        guard let id else { return }
+        
+        let fetchRequest = ContentEntity.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "%K == %@", "id", id as CVarArg)
+        
+        let managedContext = TWDBManager_MTW.shared.contentManager.managedContext
+        
+        do {
+            let result = try managedContext.fetch(fetchRequest)
+            if let entity = result.first {
+                entity.contentStared = !isFavourite
+                
+                try managedContext.save()
+                
+                isFavourite.toggle()
+                
+                DispatchQueue.main.async {
+                    self.configureIV()
+                }
+            }
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
     }
 }

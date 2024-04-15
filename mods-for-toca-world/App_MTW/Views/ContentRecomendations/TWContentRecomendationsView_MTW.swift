@@ -133,6 +133,7 @@ private extension TWContentRecomendationsView_MTW {
                 .dequeueReusableCell(withReuseIdentifier: Cell.reuseIdentifier,
                                      for: indexPath) as? Cell {
                 cell.imageView.configure(with: model.content.image)
+                cell.configure_MTW(with: model)
                 
                 return cell
             }

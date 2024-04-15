@@ -301,6 +301,7 @@ private extension TWContentCollectionView_MTW {
                 cell.imageView.configure(with: contentModel.content.image)
                 let isNew = contentModel.attributes?.new ?? false
                 cell.vBubble.isHidden = isNew ? false : true
+                cell.configure_MTW(with: contentModel)
 
                 return cell
             }
