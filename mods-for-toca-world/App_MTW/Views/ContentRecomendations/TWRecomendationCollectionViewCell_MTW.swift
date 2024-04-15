@@ -73,8 +73,18 @@ private extension TWRecomendationCollectionViewCell_MTW {
         vBubble.widthAnchor.constraint(equalToConstant: 54).isActive = true
         vBubble.isHidden = true
         
+        addShadow()
         makeLayout()
     }
+    
+    func addShadow() {
+            layer.masksToBounds = false
+            layer.shadowColor = TWColors_MTW.contentSelectorCellShadow.cgColor
+            layer.shadowOpacity = 0.8
+            layer.shadowOffset = CGSize(width: 2, height: 2)
+            layer.shadowRadius = 3.0
+            layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: layer.cornerRadius).cgPath
+        }
     
     func makeLayout() {
         imageView.snp.makeConstraints {
