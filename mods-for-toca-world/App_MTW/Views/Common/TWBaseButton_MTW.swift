@@ -19,12 +19,8 @@ class TWBaseButton_MTW: UIButton {
     }
     
     private var gradientLayer = CAGradientLayer()
+    private var gradientShadowLayer = CAGradientLayer()
     private var accentLayer = CALayer()
-    
-    var gradientColors: [CGColor] {[
-        TWColors_MTW.bubbleViewGradientStart.withAlphaComponent(opacity).cgColor,
-        TWColors_MTW.bubbleViewGradientEnd.withAlphaComponent(opacity).cgColor
-    ]}
     
     var gradientStartPoint: CGPoint {
         .zero
@@ -35,7 +31,11 @@ class TWBaseButton_MTW: UIButton {
     }
     
     var backgroundFillColor: UIColor {
-        TWColors_MTW.buttonEditBackground.withAlphaComponent(opacity)
+        TWColors_MTW.buttonShadow
+    }
+    
+    var shadowBackgroundColor: UIColor {
+        TWColors_MTW.buttonBackground
     }
     
     var borderWidth: CGFloat {
@@ -53,8 +53,15 @@ class TWBaseButton_MTW: UIButton {
     var adjustedRect: CGRect {
         .init(x: adjustment,
               y: adjustment,
-              width: bounds.width - sizeAdjustment,
-              height: bounds.height - sizeAdjustment)
+              width: bounds.width - sizeAdjustment + 2,
+              height: bounds.height - sizeAdjustment + 2)
+    }
+    
+    var adjustedShadowRect: CGRect {
+        .init(x: adjustment,
+              y: adjustment,
+              width: bounds.width - sizeAdjustment - 2,
+              height: bounds.height - sizeAdjustment - 2)
     }
     
     var cornerRadius: CGFloat {
@@ -81,6 +88,7 @@ class TWBaseButton_MTW: UIButton {
     }
     
     override func draw(_ rect: CGRect) {
+        drawShadowLayer_MTW()
         drawBackgroundLayer_MTW()
     }
     
@@ -93,7 +101,6 @@ class TWBaseButton_MTW: UIButton {
                                 cornerRadius: cornerRadius)
         let mask = CAShapeLayer()
         mask.path = path.cgPath
-//        mask.lineWidth = borderWidth
         mask.strokeColor = UIColor.black.cgColor
         mask.fillColor = nil
         
@@ -102,7 +109,7 @@ class TWBaseButton_MTW: UIButton {
             let layer = CAGradientLayer()
             
             layer.frame = bounds
-            layer.colors = gradientColors
+//            layer.colors = gradientColors
             layer.startPoint = gradientStartPoint
             layer.endPoint = gradientEndPoint
             layer.mask = mask
@@ -115,6 +122,31 @@ class TWBaseButton_MTW: UIButton {
         backgroundFillColor.setFill()
         
         path.fill()
+    }
+    
+    func drawShadowLayer_MTW() {
+        let shadowLayer = CALayer()
+        shadowLayer.frame = adjustedShadowRect
+        shadowLayer.cornerRadius = cornerRadius
+        shadowLayer.backgroundColor = shadowBackgroundColor.cgColor
+        shadowLayer.shadowColor = UIColor.black.cgColor
+        shadowLayer.shadowOpacity = 0.5
+        shadowLayer.shadowRadius = 3.0
+        shadowLayer.shadowOffset = CGSize(width: 0, height: 2)
+        
+        gradientShadowLayer.removeFromSuperlayer()
+        gradientShadowLayer = {
+            let layer = CAGradientLayer()
+            layer.frame = bounds
+            layer.startPoint = gradientStartPoint
+            layer.endPoint = gradientEndPoint
+            
+            layer.addSublayer(shadowLayer)
+            
+            return layer
+        }()
+        
+        layer.insertSublayer(gradientShadowLayer, at: 0)
     }
     
     func configure_MTW(with localizedTitle: String) {
