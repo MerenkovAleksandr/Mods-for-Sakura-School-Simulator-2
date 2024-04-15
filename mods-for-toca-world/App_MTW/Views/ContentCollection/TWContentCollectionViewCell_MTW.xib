@@ -71,6 +71,7 @@
                             <constraint firstItem="1mD-Ta-FuF" firstAttribute="centerY" secondItem="1bQ-zu-719" secondAttribute="centerY" constant="-15" id="7PF-DH-aZi"/>
                             <constraint firstItem="1mD-Ta-FuF" firstAttribute="leading" secondItem="ays-E8-VkH" secondAttribute="trailing" constant="10" id="EdP-Zn-fFg"/>
                             <constraint firstItem="ays-E8-VkH" firstAttribute="centerY" secondItem="1bQ-zu-719" secondAttribute="centerY" constant="-15" id="Io5-fz-5oa"/>
+                            <constraint firstItem="1mD-Ta-FuF" firstAttribute="centerY" secondItem="ays-E8-VkH" secondAttribute="centerY" id="fCB-KW-m2h"/>
                             <constraint firstItem="ays-E8-VkH" firstAttribute="leading" secondItem="1bQ-zu-719" secondAttribute="leading" id="tBP-wx-lYx"/>
                         </constraints>
                     </view>
@@ -101,7 +102,7 @@
     <resources>
         <image name="favourite" width="16" height="20"/>
         <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

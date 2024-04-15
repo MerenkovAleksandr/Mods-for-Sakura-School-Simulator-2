@@ -233,7 +233,7 @@ private extension TWContentCollectionView_MTW {
             let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                            subitems: [item])
 
-            group.contentInsets = .init(top: 5.0, leading: 21.0, bottom: .zero, trailing: 21.0)
+            group.contentInsets = .init(top: 10.0, leading: 21.0, bottom: .zero, trailing: 21.0)
             
             return .init(group: group)
         }
