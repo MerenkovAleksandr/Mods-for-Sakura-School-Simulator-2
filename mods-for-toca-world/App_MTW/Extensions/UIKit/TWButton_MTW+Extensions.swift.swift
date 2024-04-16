@@ -24,8 +24,8 @@ extension TWButton_MTW {
     func configure_MTW(with title: String,
                    titleColor: UIColor) {
         titleLabel?.adjustsFontSizeToFitWidth = true
-        titleLabel?.font = TWFonts_MTW.defaultFont(for: .semiBold,
-                                                          size: 20)
+        titleLabel?.font = TWFonts_MTW.knicknackFont(for: .regular,
+                                                          size: 25)
         setTitleColor(titleColor, for: .normal)
         setTitle(title, for: .normal)
         titleLabel?.lineBreakMode = .byTruncatingTail

@@ -94,17 +94,17 @@ extension TWAlertView_MTW {
         configure(title: title)
         configure(message: message)
         
-        let leadingBtn = UIButton
-            .configured(with: leadingButton.title,
-                        titleColor: leadingButton.style.foregroundColor)
+        let leadingBtn = TWAlertCancelButton_MTW()
+        leadingBtn.configure_MTW(with: leadingButton.title, titleColor: leadingButton.style.foregroundColor)
         leadingBtn.addTarget(self,
                              action: #selector(leadingAction),
                              for: .touchUpInside)
+        
         svActions.addArrangedSubview(leadingBtn)
         
         if let trailingButton {
-            let trailingBtn = UIButton
-                .configured(with: trailingButton.title,
+            let trailingBtn = TWAlertDeleteButton_MTW()
+            trailingBtn.configure_MTW(with: trailingButton.title,
                             titleColor: trailingButton.style.foregroundColor)
             trailingBtn.addTarget(self,
                                  action: #selector(trailingAction),
@@ -150,7 +150,7 @@ private extension TWAlertView_MTW {
         addSubview(svContent)
         
         svActions.axis = .horizontal
-        svActions.spacing = .zero
+        svActions.spacing = 10.0
         svActions.alignment = .fill
         svActions.distribution = .fillEqually
         
@@ -160,15 +160,16 @@ private extension TWAlertView_MTW {
     func makeLayout() {
         svContent.snp.makeConstraints {
             $0.top.equalToSuperview().offset(12.0)
-            $0.leading.equalToSuperview().offset(12.0)
-            $0.trailing.equalToSuperview().inset(12.0)
+            $0.leading.equalToSuperview().offset(32.0)
+            $0.trailing.equalToSuperview().inset(32.0)
+            $0.height.equalTo(110.0)
         }
         
         svActions.snp.makeConstraints {
-            $0.top.equalTo(svContent.snp.bottom)
-            $0.bottom.equalToSuperview().inset(24.0)
-            $0.width.equalToSuperview()
-            $0.height.equalToSuperview().multipliedBy(0.15)
+            $0.top.equalTo(svContent.snp.bottom).offset(12.0)
+            $0.leading.equalToSuperview().offset(20.0)
+            $0.trailing.equalToSuperview().inset(20.0)
+            $0.height.equalToSuperview().multipliedBy(0.27)
         }
     }
     

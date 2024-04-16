@@ -109,7 +109,6 @@ class TWBaseButton_MTW: UIButton {
             let layer = CAGradientLayer()
             
             layer.frame = bounds
-//            layer.colors = gradientColors
             layer.startPoint = gradientStartPoint
             layer.endPoint = gradientEndPoint
             layer.mask = mask

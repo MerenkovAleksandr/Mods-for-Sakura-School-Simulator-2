@@ -80,4 +80,10 @@ final class TWColors_MTW {
     // Editor Element Cell
     static let orangeCellBackground = #colorLiteral(red: 1, green: 0.7647058824, blue: 0.3764705882, alpha: 1)
     static let purpleCellBackground = #colorLiteral(red: 0.6470588235, green: 0.3803921569, blue: 0.768627451, alpha: 1)
+    // Close button
+    static let closeButtonBackgroound = #colorLiteral(red: 1, green: 0.7647058824, blue: 0.3764705882, alpha: 1)
+    static let closeButtonShadow = #colorLiteral(red: 0.8745098039, green: 0.631372549, blue: 0.2352941176, alpha: 1)
+    // Delete button
+    static let deleteButtonBackground = #colorLiteral(red: 0.8156862745, green: 0.2, blue: 0.2117647059, alpha: 1)
+    static let deleteButtonShadow = #colorLiteral(red: 0.6666666667, green: 0.1450980392, blue: 0.1529411765, alpha: 1)
 }

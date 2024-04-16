@@ -76,7 +76,7 @@ final class TWAlertController_MTW: UIViewController {
         alertView.snp.makeConstraints {
             $0.centerX.centerY.equalToSuperview()
             $0.width.equalTo(330.0)
-            $0.height.equalTo(166.0)
+            $0.height.equalTo(205.0)
         }
         
         activityIndicator.alpha = .zero

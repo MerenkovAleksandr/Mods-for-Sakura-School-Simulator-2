@@ -184,7 +184,7 @@ final class TWAttributtedStrings_MTW {
     -> NSAttributedString {
         .compose(localizedString: localizedString,
                  kern: -0.5,
-                 font: .defaultFont(.semiBold, size: 24.0),
+                 font: .knicknackFont(.medium, size: 27.0),
                  paragraphStyle: .centered,
                  foregroundcolor: foregroundColor)
     }
@@ -194,8 +194,8 @@ final class TWAttributtedStrings_MTW {
     -> NSAttributedString {
         .compose(localizedString: localizedString,
                  kern: -1.25,
-                 font: .defaultFont(.medium, size: 24.0),
-                 paragraphStyle: .centered(lineHeightMultiple: 0.52),
+                 font: .knicknackFont(.regular, size: 22.0),
+                 paragraphStyle: .centered(lineHeightMultiple: 1.2),
                  foregroundcolor: foregroundColor)
     }
     
