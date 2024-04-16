@@ -489,14 +489,36 @@ final class TWEditorCategoryCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW
 final class TWEditorElementCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
     
     private var ivContent = UIImageView()
+    private var setBackground: UIColor = .clear
+    private var setShadow: UIColor = .clear
+    private let radius = 24.0
     
     override func prepareForReuse() {
-        backgroundColor = .clear
-        drawBackgroundLayer_MTW()
+        super.prepareForReuse()
+        setBackground = .clear
+        setShadow = .clear
+    }
+    
+    override var adjustedRect: CGRect {
+        .init(x: 3,
+              y: 3,
+              width: bounds.width - 3,
+              height: bounds.height - 3)
+    }
+    
+    override var adjustedShadowRect: CGRect {
+        .init(x: 0,
+              y: 0,
+              width: bounds.width - 5,
+              height: bounds.height - 5)
     }
     
     override var backgroundFillColor: UIColor {
-        contentView.backgroundColor ?? UIColor.white
+        setShadow
+    }
+    
+    override var shadowBackgroundColor: UIColor {
+        setBackground
     }
     
     override func commonInit_MTW() {
@@ -515,7 +537,6 @@ final class TWEditorElementCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW 
     }
     
     override func drawBackgroundLayer_MTW() {
-        let radius = 24.0
         
         let path = UIBezierPath()
         
@@ -571,42 +592,33 @@ final class TWEditorElementCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW 
         ivContent.image = nil
         ivContent.hide_MTW()
         
-        contentView.backgroundColor = color
-        
-        set(isSelected: isSelected,
-            selectedColor: TWColors_MTW.navigationBarForeground,
-            defaultColor: .white)
+        setBackground = color
+        setShadow = color.darker(by: 20)
+                
+        set(isSelected: isSelected)
     }
     
     private func emptyCell(isSelected: Bool) {
         ivContent.image = nil
-        
-        contentView.backgroundColor = .clear
-        
-        set(isSelected: isSelected,
-            selectedColor: TWColors_MTW.navigationBarForeground,
-            defaultColor: .white)
+        setShadow = TWColors_MTW.navigationBarForeground
+        setBackground = TWColors_MTW.navigationBarForeground
+        set(isSelected: isSelected)
     }
     
     private func setImage(_ image: UIImage?, isSelected: Bool) {
         ivContent.image = image
         ivContent.contentMode = .scaleAspectFit
         
-        contentView.backgroundColor = isSelected ? TWColors_MTW.orangeCellBackground : TWColors_MTW.purpleCellBackground
-
-        set(isSelected: isSelected,
-            selectedColor: TWColors_MTW.navigationBarForeground,
-            defaultColor: .clear)
+        setBackground = isSelected ? TWColors_MTW.menuOrangeCellShadow : TWColors_MTW.menuPurpleCellShadow
+        setShadow = isSelected ? TWColors_MTW.menuOrangeCellBackground : TWColors_MTW.menuPurpleCellBackground
     }
     
-    private func set(isSelected: Bool,
-                     selectedColor: UIColor,
-                     defaultColor: UIColor) {
-//        contentView.layer.borderWidth = 3.0
-//        contentView.layer.borderColor = isSelected
-//        ? selectedColor.cgColor
-//        : defaultColor.cgColor
-//        contentView.backgroundColor = isSelected ? UIColor.orange : UIColor.blue
+    private func set(isSelected: Bool) {
+        layer.cornerRadius = radius
+        layer.borderWidth = 4.0
+        layer.borderColor = isSelected
+        ? TWColors_MTW.searchBarForeground.cgColor
+        : UIColor.clear.cgColor
     }
     
 }
