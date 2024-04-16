@@ -152,7 +152,7 @@ class TWBaseButton_MTW: UIButton {
         let foregroundColor = TWColors_MTW.buttonForegroundColor
             .withAlphaComponent(opacity)
         let attributtedTitle = TWAttributtedStrings_MTW
-            .barAttrString(with: localizedTitle,
+            .buttonAttrString(with: localizedTitle,
                            foregroundColor: foregroundColor)
         
         setAttributedTitle(attributtedTitle, for: .normal)

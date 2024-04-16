@@ -26,6 +26,9 @@ final class TWCharacterRandomizerController_MTW: TWNavigationController_MTW {
     
     private var network: NetworkStatusMonitor_MTW { .shared }
     
+    private var timer: Timer?
+    private var seconds: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,6 +61,8 @@ final class TWCharacterRandomizerController_MTW: TWNavigationController_MTW {
             currentState = .idle
             randomizerView.configureView_MTW(accordingTo: currentState)
             configureNavigationBar()
+            guard timer != nil else { return }
+            stopStopwatch()
             return
         }
         
@@ -73,7 +78,6 @@ extension TWCharacterRandomizerController_MTW: TWCharacterRandomizerDelegate_MTW
     func didTapActionButton() {
         switch currentState {
         case .idle:
-            
             configurator?.generateRandomCharacter()
             
             currentState = .result
@@ -81,6 +85,8 @@ extension TWCharacterRandomizerController_MTW: TWCharacterRandomizerDelegate_MTW
         case .countdown:
             break
         case .result:
+            randomizerView.configureView_MTW(accordingTo: .countdown)
+//            startTimer()
             savePreview()
         }
         
@@ -126,6 +132,16 @@ private extension TWCharacterRandomizerController_MTW {
         randomizerView.delegate = self
         
         network.delegate = self
+    }
+    
+    func startTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateStopwatch), userInfo: nil, repeats: true)
+    }
+    
+    func stopStopwatch() {
+        timer?.invalidate()
+        timer = nil
+//        randomizerView.configureCountdown(seconds)
     }
     
     func prepareContent() {
@@ -217,13 +233,16 @@ private extension TWCharacterRandomizerController_MTW {
             return
         }
         
-        let title = NSLocalizedString("Text56ID", comment: "")
-        let message = NSLocalizedString("Text57ID", comment: "")
-        
-        let alert = TWAlertController_MTW.show_MTW(with: title,
-                                                      message: message)
+        let alert = TWAlertController_MTW.loadingSuccessful { [weak self] in
+            sleep(3)
+            self?.didTapLeadingBarBtn()
+        }
         
         present(alert, animated: true)
+    }
+    
+    @objc func updateStopwatch() {
+        seconds += 1
     }
     
     func configureNavigationBar() {

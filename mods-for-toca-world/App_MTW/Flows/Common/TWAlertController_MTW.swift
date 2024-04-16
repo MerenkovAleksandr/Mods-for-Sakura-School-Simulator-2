@@ -47,6 +47,23 @@ final class TWAlertController_MTW: UIViewController {
         return alert
     }
     
+    class func loadingSuccessful(handler: @escaping () -> Void)
+    -> TWAlertController_MTW {
+        let title = NSLocalizedString("Text89ID", comment: "")
+        let alert = TWAlertController_MTW()
+        
+        alert.alertTitle = title
+        alert.alertMessage = ""
+        alert.showIndicator = false
+        alert.leadingBtn = .cancel_MTW(handler: handler)
+        alert.fadeDismiss_MTW(withSelected: true)
+        alert.modalPresentationStyle = .overFullScreen
+        alert.sizeForSuccessful()
+        alert.alertView.hideForSuccessful()
+        
+        return alert
+    }
+    
     private let activityIndicator = TWActivityIndicator_MTW()
     private let alertView = TWAlertView_MTW()
     
@@ -113,6 +130,14 @@ final class TWAlertController_MTW: UIViewController {
                 self.activityIndicator.rotateView()
             }
         })
+    }
+    
+    func sizeForSuccessful() {
+        alertView.snp.makeConstraints {
+            $0.centerX.centerY.equalToSuperview().offset(70)
+            $0.width.equalTo(330.0)
+            $0.height.equalTo(65.0)
+        }
     }
     
     func dismissWithFade_MTW(completion: (() -> Void)? = nil) {

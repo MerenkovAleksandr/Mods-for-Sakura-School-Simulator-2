@@ -48,28 +48,43 @@ extension TWCharacterRandomizerView_MTW {
     func configureView_MTW(accordingTo state: RandomizerState) {
         switch state {
         case .result:
+            lblCoundownTimer.hide_MTW()
             ivContent.visibility(isVisible: true)
             ivResultBackground.visibility(isVisible: true)
             ivPlaceholder.visibility(isVisible: false)
             
             configureBtn(with: downloadTitle)
-            
+
             delegate?.getCharacterImage { [weak self] image in
                 self?.ivContent.image = image
                 self?.configureBtn(with: self?.downloadTitle ?? "")
             }
+        case .countdown:
+            loadingBtn()
         default:
+            lblCoundownTimer.show_MTW()
             ivContent.visibility(isVisible: false)
             ivResultBackground.visibility(isVisible: false)
             ivPlaceholder.visibility(isVisible: true)
             
             ivContent.image = nil
             
+            configureTimer()
             configureBtn(with: startTitle)
         }
     }
     
+    func configureCountdown(_ seconds: Int) {
+        lblCoundownTimer.text = formatSeconds(seconds: seconds)
+    }
     
+    func formatSeconds(seconds: Int) -> String {
+        let hours = seconds / 3600
+        let minutes = (seconds % 3600) / 60
+        let seconds = (seconds % 3600) % 60
+        
+        return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+    }
 }
 
 // MARK: - Private API
@@ -77,11 +92,11 @@ extension TWCharacterRandomizerView_MTW {
 private extension TWCharacterRandomizerView_MTW {
     
     var downloadTitle: String {
-        NSLocalizedString("Text52ID", comment: "")
+        NSLocalizedString("Text52ID", comment: "").uppercased()
     }
     
     var startTitle: String {
-        NSLocalizedString("Text85ID", comment: "")
+        NSLocalizedString("Text85ID", comment: "").uppercased()
     }
     
     func commonInit_MTW() {
@@ -94,8 +109,30 @@ private extension TWCharacterRandomizerView_MTW {
         addSubview(view)
     }
     
+    func configureTimer() {
+        let attributedString = TWAttributtedStrings_MTW
+            .timerAttrString(with: "00:00:00",
+                             foregroundColor: TWColors_MTW.contentCellForeground)
+        lblCoundownTimer.attributedText = attributedString
+    }
+    
     func configureBtn(with title: String) {
+        btnDownload.subviews.forEach { $0.removeFromSuperview() }
         btnDownload.configure_MTW(with: title)
+    }
+    
+    func loadingBtn() {
+        configureBtn(with: "")
+
+        let activityDimensions: CGFloat = 38
+        let activityIndicator = TWActivityIndicator_MTW(frame: CGRect(x: btnDownload.bounds.width / 2 - 20,
+                                                                      y: btnDownload.bounds.height / 2 - 20,
+                                                                      width: activityDimensions,
+                                                                      height: activityDimensions))
+        activityIndicator.rotateView()
+        
+        btnDownload.addSubview(activityIndicator)
+        
     }
     
 }

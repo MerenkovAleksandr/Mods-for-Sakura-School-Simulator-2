@@ -120,6 +120,22 @@ extension TWAlertView_MTW {
                 .alertMessageForeground)
     }
     
+    func hideForSuccessful() {
+        lblMessage.isHidden = true
+        svActions.isHidden = true
+        guard let localizedString = lblTitle.text else { return }
+        lblTitle.attributedText = TWAttributtedStrings_MTW
+            .alertViewTitleAttrString(with: localizedString,
+                                      foregroundColor: TWColors_MTW
+                .contentCellForeground)
+        
+        svContent.snp.makeConstraints {
+            $0.height.equalTo(40)
+        }
+        
+        layoutIfNeeded()
+    }
+    
 }
 
 // MARK: - Private API
