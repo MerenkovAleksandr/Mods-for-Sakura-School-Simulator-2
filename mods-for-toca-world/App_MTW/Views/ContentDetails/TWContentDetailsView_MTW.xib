@@ -71,7 +71,7 @@
                                     <rect key="frame" x="146" y="0.0" width="83" height="80"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="icon_download"/>
+                                    <buttonConfiguration key="configuration" style="plain"/>
                                     <connections>
                                         <action selector="btnAction:" destination="-1" eventType="touchUpInside" id="gvb-6K-K60"/>
                                     </connections>
@@ -117,7 +117,6 @@
         </view>
     </objects>
     <resources>
-        <image name="icon_download" width="20" height="24"/>
         <systemColor name="separatorColor">
             <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

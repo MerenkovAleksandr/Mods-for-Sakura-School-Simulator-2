@@ -30,7 +30,8 @@ final class TWCharacterPreviewView_MTW: TWBaseView_MTW {
     override func draw(_ rect: CGRect) {}
     
     @IBAction func downloadBtnAction(_ sender: Any) {
-        configureLoadingBtn()
+        btnDownload.configure_MTW(with: "")
+        btnDownload.animationLoading()
         didSave?()
     }
 }
@@ -47,7 +48,7 @@ extension TWCharacterPreviewView_MTW {
     }
     
     func stopAnimation() {
-        btnDownload.subviews.forEach({ $0.removeFromSuperview() })
+        btnDownload.stopAminationLoading()
         configureDownloadButton()
     }
 }
@@ -75,20 +76,6 @@ private extension TWCharacterPreviewView_MTW {
             .buttonAttrString(with: localizedTitle,
                            foregroundColor: TWColors_MTW.buttonForegroundColor),
                                        for: .normal)
-    }
-    
-    func configureLoadingBtn() {
-        btnDownload.configure_MTW(with: "")
-
-        let activityDimensions: CGFloat = 38
-        let activityIndicator = TWActivityIndicator_MTW(frame: CGRect(x: btnDownload.bounds.width / 2 - 20,
-                                                                      y: btnDownload.bounds.height / 2 - 20,
-                                                                      width: activityDimensions,
-                                                                      height: activityDimensions))
-        activityIndicator.rotateView()
-        
-        btnDownload.addSubview(activityIndicator)
-        
     }
     
     func configureSubMenuView() {

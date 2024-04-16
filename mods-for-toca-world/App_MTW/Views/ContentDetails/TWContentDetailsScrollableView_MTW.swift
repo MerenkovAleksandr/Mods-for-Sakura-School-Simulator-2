@@ -88,6 +88,9 @@ extension TWContentDetailsScrollableView_MTW: TWContentDetailsDelegate_MTW {
         didSaveImage?(self.selectedItem)
     }
 
+    func stopAnimation() {
+        vContentDetails.stopAnimation()
+    }
 }
 
 // MARK: - Private API

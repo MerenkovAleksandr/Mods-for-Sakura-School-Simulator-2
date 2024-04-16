@@ -158,4 +158,19 @@ class TWBaseButton_MTW: UIButton {
         setAttributedTitle(attributtedTitle, for: .normal)
         setNeedsDisplay()
     }
+    
+    func animationLoading() {
+        let activityDimensions: CGFloat = 38
+        let activityIndicator = TWActivityIndicator_MTW(frame: CGRect(x: bounds.width / 2 - 20,
+                                                                      y: bounds.height / 2 - 20,
+                                                                      width: activityDimensions,
+                                                                      height: activityDimensions))
+        activityIndicator.rotateView()
+        
+        addSubview(activityIndicator)
+    }
+    
+    func stopAminationLoading() {
+        subviews.forEach({ $0.removeFromSuperview() })
+    }
 }

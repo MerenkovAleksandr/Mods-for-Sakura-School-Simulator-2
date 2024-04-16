@@ -33,6 +33,8 @@ final class TWContentDetailsView_MTW: TWBaseView_MTW {
     var image: UIImage? { ivContent.image }
     
     @IBAction func btnAction(_ sender: Any) {
+        btnDownload.animationLoading()
+        animationImage()
         delegate?.didTapActionButton()
     }
     
@@ -122,6 +124,12 @@ extension TWContentDetailsView_MTW {
         configureContentDescription(localizedString: item.content.description)
     }
     
+    func stopAnimation() {
+        btnDownload.stopAminationLoading()
+        guard let image = UIImage(named: "icon_download") else { return }
+        btnDownload.setImage(image, for: .normal)
+    }
+    
 }
 
 // MARK: - Private API
@@ -199,6 +207,14 @@ private extension TWContentDetailsView_MTW {
             $0.trailing.equalTo(btnDownload.snp.leading).offset(-10.0)
             $0.height.equalTo(74)
         }
+        
+        guard let image = UIImage(named: "icon_download") else { return }
+        btnDownload.setImage(image, for: .normal)
+    }
+    
+    func animationImage() {
+        guard let image = UIImage(named: "icon_indicator") else { return }
+        btnDownload.setImage(image, for: .normal)
     }
     
     func configureFavouriteImageView() {
