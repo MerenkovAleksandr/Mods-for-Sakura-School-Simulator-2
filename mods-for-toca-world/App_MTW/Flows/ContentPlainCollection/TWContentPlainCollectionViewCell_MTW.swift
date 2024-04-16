@@ -24,7 +24,7 @@ class TWContentPlainCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
     }
     
     var foregroundColor: UIColor {
-        TWColors_MTW.contentCellForeground
+        TWColors_MTW.soundCellForeground
     }
     
     override var gradientColors: [CGColor] {
@@ -104,7 +104,7 @@ private extension TWContentPlainCollectionViewCell_MTW {
     
     func configureTitleLabel(localizedTitle: String) {
         lblContentTitle.attributedText = TWAttributtedStrings_MTW
-            .contentSelectorItemAttrString(with: localizedTitle,
+            .contentPlainTitleAttrString(with: localizedTitle,
                                            foregroundColor: foregroundColor)
         lblContentTitle.sizeToFit()
     }

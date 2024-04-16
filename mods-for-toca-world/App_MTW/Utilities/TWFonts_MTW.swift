@@ -29,4 +29,8 @@ final class TWFonts_MTW {
         .init(name: .init(format: "Knicknack-Regular", style.rawValue), size: size)!
     }
     
+    class func montserratFont(for style: FontStyle, size: CGFloat) -> UIFont {
+        .init(name: .init(format: "Montserrat", style.rawValue), size: size)!
+    }
+    
 }

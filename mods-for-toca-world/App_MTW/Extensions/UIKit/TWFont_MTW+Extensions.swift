@@ -26,4 +26,9 @@ extension TWFont_MTW {
         TWFonts_MTW.knicknackFont(for: style, size: size)
     }
     
+    class func montserratFont(_ style: TWFonts_MTW.FontStyle,
+                           size: CGFloat) -> UIFont {
+        TWFonts_MTW.knicknackFont(for: style, size: size)
+    }
+    
 }

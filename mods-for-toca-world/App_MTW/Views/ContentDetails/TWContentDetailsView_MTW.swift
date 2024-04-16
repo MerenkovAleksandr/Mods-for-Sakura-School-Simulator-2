@@ -77,7 +77,6 @@ final class TWContentDetailsView_MTW: TWBaseView_MTW {
     override func draw(_ rect: CGRect) {
         drawShadowLayer_MTW()
         drawBackgroundLayer_MTW()
-        applyMask()
     }
     
     override func commonInit_MTW() {
@@ -106,6 +105,11 @@ extension TWContentDetailsView_MTW {
             vBubble.hide_MTW()
             configureContentTitle(localizedString: item.content.displayName)
             ivFavourite.hide_MTW()
+            btnDownload.hide_MTW()
+            btnShare.hide_MTW()
+            lblDescription.snp.makeConstraints {
+                $0.bottom.equalToSuperview()
+            }
         } else {
             vBubble.visibility(isVisible: item.attributes?.new ?? false)
             lblTitle.hide_MTW()
@@ -141,6 +145,8 @@ private extension TWContentDetailsView_MTW {
     func configureImageView(item: TWContentModel_MTW) {
         ivContent.image = item.content.image
         ivContent.setCornerRadius_MTW(8.0)
+        guard item.contentType != .guide else { return }
+        applyMask()
     }
     
     func configureContentTitle(localizedString: String?) {

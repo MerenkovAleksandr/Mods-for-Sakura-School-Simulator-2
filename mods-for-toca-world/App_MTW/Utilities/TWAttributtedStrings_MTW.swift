@@ -72,6 +72,25 @@ final class TWAttributtedStrings_MTW {
                         foregroundcolor: foregroundColor)
     }
     
+    class func contentPlainTitleAttrString(with localizedString: String,
+                                             foregroundColor: UIColor)
+    -> NSAttributedString {
+        let kern: CGFloat = iPad ? -1.5 : -0.5
+        let size: CGFloat
+        
+        if UIScreen.main.nativeBounds.height < 2436, !iPad {
+            size = 18.0
+        } else {
+            size = iPad ? 36.0 : 18.0
+        }
+        
+        return .compose(localizedString: localizedString,
+                        kern: kern,
+                        font: .knicknackFont(.regular, size: size),
+                        paragraphStyle: .centered(lineSpacing: 4.0),
+                        foregroundcolor: foregroundColor)
+    }
+    
     class func contentSelectorItemAttrString(with localizedString: String,
                                              foregroundColor: UIColor)
     -> NSAttributedString {
@@ -158,11 +177,11 @@ final class TWAttributtedStrings_MTW {
     -> NSAttributedString {
         .compose(localizedString: localizedString,
                  kern: -0.5,
-                 font: .notoSantFont(.medium,
-                                    size: iPad ? 24.0 : 16.0),
+                 font: .montserratFont(.regular,
+                                    size: iPad ? 24.0 : 15.0),
                  paragraphStyle: .aligned(.left,
                                           lineBrakeMode: .byTruncatingTail,
-                                          lineHeightMultiple: 1.1),
+                                          lineHeightMultiple: 1.3),
                  foregroundcolor: foregroundColor)
     }
     
@@ -171,11 +190,11 @@ final class TWAttributtedStrings_MTW {
     -> NSAttributedString {
         .compose(localizedString: localizedString,
                  kern: -0.5,
-                 font: .defaultFont(.regular,
+                 font: .knicknackFont(.regular,
                                     size: iPad ? 36.0 : 21.0),
                  paragraphStyle: .aligned(.center,
                                           lineBrakeMode: .byTruncatingTail,
-                                          lineHeightMultiple: 0.8),
+                                          lineHeightMultiple: 1.2),
                  foregroundcolor: foregroundColor)
     }
     
