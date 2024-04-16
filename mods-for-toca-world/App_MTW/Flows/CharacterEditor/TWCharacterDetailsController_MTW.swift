@@ -133,11 +133,11 @@ private extension TWCharacterDetailsController_MTW {
             return
         }
         
-        let title = NSLocalizedString("Text56ID", comment: "")
-        let message = NSLocalizedString("Text57ID", comment: "")
-        
-        let alert = TWAlertController_MTW.show_MTW(with: title,
-                                                      message: message)
+        let alert = TWAlertController_MTW.loadingSuccessful { [weak self] in
+            sleep(1)
+//            self?.didTapLeadingBarBtn()
+            self?.characterPreview.stopAnimation()
+        }
         
         present(alert, animated: true)
     }

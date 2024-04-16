@@ -234,7 +234,7 @@ private extension TWCharacterRandomizerController_MTW {
         }
         
         let alert = TWAlertController_MTW.loadingSuccessful { [weak self] in
-            sleep(3)
+            sleep(1)
             self?.didTapLeadingBarBtn()
         }
         

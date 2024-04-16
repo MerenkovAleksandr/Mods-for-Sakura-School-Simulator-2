@@ -60,7 +60,7 @@ extension TWCharacterRandomizerView_MTW {
                 self?.configureBtn(with: self?.downloadTitle ?? "")
             }
         case .countdown:
-            loadingBtn()
+            configureLoadingBtn()
         default:
             lblCoundownTimer.show_MTW()
             ivContent.visibility(isVisible: false)
@@ -121,7 +121,7 @@ private extension TWCharacterRandomizerView_MTW {
         btnDownload.configure_MTW(with: title)
     }
     
-    func loadingBtn() {
+    func configureLoadingBtn() {
         configureBtn(with: "")
 
         let activityDimensions: CGFloat = 38
