@@ -21,6 +21,7 @@ final class TWCharacterDetailsController_MTW: TWNavigationController_MTW {
     
     private var characterPreview = TWCharacterPreviewView_MTW()
     private var preview: TWCharacterPreview_MTW!
+    private let fileShare = TWFileShare_MTW.share
     
     private var dropbox: TWDBManager_MTW { .shared }
     
@@ -101,7 +102,17 @@ private extension TWCharacterDetailsController_MTW {
         let status = PHPhotoLibrary.authorizationStatus(for: .addOnly)
         
         if status == .authorized {
-            saveImage(image)
+            fileShare.saveFile(data: image, fileName: UUID().uuidString, viewController: self) { [weak self] isSaved, error in
+                if isSaved {
+                    self?.saveImage(image)
+                } else {
+                    self?.characterPreview.stopAnimation()
+                }
+                
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+            }
             return
         }
         
@@ -133,11 +144,13 @@ private extension TWCharacterDetailsController_MTW {
             return
         }
         
-        let alert = TWAlertController_MTW.loadingSuccessful { [weak self] in
-            sleep(1)
+        let alert = TWAlertController_MTW.loadingSuccessful {
 //            self?.didTapLeadingBarBtn()
-            self?.characterPreview.stopAnimation()
         }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: { [weak self] in
+            alert.dismiss(animated: true)
+            self?.characterPreview.stopAnimation()
+        })
         
         present(alert, animated: true)
     }

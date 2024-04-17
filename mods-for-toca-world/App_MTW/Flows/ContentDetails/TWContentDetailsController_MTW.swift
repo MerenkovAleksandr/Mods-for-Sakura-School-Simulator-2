@@ -22,6 +22,7 @@ final class TWContentDetailsController_MTW: TWNavigationController_MTW {
     var didUpdate: ((TWContentModel_MTW) -> Void)?
     
     private var contentView = TWContentDetailsScrollableView_MTW()
+    private let fileShare = TWFileShare_MTW.share
     
     override var localizedTitle: String {
         switch contentType {
@@ -73,6 +74,7 @@ private extension TWContentDetailsController_MTW {
             if let selectedItem = selectedItem {
                 self?.selectedItem = selectedItem
             }
+            
             self?.savePreview()
         }
         
@@ -99,7 +101,18 @@ private extension TWContentDetailsController_MTW {
         let status = PHPhotoLibrary.authorizationStatus(for: .addOnly)
         
         if status == .authorized {
-            saveImage(image)
+            
+            fileShare.saveFile(data: image, fileName: UUID().uuidString, viewController: self) { [weak self] isSaved, error in
+                if isSaved {
+                    self?.saveImage(image)
+                } else {
+                    self?.contentView.stopAnimation()
+                }
+                
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+            }
             return
         }
         
@@ -131,13 +144,16 @@ private extension TWContentDetailsController_MTW {
             return
         }
         
-        let alert = TWAlertController_MTW.loadingSuccessful { [weak self] in
-            sleep(1)
+        let alert = TWAlertController_MTW.loadingSuccessful {
 //            self?.didTapLeadingBarBtn()
-            self?.contentView.stopAnimation()
         }
-        
         present(alert, animated: true)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: { [weak self] in
+            self?.contentView.stopAnimation()
+            alert.dismiss(animated: true)
+        })
+
     }
     
 }
