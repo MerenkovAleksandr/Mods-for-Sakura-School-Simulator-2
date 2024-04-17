@@ -148,15 +148,20 @@ private extension TWContentSelectorCollectionView_MTW {
     
     func generateMainSectionLayoutPad() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33),
-                                              heightDimension: .fractionalHeight(1.0))
+                                              heightDimension: .fractionalHeight(1.4))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
+        let secondItem = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.65),
+                                                                                   heightDimension: .fractionalHeight(1.4)))
+        
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .fractionalHeight(0.2))
+                                               heightDimension: .fractionalHeight(0.24))
+        
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
-                                                       subitems: [item])
-        group.contentInsets = .init(top: .zero, leading: 36.0, bottom: .zero, trailing: 36.0)
+                                                       subitems: [item, secondItem])
+        group.contentInsets = .init(top: .zero, leading: bounds.width / 4, bottom: .zero, trailing: bounds.width / 4)
+        group.interItemSpacing = .fixed(10)
         
         return .init(group: group)
     }
@@ -187,16 +192,17 @@ private extension TWContentSelectorCollectionView_MTW {
     }
     
     func generateSubSectionLayoutPad() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                              heightDimension: .fractionalHeight(1.0))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33),
+                                              heightDimension: .fractionalHeight(1.7))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .fractionalHeight(0.1))
+                                               heightDimension: .fractionalHeight(0.25))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                        subitems: [item])
-        group.contentInsets = .init(top: .zero, leading: 63.0, bottom: .zero, trailing: 63.0)
+        group.contentInsets = .init(top: 120.0, leading: bounds.width / 4, bottom: .zero, trailing: bounds.width / 4)
+        group.interItemSpacing = .fixed(10)
         
         return .init(group: group)
     }

@@ -29,7 +29,7 @@ final class TWAttributtedStrings_MTW {
     
     class func barAttrString(with localizedString: String,
                              foregroundColor: UIColor) -> NSAttributedString {
-        let size: CGFloat = iPad ? 44.0 : 32.0
+        let size: CGFloat = iPad ? 58.0 : 32.0
         let lineSpacing: CGFloat = iPad ? .zero : 20.0
         let kern = iPad ? -2.0 : -0.5
         
