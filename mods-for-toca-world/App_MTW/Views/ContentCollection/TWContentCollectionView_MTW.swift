@@ -255,16 +255,33 @@ private extension TWContentCollectionView_MTW {
     }
     
     func generateSectionLayoutPad() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33),
+        if delegate?.contentType == nil || delegate?.contentType != .wallpaper {
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
+                                                  heightDimension: .fractionalHeight(1.0))
+            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+            
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                                   heightDimension: .fractionalWidth(0.15))
+            
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
+                                                           subitems: [item])
+            group.contentInsets = .init(top: 10.0, leading: 63.0, bottom: .zero, trailing: 63.0)
+            group.interItemSpacing = .fixed(15)
+            
+            return .init(group: group)
+        }
+        
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.25),
                                               heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .fractionalWidth(0.35))
+                                               heightDimension: .fractionalWidth(0.27))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                        subitems: [item])
-        group.contentInsets = .init(top: .zero, leading: 63.0, bottom: .zero, trailing: 63.0)
+        group.contentInsets = .init(top: 10.0, leading: 63.0, bottom: .zero, trailing: 63.0)
+        group.interItemSpacing = .fixed(15)
         
         return .init(group: group)
     }

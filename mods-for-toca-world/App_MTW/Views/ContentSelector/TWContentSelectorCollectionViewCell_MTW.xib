@@ -20,7 +20,7 @@
                         <rect key="frame" x="68" y="16" width="91" height="91"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="kCh-8D-HQo" secondAttribute="height" multiplier="1:1" id="EYe-gN-3gW"/>
-                            <constraint firstAttribute="width" secondItem="b5l-m8-eaB" secondAttribute="height" multiplier="0.4" id="PRa-iR-jTw"/>
+                            <constraint firstAttribute="width" secondItem="b5l-m8-eaB" secondAttribute="height" multiplier="0.37" id="PRa-iR-jTw"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="751" insetsLayoutMarginsFromSafeArea="NO" text="LABEL" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="0" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t62-M6-SdU">
@@ -52,7 +52,7 @@
                 <constraint firstItem="kCh-8D-HQo" firstAttribute="top" secondItem="b5l-m8-eaB" secondAttribute="top" constant="16" id="XqW-Ok-SCF"/>
                 <constraint firstAttribute="bottom" secondItem="Gtk-Rg-sWA" secondAttribute="bottom" id="abZ-gw-BIa"/>
                 <constraint firstItem="J10-9d-2RL" firstAttribute="centerX" secondItem="b5l-m8-eaB" secondAttribute="centerX" id="b6b-WY-Epo"/>
-                <constraint firstItem="t62-M6-SdU" firstAttribute="top" secondItem="kCh-8D-HQo" secondAttribute="bottom" constant="15" id="bLt-jj-xd7"/>
+                <constraint firstItem="t62-M6-SdU" firstAttribute="top" secondItem="kCh-8D-HQo" secondAttribute="bottom" constant="4" id="bLt-jj-xd7"/>
                 <constraint firstAttribute="bottom" secondItem="t62-M6-SdU" secondAttribute="bottom" constant="4" id="mLp-g3-z9e"/>
                 <constraint firstAttribute="trailing" secondItem="t62-M6-SdU" secondAttribute="trailing" constant="12" id="pMR-eM-v95"/>
             </constraints>

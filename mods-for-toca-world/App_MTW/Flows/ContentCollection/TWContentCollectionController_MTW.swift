@@ -66,7 +66,6 @@ final class TWContentCollectionController_MTW: TWNavigationController_MTW {
             }
             return
         }
-        
         showContentPreloader()
     }
     
@@ -76,10 +75,10 @@ final class TWContentCollectionController_MTW: TWNavigationController_MTW {
         vNavigation.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(vOffset)
             make.centerX.equalTo(view)
-            make.width.equalTo(view).multipliedBy(iPad ? 0.7 : 0.9)
-            make.height.equalTo(vNavigation.snp.width).multipliedBy(1.0/4.0)
+            make.width.equalTo(view).multipliedBy(iPad ? 1.0 : 0.9)
+            make.height.equalTo(vNavigation.snp.width).multipliedBy(iPad ? 0.1 : 1.0/4.0)
         }
-        
+
         vContent.snp.makeConstraints { make in
             make.top.equalTo(vNavigation.snp.bottom).offset(vOffset)
             make.leading.equalToSuperview()
