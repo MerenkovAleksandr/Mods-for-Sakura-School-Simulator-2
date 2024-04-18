@@ -29,6 +29,7 @@ final class TWContentDetailsView_MTW: TWBaseView_MTW {
     
     private(set) var id: UUID?
     private(set) var isFavourite: Bool = false
+    private var item: TWContentModel_MTW?
     
     var image: UIImage? { ivContent.image }
     
@@ -74,6 +75,7 @@ final class TWContentDetailsView_MTW: TWBaseView_MTW {
         super.layoutSubviews()
         
         ivContent.setCornerRadius_MTW(16.0)
+        generateContentLayout()
     }
     
     override func draw(_ rect: CGRect) {
@@ -153,8 +155,13 @@ private extension TWContentDetailsView_MTW {
     func configureImageView(item: TWContentModel_MTW) {
         ivContent.image = item.content.image
         ivContent.setCornerRadius_MTW(8.0)
-        guard item.contentType != .guide else { return }
-        applyMask()
+        
+        guard item.contentType == .guide else { return }
+        self.item = item
+    }
+    
+    func generateContentLayout() {
+        iPad ? generateContentLayoutPad() : generateContentLayoutPhone()
     }
     
     func configureContentTitle(localizedString: String?) {
@@ -184,6 +191,8 @@ private extension TWContentDetailsView_MTW {
     }
     
     func configureButtons() {
+        let height = iPad ? 100.0 : 74.0
+        let width = iPad ? 127.0 : 94.0
         btnDownload.setAttributedTitle(TWAttributtedStrings_MTW
             .barAttrString(with: "",
                            foregroundColor: TWColors_MTW.buttonForegroundColor),
@@ -191,8 +200,8 @@ private extension TWContentDetailsView_MTW {
         
         btnDownload.snp.makeConstraints {
             $0.trailing.equalToSuperview()
-            $0.width.equalTo(94)
-            $0.height.equalTo(74)
+            $0.width.equalTo(width)
+            $0.height.equalTo(height)
         }
         
         let localizedTitle = NSLocalizedString("Text88ID", comment: "")
@@ -205,7 +214,7 @@ private extension TWContentDetailsView_MTW {
         btnShare.snp.makeConstraints {
             $0.leading.equalToSuperview()
             $0.trailing.equalTo(btnDownload.snp.leading).offset(-10.0)
-            $0.height.equalTo(74)
+            $0.height.equalTo(height)
         }
         
         guard let image = UIImage(named: "icon_download") else { return }
@@ -231,11 +240,32 @@ private extension TWContentDetailsView_MTW {
         configureFavouriteImageView()
     }
     
-    func applyMask() {
+    func generateContentLayoutPad() {
         let maskLayer = CAShapeLayer()
         let path = UIBezierPath()
         let cornerRadius: CGFloat = 15
         
+        path.move(to: CGPoint(x: 0, y: 0))
+        path.addLine(to: CGPoint(x: bounds.width - 100, y: 0))
+        path.addArc(withCenter: CGPoint(x: bounds.width - 80, y: cornerRadius), radius: cornerRadius, startAngle: .pi * 3 / 2, endAngle: 0, clockwise: true)
+        path.addArc(withCenter: CGPoint(x: bounds.width - 50, y: cornerRadius), radius: cornerRadius, startAngle: .pi, endAngle: .pi / 2, clockwise: false)
+        path.addArc(withCenter: CGPoint(x: bounds.width - 40, y: cornerRadius * 3), radius: cornerRadius, startAngle: .pi * 3 / 2, endAngle: 0, clockwise: true)
+        path.addLine(to: CGPoint(x: bounds.width - 20, y: bounds.height))
+        path.addLine(to: CGPoint(x: 0, y: bounds.height))
+        path.close()
+
+        maskLayer.path = path.cgPath
+        ivContent.layer.mask = maskLayer
+        
+        guard item != nil else { return }
+        ivContent.layer.mask = nil
+    }
+    
+    func generateContentLayoutPhone() {
+        let maskLayer = CAShapeLayer()
+        let path = UIBezierPath()
+        let cornerRadius: CGFloat = 15
+    
         path.move(to: CGPoint(x: 0, y: 0))
         path.addLine(to: CGPoint(x: bounds.width - 90, y: 0))
         path.addArc(withCenter: CGPoint(x: bounds.width - 70, y: cornerRadius), radius: cornerRadius, startAngle: .pi * 3 / 2, endAngle: 0, clockwise: true)
@@ -244,9 +274,12 @@ private extension TWContentDetailsView_MTW {
         path.addLine(to: CGPoint(x: bounds.width, y: bounds.height))
         path.addLine(to: CGPoint(x: 0, y: bounds.height))
         path.close()
-
+    
         maskLayer.path = path.cgPath
         ivContent.layer.mask = maskLayer
+        
+        guard item != nil else { return }
+        ivContent.layer.mask = nil
     }
     
 }
