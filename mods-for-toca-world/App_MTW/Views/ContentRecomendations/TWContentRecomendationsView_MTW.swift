@@ -148,12 +148,12 @@ private extension TWContentRecomendationsView_MTW {
     
     func generateLayoutPad() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.25),
-                                              heightDimension: .absolute(120.0))
+                                              heightDimension: .absolute(175.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = .init(top: .zero, leading: 12.0, bottom: .zero, trailing: 12.0)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .absolute(120.0))
+                                               heightDimension: .absolute(175.0))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                        subitems: [item])

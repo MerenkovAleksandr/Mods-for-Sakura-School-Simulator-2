@@ -270,9 +270,11 @@ final class TWAttributtedStrings_MTW {
     class func recomendationsTitleAttrString(with localizedString: String,
                                              foregroundColor: UIColor)
     -> NSAttributedString {
-        .compose(localizedString: localizedString,
+        let size = iPad ? 41.0 : 24.0
+        
+        return .compose(localizedString: localizedString,
                  kern: -0.5,
-                 font: .defaultFont(.semiBold, size: 24.0),
+                 font: .defaultFont(.semiBold, size: size),
                  paragraphStyle:.aligned(.left),
                  foregroundcolor: foregroundColor)
     }
