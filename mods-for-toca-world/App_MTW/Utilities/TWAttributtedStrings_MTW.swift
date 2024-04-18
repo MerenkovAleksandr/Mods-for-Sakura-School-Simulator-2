@@ -111,13 +111,13 @@ final class TWAttributtedStrings_MTW {
         if UIScreen.main.nativeBounds.height < 2436, !iPad {
             size = 18.0
         } else {
-            size = iPad ? 36.0 : 18.0
+            size = iPad ? 24.0 : 18.0
         }
         
         return .compose(localizedString: localizedString,
                         kern: kern,
                         font: .knicknackFont(.regular, size: size),
-                        paragraphStyle: .centered(lineSpacing: 4.0),
+                        paragraphStyle: .aligned(.left, lineSpacing: 4.0),
                         foregroundcolor: foregroundColor)
     }
     

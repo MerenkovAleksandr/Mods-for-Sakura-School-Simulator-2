@@ -115,7 +115,6 @@ class TWContentPlainCollectionController_MTW: TWNavigationController_MTW {
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                        subitems: [item])
         group.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)
-//        group.interItemSpacing = .fixed(10)
         
         let section = NSCollectionLayoutSection(group: group)
         
@@ -124,21 +123,23 @@ class TWContentPlainCollectionController_MTW: TWNavigationController_MTW {
     }
     
     func generateLayoutPad() -> UICollectionViewLayout {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
                                               heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .fractionalHeight(0.15))
+                                               heightDimension: .fractionalHeight(0.1))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                        subitems: [item])
+        group.interItemSpacing = .fixed(15.0)
         group.contentInsets = .init(top: .zero,
-                                    leading: 48.0,
+                                    leading: .zero,
                                     bottom: .zero,
-                                    trailing: 48.0)
+                                    trailing: .zero)
         
         let section = NSCollectionLayoutSection(group: group)
+        section.interGroupSpacing = 15.0
         
         return UICollectionViewCompositionalLayout(section: section)
     }
@@ -150,7 +151,7 @@ class TWContentPlainCollectionController_MTW: TWNavigationController_MTW {
     }
     
     func layoutCollectionView() {
-        let multiplier: CGFloat = iPad ? 0.75 : 0.9
+        let multiplier: CGFloat = iPad ? 0.9 : 0.9
         
         collectionView.snp.makeConstraints {
             $0.top.equalToSuperview()
