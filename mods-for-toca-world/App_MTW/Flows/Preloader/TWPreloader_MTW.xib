@@ -35,21 +35,17 @@
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q4a-za-yBQ" customClass="TWActivityIndicator_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
+                    <rect key="frame" x="20" y="388" width="353" height="74.666666666666686"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MGK-9D-Jhm">
                     <rect key="frame" x="20" y="388.66666666666669" width="353" height="74.666666666666686"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q4a-za-yBQ" customClass="TWActivityIndicator_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="353" height="74.666666666666671"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        </view>
-                    </subviews>
                 </stackView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="MGK-9D-Jhm" secondAttribute="trailing" constant="20" id="0sQ-qo-s2S">
-                    <variation key="heightClass=regular-widthClass=regular" constant="120"/>
-                </constraint>
                 <constraint firstItem="3em-1z-bJ2" firstAttribute="centerY" secondItem="agf-Wv-JAG" secondAttribute="centerY" id="3tz-N8-glj"/>
                 <constraint firstItem="MGK-9D-Jhm" firstAttribute="top" secondItem="agf-Wv-JAG" secondAttribute="top" constant="388.66666666666663" id="ISH-vb-hWh"/>
                 <constraint firstItem="MGK-9D-Jhm" firstAttribute="leading" secondItem="agf-Wv-JAG" secondAttribute="leading" constant="20" id="Mek-PE-oyt">

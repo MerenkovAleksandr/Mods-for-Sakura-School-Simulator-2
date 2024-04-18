@@ -16,6 +16,16 @@ class TWPreloader_MTW: TWBaseController_MTW, NetworkStatusMonitorDelegate_MTW {
     private var isReadyToProceed: Bool = false
     private var dropBox: TWDBManager_MTW { .shared }
     private var network: NetworkStatusMonitor_MTW { .shared }
+    
+    private var iPad: Bool {
+        UIDevice.current.userInterfaceIdiom == .pad
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        makeLayout()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,6 +96,18 @@ private extension TWPreloader_MTW {
             if progress == 1.0 {
                 self?.navigateToMainMenu()
             }
+        }
+    }
+    
+    func makeLayout() {
+        let offset = iPad ? 163.0 : 65.0
+        vActivitiIndicator.snp.makeConstraints { make in
+            make.width.height.equalTo(offset)
+            make.centerX.centerY.equalToSuperview()
+        }
+        
+        lblTitle.snp.makeConstraints { make in
+            make.centerX.centerY.equalToSuperview()
         }
     }
     
