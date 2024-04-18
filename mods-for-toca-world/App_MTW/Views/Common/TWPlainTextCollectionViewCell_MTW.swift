@@ -153,7 +153,7 @@ private extension TWPlainTextCollectionViewCell_MTW {
     
     func configureTitleLabel(with title: String) {
         lblContentTitle.attributedText = TWAttributtedStrings_MTW
-            .contentSelectorItemAttrString(with: title,
+            .soundSelectorItemAttrString(with: title,
                                            foregroundColor: foregoundColor)
         lblContentTitle.textAlignment = .left
         lblContentTitle.sizeToFit()

@@ -101,18 +101,20 @@ final class TWSoundsCollectionController_MTW: TWContentPlainCollectionController
     }
     
     override func generateLayoutPad() -> UICollectionViewLayout {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33),
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
                                               heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .absolute(120.0))
+                                               heightDimension: .absolute(100.0))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                        subitems: [item])
         group.contentInsets = .init(top: .zero, leading: 80.0, bottom: .zero, trailing: 80.0)
+        group.interItemSpacing = .fixed(15.0)
         
         let section = NSCollectionLayoutSection(group: group)
+        section.interGroupSpacing = 15.0
         
         return UICollectionViewCompositionalLayout(section: section)
     }

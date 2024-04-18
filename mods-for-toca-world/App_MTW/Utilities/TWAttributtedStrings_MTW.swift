@@ -140,6 +140,25 @@ final class TWAttributtedStrings_MTW {
                         foregroundcolor: foregroundColor)
     }
     
+    class func soundSelectorItemAttrString(with localizedString: String,
+                                             foregroundColor: UIColor)
+    -> NSAttributedString {
+        let kern: CGFloat = iPad ? -1.5 : -0.5
+        let size: CGFloat
+        
+        if UIScreen.main.nativeBounds.height < 2436, !iPad {
+            size = 20.0
+        } else {
+            size = iPad ? 29.0 : 24.0
+        }
+        
+        return .compose(localizedString: localizedString,
+                        kern: kern,
+                        font: .knicknackFont(.regular, size: size),
+                        paragraphStyle: .centered(lineSpacing: -20.0),
+                        foregroundcolor: foregroundColor)
+    }
+    
     class func searchBarAttrString(with localizedString: String,
                                    foregroundColor: UIColor)
     -> NSAttributedString {
