@@ -56,6 +56,19 @@ final class TWCharacterRandomizerController_MTW: TWNavigationController_MTW {
         showContentPerloader()
     }
     
+    override func makeLayout() {
+    let vOffset: CGFloat = iPad ? 24.0 : 2.0
+    
+    vNavigation.snp.makeConstraints { make in
+        make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(vOffset)
+        make.centerX.equalTo(view)
+        make.width.equalTo(view).multipliedBy(iPad ? 0.95 : 0.9)
+        make.height.equalTo(vNavigation.snp.width).multipliedBy(iPad ? 0.1 : 1.0/4.0)
+    }
+
+        layoutContentView()
+    }
+    
     override func didTapLeadingBarBtn() {
         if currentState == .result {
             currentState = .idle

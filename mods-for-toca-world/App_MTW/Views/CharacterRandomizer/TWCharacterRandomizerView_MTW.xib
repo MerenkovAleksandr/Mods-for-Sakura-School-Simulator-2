@@ -23,10 +23,10 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_randomizer_character" translatesAutoresizingMaskIntoConstraints="NO" id="ON4-DN-Fob">
-                    <rect key="frame" x="9" y="-40" width="375" height="777"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_randomizer_character" translatesAutoresizingMaskIntoConstraints="NO" id="ON4-DN-Fob">
+                    <rect key="frame" x="-188.66666666666666" y="-40" width="770.33333333333337" height="770"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="ON4-DN-Fob" secondAttribute="height" constant="-402" id="gfK-Se-cES"/>
+                        <constraint firstAttribute="width" secondItem="ON4-DN-Fob" secondAttribute="height" id="gfK-Se-cES"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Acd-br-wod" customClass="TWBaseButton_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
@@ -43,7 +43,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iE-4d-lgT">
-                    <rect key="frame" x="19.666666666666657" y="25" width="353.66666666666674" height="48"/>
+                    <rect key="frame" x="19.666666666666657" y="-5" width="353.66666666666674" height="48"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="6iG-py-a04"/>
                     </constraints>
@@ -52,7 +52,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sOm-XK-SUj">
-                    <rect key="frame" x="27.666666666666657" y="68.666666666666657" width="337.66666666666674" height="337.66666666666674"/>
+                    <rect key="frame" x="30.666666666666657" y="68.333333333333343" width="331.66666666666674" height="331.33333333333326"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="sOm-XK-SUj" secondAttribute="height" id="vFv-gk-DmO"/>
                     </constraints>
@@ -63,7 +63,7 @@
             </subviews>
             <color key="backgroundColor" systemColor="separatorColor"/>
             <constraints>
-                <constraint firstItem="3iE-4d-lgT" firstAttribute="top" secondItem="skG-CT-zSj" secondAttribute="top" constant="25" id="2Ba-gq-MEp"/>
+                <constraint firstItem="3iE-4d-lgT" firstAttribute="top" secondItem="skG-CT-zSj" secondAttribute="top" constant="-5" id="2Ba-gq-MEp"/>
                 <constraint firstItem="ybo-1U-xVO" firstAttribute="centerX" secondItem="skG-CT-zSj" secondAttribute="centerX" id="8Rz-sw-Pn9"/>
                 <constraint firstItem="3iE-4d-lgT" firstAttribute="centerX" secondItem="skG-CT-zSj" secondAttribute="centerX" id="ANi-rr-LRs"/>
                 <constraint firstItem="ybo-1U-xVO" firstAttribute="width" secondItem="skG-CT-zSj" secondAttribute="width" multiplier="0.65" id="QHf-cn-fhd"/>
