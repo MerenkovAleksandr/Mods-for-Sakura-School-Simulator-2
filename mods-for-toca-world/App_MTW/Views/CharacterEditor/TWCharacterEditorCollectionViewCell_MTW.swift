@@ -18,7 +18,7 @@ class TWCharacterEditorCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW {
     
     private(set) var id: UUID?
     private(set) var isFavourite: Bool = false
-    
+
     override var cornerRadius: CGFloat {
         bounds.height / 8
     }
@@ -91,6 +91,12 @@ extension TWCharacterEditorCollectionViewCell_MTW {
             ivContent.createNewCharacter()
         }
         vBubble.updateImageViewForEdit()
+        
+        if iPad {
+            vBubble.snp.makeConstraints { make in
+                make.leading.equalToSuperview().offset(160)
+            }
+        }
     }
     
 }
@@ -117,4 +123,3 @@ private extension TWCharacterEditorCollectionViewCell_MTW {
         ivContent.layer.mask = maskLayer
     }
 }
-

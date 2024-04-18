@@ -33,6 +33,17 @@ final class TWCharacterSelectorController_MTW: TWContentPlainCollectionControlle
           applySnapshot()
      }
      
+     override func layoutCollectionView() {
+         let multiplier: CGFloat = iPad ? 0.87 : 0.9
+         
+         collectionView.snp.makeConstraints {
+             $0.top.equalToSuperview()
+             $0.centerX.equalToSuperview()
+             $0.width.equalToSuperview().multipliedBy(multiplier)
+             $0.bottom.equalToSuperview()
+         }
+     }
+     
      override func generateLayoutPhone() -> UICollectionViewLayout {
           let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
                                                 heightDimension: .fractionalHeight(1.0))
@@ -50,17 +61,18 @@ final class TWCharacterSelectorController_MTW: TWContentPlainCollectionControlle
      }
      
      override func generateLayoutPad() -> UICollectionViewLayout {
-          let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33),
+          let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.23),
                                                 heightDimension: .fractionalHeight(1.0))
           let item = NSCollectionLayoutItem(layoutSize: itemSize)
           
           let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                                 heightDimension: .fractionalWidth(0.33))
+                                                 heightDimension: .fractionalWidth(0.23))
           
           let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                          subitems: [item])
-          
+          group.interItemSpacing = .fixed(15.0)
           let section = NSCollectionLayoutSection(group: group)
+          section.interGroupSpacing = 15.0
           
           return UICollectionViewCompositionalLayout(section: section)
      }
