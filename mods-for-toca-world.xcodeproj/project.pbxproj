@@ -170,8 +170,6 @@
 		FEC8BAA72A617FE6009833DD /* ConstraintDirectionalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC8BA822A617FE6009833DD /* ConstraintDirectionalInsets.swift */; };
 		FEC8BAA82A617FE6009833DD /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC8BA832A617FE6009833DD /* ConstraintLayoutSupportDSL.swift */; };
 		FEC8BAA92A617FE6009833DD /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC8BA842A617FE6009833DD /* ConstraintMakerRelatable.swift */; };
-		FEC8BAB12A6182AF009833DD /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC8BAB02A6182AF009833DD /* NotificationService.swift */; };
-		FEC8BAB52A6182AF009833DD /* PushwooshCenter.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FEC8BAAE2A6182AF009833DD /* PushwooshCenter.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FEC8BABE2A61846E009833DD /* AdServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC8BABD2A61846E009833DD /* AdServices.framework */; };
 		FEC8BAC02A61847E009833DD /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC8BABF2A61847E009833DD /* AdSupport.framework */; };
 		FEC8BAC22A618484009833DD /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC8BAC12A618484009833DD /* iAd.framework */; };
@@ -181,16 +179,6 @@
 		FEC8BACC2A61ACC0009833DD /* NetworkStatusMonitor_MTW.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC8BACB2A61ACC0009833DD /* NetworkStatusMonitor_MTW.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		FEC8BAB32A6182AF009833DD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FEC8B9B52A6179A4009833DD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FEC8BAAD2A6182AF009833DD;
-			remoteInfo = PushwooshCenter;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		FEC8BAB92A6182AF009833DD /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -198,7 +186,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				FEC8BAB52A6182AF009833DD /* PushwooshCenter.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 1;
@@ -409,11 +396,7 @@
 		FEC8BA822A617FE6009833DD /* ConstraintDirectionalInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintDirectionalInsets.swift; sourceTree = "<group>"; };
 		FEC8BA832A617FE6009833DD /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		FEC8BA842A617FE6009833DD /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
-		FEC8BAAE2A6182AF009833DD /* PushwooshCenter.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PushwooshCenter.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		FEC8BAB02A6182AF009833DD /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
-		FEC8BAB22A6182AF009833DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEC8BABA2A6182F0009833DD /* mods-for-toca-world.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "mods-for-toca-world.entitlements"; sourceTree = "<group>"; };
-		FEC8BABB2A618300009833DD /* PushwooshCenter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PushwooshCenter.entitlements; sourceTree = "<group>"; };
 		FEC8BABD2A61846E009833DD /* AdServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdServices.framework; path = System/Library/Frameworks/AdServices.framework; sourceTree = SDKROOT; };
 		FEC8BABF2A61847E009833DD /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		FEC8BAC12A618484009833DD /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
@@ -438,13 +421,6 @@
 				FEC8BA542A617D13009833DD /* Adjust in Frameworks */,
 				FEC8BA572A617D5C009833DD /* FirebaseAnalytics in Frameworks */,
 				F480810B2A6C1DBF007845BC /* SwiftyDropbox in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FEC8BAAB2A6182AF009833DD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -806,7 +782,6 @@
 			isa = PBXGroup;
 			children = (
 				FEC8B9BF2A6179A4009833DD /* mods-for-toca-world */,
-				FEC8BAAF2A6182AF009833DD /* PushwooshCenter */,
 				FEC8B9BE2A6179A4009833DD /* Products */,
 				FEC8BABC2A61846E009833DD /* Frameworks */,
 			);
@@ -816,7 +791,6 @@
 			isa = PBXGroup;
 			children = (
 				FEC8B9BD2A6179A4009833DD /* mods-for-toca-world.app */,
-				FEC8BAAE2A6182AF009833DD /* PushwooshCenter.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -827,7 +801,7 @@
 				F48081082A6C1D61007845BC /* App_MTW */,
 				FEC8BABA2A6182F0009833DD /* mods-for-toca-world.entitlements */,
 				FEC8BA5C2A617E50009833DD /* Configurations */,
-				FEC8B9DB2A617C48009833DD /* Subscription */,
+				FEC8B9DB2A617C48009833DD /* Adjust */,
 				FEC8B9C02A6179A4009833DD /* TWAppDelegate_MTW.swift */,
 				FEC8B9C22A6179A4009833DD /* SceneDelegate.swift */,
 				FEC8B9C92A6179A6009833DD /* Assets.xcassets */,
@@ -836,15 +810,15 @@
 			path = "mods-for-toca-world";
 			sourceTree = "<group>";
 		};
-		FEC8B9DB2A617C48009833DD /* Subscription */ = {
+		FEC8B9DB2A617C48009833DD /* Adjust */ = {
 			isa = PBXGroup;
 			children = (
-				FEC8BA582A617D7B009833DD /* Adjust+Pushwoosh */,
+				FEC8BA582A617D7B009833DD /* Adjust */,
 				FEC8BA052A617C48009833DD /* localizable */,
 				FEC8B9DC2A617C48009833DD /* Flow */,
 			);
-			name = Subscription;
-			path = Subscrible/Subscription;
+			name = Adjust;
+			path = Subscrible/Adjust;
 			sourceTree = "<group>";
 		};
 		FEC8B9DC2A617C48009833DD /* Flow */ = {
@@ -940,12 +914,12 @@
 			path = localizable;
 			sourceTree = "<group>";
 		};
-		FEC8BA582A617D7B009833DD /* Adjust+Pushwoosh */ = {
+		FEC8BA582A617D7B009833DD /* Adjust */ = {
 			isa = PBXGroup;
 			children = (
 				FEC8BA5A2A617E30009833DD /* ServicesManager.swift */,
 			);
-			path = "Adjust+Pushwoosh";
+			path = Adjust;
 			sourceTree = "<group>";
 		};
 		FEC8BA5C2A617E50009833DD /* Configurations */ = {
@@ -1000,16 +974,6 @@
 			path = snapkit;
 			sourceTree = "<group>";
 		};
-		FEC8BAAF2A6182AF009833DD /* PushwooshCenter */ = {
-			isa = PBXGroup;
-			children = (
-				FEC8BABB2A618300009833DD /* PushwooshCenter.entitlements */,
-				FEC8BAB02A6182AF009833DD /* NotificationService.swift */,
-				FEC8BAB22A6182AF009833DD /* Info.plist */,
-			);
-			path = PushwooshCenter;
-			sourceTree = "<group>";
-		};
 		FEC8BABC2A61846E009833DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1038,7 +1002,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				FEC8BAB42A6182AF009833DD /* PBXTargetDependency */,
 			);
 			name = "mods-for-toca-world";
 			packageProductDependencies = (
@@ -1051,23 +1014,6 @@
 			productReference = FEC8B9BD2A6179A4009833DD /* mods-for-toca-world.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FEC8BAAD2A6182AF009833DD /* PushwooshCenter */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FEC8BAB62A6182AF009833DD /* Build configuration list for PBXNativeTarget "PushwooshCenter" */;
-			buildPhases = (
-				FEC8BAAA2A6182AF009833DD /* Sources */,
-				FEC8BAAB2A6182AF009833DD /* Frameworks */,
-				FEC8BAAC2A6182AF009833DD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = PushwooshCenter;
-			productName = PushwooshCenter;
-			productReference = FEC8BAAE2A6182AF009833DD /* PushwooshCenter.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1079,9 +1025,6 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					FEC8B9BC2A6179A4009833DD = {
-						CreatedOnToolsVersion = 14.3.1;
-					};
-					FEC8BAAD2A6182AF009833DD = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
@@ -1148,7 +1091,6 @@
 			projectRoot = "";
 			targets = (
 				FEC8B9BC2A6179A4009833DD /* mods-for-toca-world */,
-				FEC8BAAD2A6182AF009833DD /* PushwooshCenter */,
 			);
 		};
 /* End PBXProject section */
@@ -1184,13 +1126,6 @@
 				F48081562A6D15C7007845BC /* Baloo2-SemiBold.ttf in Resources */,
 				F48081632A6D2C62007845BC /* TWContentSelectorCollectionViewCell_MTW.xib in Resources */,
 				F491B1E92A7909E800F4CD6B /* TWColorPicker_MTW.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FEC8BAAC2A6182AF009833DD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1338,23 +1273,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FEC8BAAA2A6182AF009833DD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FEC8BAB12A6182AF009833DD /* NotificationService.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		FEC8BAB42A6182AF009833DD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FEC8BAAD2A6182AF009833DD /* PushwooshCenter */;
-			targetProxy = FEC8BAB32A6182AF009833DD /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FEC8BA062A617C48009833DD /* Localizable.strings */ = {
@@ -1600,64 +1519,6 @@
 			};
 			name = Release;
 		};
-		FEC8BAB72A6182AF009833DD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = PushwooshCenter/PushwooshCenter.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WSL2HKX9YP;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PushwooshCenter/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = PushwooshCenter;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSUserTrackingUsageDescription = "TEMPLATE TEMPLATE TEMPLATE";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.softinter.development.Pushwoosh;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		FEC8BAB82A6182AF009833DD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = PushwooshCenter/PushwooshCenter.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WSL2HKX9YP;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PushwooshCenter/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = PushwooshCenter;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSUserTrackingUsageDescription = "TEMPLATE TEMPLATE TEMPLATE";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.softinter.development.Pushwoosh;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1675,15 +1536,6 @@
 			buildConfigurations = (
 				FEC8B9D22A6179A6009833DD /* Debug */,
 				FEC8B9D32A6179A6009833DD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FEC8BAB62A6182AF009833DD /* Build configuration list for PBXNativeTarget "PushwooshCenter" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FEC8BAB72A6182AF009833DD /* Debug */,
-				FEC8BAB82A6182AF009833DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

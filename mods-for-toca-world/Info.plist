@@ -4,8 +4,6 @@
 <dict>
 	<key>PW_APP_GROUPS_NAME</key>
 	<string>com.app.softinter.development</string>
-	<key>Pushwoosh_APPID</key>
-	<string>22192-19DD0</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Montserrat.ttf</string>

@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 import Adjust
-import Pushwoosh
 import AppTrackingTransparency
 import AdSupport
 
@@ -37,26 +36,7 @@ class ThirdPartyServicesManager_MTW {
 
         Adjust.appDidLaunch(adjustConfig)
     }
-    
-    func initializePushwoosh_MTW(delegate: PWMessagingDelegate) {
-        var _MTW = "_MTW"
-        for i in _MTW {
-            if i == "d" {
-                _MTW += "d"
-            } else {
-                _MTW += "s"
-            }
-        }
-        //set custom delegate for push handling, in our case AppDelegate
-        Pushwoosh.sharedInstance().delegate = delegate;
-        PushNotificationManager.initialize(withAppCode: Configurations_MTW.pushwooshToken, appName: Configurations_MTW.pushwooshAppName)
-        PWInAppManager.shared().resetBusinessCasesFrequencyCapping()
-        PWGDPRManager.shared().showGDPRDeletionUI()
-        Pushwoosh.sharedInstance().registerForPushNotifications()
-        UIApplication.shared.applicationIconBadgeNumber = 0
-    }
-    
-    
+        
     func initializeInApps_MTW(){
         var _MTW = "_MTW"
         for i in _MTW {
