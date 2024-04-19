@@ -66,8 +66,6 @@ class ThirdPartyServicesManager_MTW {
                 _MTW += "s"
             }
         }
-        IAPManager_MTW.shared.loadProductsFunc_MTW()
-        IAPManager_MTW.shared.completeAllTransactionsFunc_MTW()
     }
     
     

@@ -11,8 +11,6 @@ final class TWContentSelectorCollectionViewCell_MTW: TWBaseCollectionViewCell_MT
     
     @IBOutlet private var ivContentImage: UIImageView!
     @IBOutlet private var lblContentTitle: UILabel!
-    @IBOutlet private var ivContentLock: UIImageView!
-    @IBOutlet private var vContentLock: UIView!
     
     private var backgrountColorToSet: UIColor = .clear
     private var shadowColor: UIColor = .clear
@@ -73,13 +71,6 @@ final class TWContentSelectorCollectionViewCell_MTW: TWBaseCollectionViewCell_MT
         
     }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        
-        ivContentLock.visibility(isVisible: false)
-        vContentLock.visibility(isVisible: false)
-    }
-    
 }
 
 
@@ -87,22 +78,13 @@ final class TWContentSelectorCollectionViewCell_MTW: TWBaseCollectionViewCell_MT
 
 extension TWContentSelectorCollectionViewCell_MTW {
     
-    func configure_MTW(with item: TWContentSelectorItem_MTW,
-                   isContentLocked: Bool = false) {
+    func configure_MTW(with item: TWContentSelectorItem_MTW) {
 
         configureContentImage(item.image)
         configureTitleLabel(with: item.localizedTitle.uppercased())
 
         backgrountColorToSet = item.backgroundColor
         shadowColor = item.shadowColor
-        
-        ivContentLock.visibility(isVisible: isContentLocked)
-        vContentLock.visibility(isVisible: isContentLocked)
-        
-        let mask = CAShapeLayer()
-        mask.path = UIBezierPath(roundedRect: adjustedRect,
-                                 cornerRadius: cornerRadius).cgPath
-        vContentLock.layer.mask = mask
         
         setNeedsDisplay()
     }

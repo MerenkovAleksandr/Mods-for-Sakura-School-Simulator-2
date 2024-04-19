@@ -232,8 +232,7 @@ private extension TWContentSelectorCollectionView_MTW {
                 .dequeueReusableCell(withReuseIdentifier: Cell.reuseIdentifier,
                                      for: indexPath) as? Cell {
                 
-                cell.configure_MTW(with: item,
-                               isContentLocked: item.isContentLocked)
+                cell.configure_MTW(with: item)
                 
                 return cell
             }

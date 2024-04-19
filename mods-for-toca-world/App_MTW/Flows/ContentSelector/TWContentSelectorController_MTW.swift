@@ -59,13 +59,9 @@ extension TWContentSelectorController_MTW: TWContentSelectorDelegate_MTW {
         view.isUserInteractionEnabled = false
         
         switch item {
-        case .mods where item.isContentLocked:
-            showPremiumController(style: .unlockFuncProduct)
         case .mods:
             navigate(to: TWContentCollectionController_MTW
                 .instantiate_MTW(with: item.contentType))
-        case .characters where item.isContentLocked:
-            showPremiumController(style: .unlockContentProduct)
         case .characters:
             navigate(to: TWCharacterSelectorController_MTW())
         case .sets, .wallpapers, .maps:
@@ -99,14 +95,6 @@ private extension TWContentSelectorController_MTW {
     
     func navigate(to controller: UIViewController) {
         navigationController?.pushViewController(controller, animated: false)
-    }
-    
-    func showPremiumController(style: PremiumMainControllerStyle_MTW) {
-        let controller = PremiumMainController_MTW()
-        controller.productBuy = style
-        controller.modalPresentationStyle = .fullScreen
-        
-        present(controller, animated: true)
     }
     
 }

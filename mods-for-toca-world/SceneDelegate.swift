@@ -18,27 +18,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         window.rootViewController = TWPreloader_MTW.loadFromNib()
         window.makeKeyAndVisible()
-//        IAPManager_MTW.shared.validateSubscriptions_MTW(productIdentifiers: [
-//            Configurations_MTW.mainSubscriptionID,
-//            Configurations_MTW.unlockFuncSubscriptionID,
-//            Configurations_MTW.unlockContentSubscriptionID
-//        ], completion: { results in
-//            let isSubscribed = results[Configurations_MTW.mainSubscriptionID] ?? false
-//            if isSubscribed {
-//                let unsubscribedVC = TWPreloader_MTW.loadFromNib() // MainAppController()
-//                unsubscribedVC.modalPresentationStyle = .fullScreen
-//                window.rootViewController = unsubscribedVC
-//                window.makeKeyAndVisible()
-//                return
-//            }
-//            
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-//                let unsubscribedVC = PremiumMainController_MTW()
-//                unsubscribedVC.modalPresentationStyle = .fullScreen
-//                window.rootViewController = unsubscribedVC
-//                window.makeKeyAndVisible()
-//            })
-//        })
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
