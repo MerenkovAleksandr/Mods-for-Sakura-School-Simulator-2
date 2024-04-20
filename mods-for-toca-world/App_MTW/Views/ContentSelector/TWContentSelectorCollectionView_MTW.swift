@@ -201,7 +201,7 @@ private extension TWContentSelectorCollectionView_MTW {
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                        subitems: [item])
-        group.contentInsets = .init(top: 120.0, leading: bounds.width / 4, bottom: .zero, trailing: bounds.width / 4)
+        group.contentInsets = .init(top: 130.0, leading: bounds.width / 4, bottom: .zero, trailing: bounds.width / 4)
         group.interItemSpacing = .fixed(10)
         
         return .init(group: group)

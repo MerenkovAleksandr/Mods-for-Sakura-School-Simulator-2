@@ -69,24 +69,6 @@ final class TWContentCollectionController_MTW: TWNavigationController_MTW {
         showContentPreloader()
     }
     
-    override func makeLayout() {
-        let vOffset: CGFloat = iPad ? 24.0 : 12.0
-        
-        vNavigation.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(vOffset)
-            make.centerX.equalTo(view)
-            make.width.equalTo(view).multipliedBy(iPad ? 1.0 : 0.9)
-            make.height.equalTo(vNavigation.snp.width).multipliedBy(iPad ? 0.1 : 1.0/4.0)
-        }
-
-        vContent.snp.makeConstraints { make in
-            make.top.equalTo(vNavigation.snp.bottom).offset(vOffset)
-            make.leading.equalToSuperview()
-            make.trailing.equalToSuperview()
-            make.bottom.equalToSuperview()
-        }
-    }
-    
 }
 
 // MARK: - TWContentCollectionViewDelegate_MTW
