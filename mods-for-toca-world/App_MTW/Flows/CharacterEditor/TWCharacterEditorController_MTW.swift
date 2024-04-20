@@ -514,7 +514,7 @@ final class TWEditorElementCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW 
     }
     
     override var backgroundFillColor: UIColor {
-        setShadow
+        setBackground
     }
     
     override var shadowBackgroundColor: UIColor {
@@ -538,44 +538,56 @@ final class TWEditorElementCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW 
     
     override func drawBackgroundLayer_MTW() {
         
-        let path = UIBezierPath()
-        
-        path.move(to: CGPoint(x: radius, y: 0))
-        path.addLine(to: CGPoint(x: bounds.width - radius, y: 0))
-        path.addArc(withCenter: CGPoint(x: bounds.width - radius, y: radius), radius: radius, startAngle: .pi * 3 / 2, endAngle: 0, clockwise: true)
-        path.addLine(to: CGPoint(x: bounds.width, y: bounds.height - radius))
-        path.addArc(withCenter: CGPoint(x: bounds.width - radius, y: bounds.height - radius), radius: radius, startAngle: 0, endAngle: .pi / 2, clockwise: true)
-        path.addLine(to: CGPoint(x: radius, y: bounds.height))
-        path.addArc(withCenter: CGPoint(x: radius, y: bounds.height - radius), radius: radius, startAngle: .pi / 2, endAngle: .pi, clockwise: true)
-        path.addLine(to: CGPoint(x: 0, y: radius))
-        path.addArc(withCenter: CGPoint(x: radius, y: radius), radius: radius, startAngle: .pi, endAngle: .pi * 3 / 2, clockwise: true)
-
-        let mask = CAShapeLayer()
-        mask.path = path.cgPath
-        mask.lineWidth = borderWidth
-        mask.strokeColor = UIColor.black.cgColor
-        mask.fillColor = nil
+        let shadowLayer = CALayer()
+        shadowLayer.frame = adjustedShadowRect
+        shadowLayer.cornerRadius = cornerRadius
+        shadowLayer.backgroundColor = backgroundFillColor.cgColor
+        shadowLayer.shadowColor = UIColor.black.cgColor
+        shadowLayer.shadowOpacity = 0.5
+        shadowLayer.shadowRadius = 3.0
+        shadowLayer.shadowOffset = CGSize(width: 0, height: 0)
         
         gradientLayer.removeFromSuperlayer()
         gradientLayer = {
             let layer = CAGradientLayer()
-            
             layer.frame = bounds
             layer.colors = gradientColors
             layer.startPoint = gradientStartPoint
             layer.endPoint = gradientEndPoint
-            layer.mask = mask
+            
+            layer.addSublayer(shadowLayer)
             
             return layer
         }()
         
-        layer.insertSublayer(gradientLayer, at: 0)
+        layer.insertSublayer(gradientShadowLayer, at: 1)
+    }
+    
+    override func drawShadowLayer_MTW() {
+
+        let shadowLayer = CALayer()
+        shadowLayer.frame = adjustedShadowRect
+        shadowLayer.cornerRadius = cornerRadius
+        shadowLayer.backgroundColor = backgroundFillColor.cgColor
+        shadowLayer.shadowColor = setShadow.cgColor
+        shadowLayer.shadowOpacity = 1
+        shadowLayer.shadowRadius = 1.0
+        shadowLayer.shadowOffset = CGSize(width: 5, height: 5)
         
-        backgroundFillColor.setFill()
+        gradientShadowLayer.removeFromSuperlayer()
+        gradientShadowLayer = {
+            let layer = CAGradientLayer()
+            layer.frame = bounds
+            layer.colors = gradientColors
+            layer.startPoint = gradientStartPoint
+            layer.endPoint = gradientEndPoint
+            
+            layer.addSublayer(shadowLayer)
+            
+            return layer
+        }()
         
-        path.fill()
-        
-        
+        layer.insertSublayer(gradientShadowLayer, at: 0)
     }
     
     func configure(with content: EditorContent,
@@ -594,23 +606,32 @@ final class TWEditorElementCollectionViewCell_MTW: TWBaseCollectionViewCell_MTW 
         
         setBackground = color
         setShadow = color.darker(by: 20)
-                
+        drawShadowLayer_MTW()
         set(isSelected: isSelected)
     }
     
     private func emptyCell(isSelected: Bool) {
         ivContent.image = nil
+        
         setShadow = TWColors_MTW.navigationBarForeground
         setBackground = TWColors_MTW.navigationBarForeground
         set(isSelected: isSelected)
+        
+        drawBackgroundLayer_MTW()
+        drawShadowLayer_MTW()
     }
     
     private func setImage(_ image: UIImage?, isSelected: Bool) {
         ivContent.image = image
         ivContent.contentMode = .scaleAspectFit
         
-        setBackground = isSelected ? TWColors_MTW.menuOrangeCellShadow : TWColors_MTW.menuPurpleCellShadow
-        setShadow = isSelected ? TWColors_MTW.menuOrangeCellBackground : TWColors_MTW.menuPurpleCellBackground
+        setBackground = isSelected ? TWColors_MTW.menuOrangeCellBackground : TWColors_MTW.menuPurpleCellBackground
+        setShadow = isSelected ? TWColors_MTW.menuOrangeCellShadow : TWColors_MTW.menuPurpleCellShadow
+        
+        set(isSelected: false)
+
+        drawShadowLayer_MTW()
+        drawBackgroundLayer_MTW()
     }
     
     private func set(isSelected: Bool) {
