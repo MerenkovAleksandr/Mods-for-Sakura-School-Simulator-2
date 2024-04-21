@@ -22,10 +22,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3em-1z-bJ2" customClass="TWProgressBarView_MTW" customModule="mods_for_toca_world" customModuleProvider="target">
-                    <rect key="frame" x="20" y="404" width="353" height="44"/>
+                    <rect key="frame" x="196" y="425.66666666666669" width="1" height="1"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="3em-1z-bJ2" secondAttribute="height" multiplier="8:1" id="hEX-qn-gMd"/>
+                        <constraint firstAttribute="width" constant="1" id="NFe-P1-cMy"/>
+                        <constraint firstAttribute="height" constant="1" id="PA6-cK-Tj9"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" fixedFrame="YES" text="LABEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4J-h5-gXU">
@@ -51,8 +52,7 @@
                 <constraint firstItem="MGK-9D-Jhm" firstAttribute="leading" secondItem="agf-Wv-JAG" secondAttribute="leading" constant="20" id="Mek-PE-oyt">
                     <variation key="heightClass=regular-widthClass=regular" constant="120"/>
                 </constraint>
-                <constraint firstItem="3em-1z-bJ2" firstAttribute="leading" secondItem="MGK-9D-Jhm" secondAttribute="leading" id="RYO-Yk-Ldx"/>
-                <constraint firstItem="3em-1z-bJ2" firstAttribute="trailing" secondItem="MGK-9D-Jhm" secondAttribute="trailing" id="lgC-fn-X32"/>
+                <constraint firstItem="3em-1z-bJ2" firstAttribute="centerX" secondItem="agf-Wv-JAG" secondAttribute="centerX" id="Mni-gk-JpR"/>
                 <constraint firstItem="MGK-9D-Jhm" firstAttribute="centerY" secondItem="agf-Wv-JAG" secondAttribute="centerY" id="mBd-Bj-OeV"/>
                 <constraint firstItem="MGK-9D-Jhm" firstAttribute="centerX" secondItem="agf-Wv-JAG" secondAttribute="centerX" id="yLj-uP-4CT"/>
             </constraints>
